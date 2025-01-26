@@ -62,7 +62,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
         ${poppins.className}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
