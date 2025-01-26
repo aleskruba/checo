@@ -25,12 +25,12 @@ export default async function Home() {
   <p className="inline">
     Si estás interesado, también ofrezco clases de conversación en checo a través de la plataforma{" "}
     <a href="https://www.italki.com" target="_blank" rel="noopener noreferrer" className="inline">
-      italki.com
+
     </a>
     <Image
       src={Italki} // Example URL for italki badge
       alt="italki Banner"
-      className="inline-block w-12 h-auto ml-2" // Adjust size and margin-left as needed
+      className="inline-block w-12 h-auto ml-2 p-1" // Adjust size and margin-left as needed
     />
   </p>
 </div>
@@ -56,11 +56,11 @@ export default async function Home() {
   <p className="mr-2">
     Pokud budete mít zájem, nabízím také konverzační kurzy češtiny přes aplikaci{" "}
     <a href="https://www.italki.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-      italki.com
+  
       <Image
         src={Italki} // Example URL for italki badge
         alt="italki Banner"
-        className="w-12 h-auto ml-2" // Adjust size and margin-left as needed
+        className="w-12 h-auto ml-2 p-1" // Adjust size and margin-left as needed
       />
     </a>
   </p>
