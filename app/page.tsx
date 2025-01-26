@@ -10,7 +10,7 @@ export default async function Home() {
 
     <div className="mt-8 md:mt-0">
 <section className="pl-2 pr-2 max-w-4xl mx-auto  text-left">
-  <h1 className="font-bold mb-4 text-blue-700">¡Hola, bienvenidos a la página para aprender checo!</h1>
+  <h1 className="font-bold mb-4 dark:text-blue-400 text-blue-700">¡Hola, bienvenidos a la página para aprender checo!</h1>
   <p className="mb-2">
     Me llamo Aleš y he creado esta página para ayudar a personas de habla hispana a aprender los fundamentos del idioma checo.
     Llevo cinco años aprendiendo español, y sé lo difícil que puede ser dominar un idioma nuevo.

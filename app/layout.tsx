@@ -92,7 +92,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                       
                       "
                       >
-                      Vítejte na stránkách <span className="font-extrabold ml-2">  <span className="text-blue-700  ">Čeština</span>  <span className='dark:text-white text-gray-400'>s</span>  <span className='dark:text-red-500 text-red-700'>Alešem</span></span> !
+                      Vítejte na stránkách <span className="font-extrabold ml-2">  <span className="text-blue-700  dark:text-blue-400">Čeština</span>  <span className='dark:text-white text-gray-400'>s</span>  <span className='dark:text-red-500 text-red-700'>Alešem</span></span> !
                     </h1>
            
                     </Link>
@@ -170,7 +170,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                             <Image src={Logo} alt='logo' className="size-12 rounded-full"/>
                             <div className='flex gap-2 flex-col'>
           
-                    <h3 className="font-extrabold ml-2 text text-xl"><span className='text-blue-700'>Čeština</span>  <span className='dark:text-white text-gray-400'>s</span> <span className='dark:text-red-500 text-red-700'> Alešem</span></h3> 
+                    <h3 className="font-extrabold ml-2 text text-xl"><span className='text-blue-700 dark:text-blue-400'>Čeština</span>  <span className='dark:text-white text-gray-400'>s</span> <span className='dark:text-red-500 text-red-700'> Alešem</span></h3> 
 
                     </div>
                             </Link>
