@@ -76,7 +76,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                     
                     <Image src={Logo} alt='Logo' className="size-16 rounded-full"/>
                     <p className="text-xl font-bold ml-4">
-                    Hola,  Ahoj! 
+                    Ahoj,  Hola! 
                   
                                   
                     </p>
@@ -151,7 +151,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                                 
                                 rounded-full"/>
                               <p className="text-ls font-bold text-white whitespace-nowrap">
-                              Hola,  Ahoj! 
+                              Ahoj,  Hola! 
                                     </p>
                                     <Image src={Flag} alt='Flag' className="size-14 rounded-full"/>
                                     </div>
