@@ -48,7 +48,7 @@ export function ThemeComponent({ closeSheet }: { closeSheet: () => void }) {
           <CollapsibleTrigger asChild>
               <SidebarMenuButton className="group">
       <span className="flex items-center gap-2 justify-between w-full" onClick={handleToggle}>
-      <h1 className="text-lg" >
+      <h1 className="text-base" >
             Vzhled / Apariencia
             </h1>
           {/* ChevronDown shows when Collapsible is open */}
@@ -65,12 +65,12 @@ export function ThemeComponent({ closeSheet }: { closeSheet: () => void }) {
          
                   <SidebarMenuSubItem >
                     <div className="flex flex-col justify-start items-start gap-1">
-                        <div className="flex gap-1 cursor-pointer dark:hover:text-gray-200 hover:text-gray-800 " 
-                        onClick={() => {setTheme("light") ;  closeSheet() }}>          <Sun size={16} style={{ marginRight: "8px" }} /> 
-                        Světlý / Claro</div>
-                        <div className="flex gap-1 cursor-pointer dark:hover:text-gray-200 hover:text-gray-800 " 
+                        <div className="flex justify-between w-full cursor-pointer dark:hover:text-gray-200 hover:text-gray-800 " 
+                        onClick={() => {setTheme("light") ;  closeSheet() }}>    
+                        Světlý / Claro  <Sun size={16} /> </div>
+                        <div className="flex justify-between w-full cursor-pointer dark:hover:text-gray-200 hover:text-gray-800 " 
                         onClick={() => {setTheme("dark") ;  closeSheet() }}
-                        ><Moon size={16} style={{ marginRight: "8px" }} />Tmavý / Oscuro</div>
+                        >Tmavý / Oscuro <Moon size={16}  /></div>
                     </div>
                  
                   </SidebarMenuSubItem>
