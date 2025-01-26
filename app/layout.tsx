@@ -92,7 +92,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                       
                       "
                       >
-                      Vítejte na stránkách <span className="font-extrabold ml-2">"  <span className="text-blue-700  ">Čeština</span>  <span className='dark:text-white text-gray-400'>s</span>  <span className='dark:text-red-500 text-red-700'>Alešem</span>"</span> !
+                      Vítejte na stránkách <span className="font-extrabold ml-2">  <span className="text-blue-700  ">Čeština</span>  <span className='dark:text-white text-gray-400'>s</span>  <span className='dark:text-red-500 text-red-700'>Alešem</span></span> !
                     </h1>
            
                     </Link>
