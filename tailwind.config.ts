@@ -9,6 +9,7 @@ export default {
   ],
   theme: {
   	extend: {
+		
   		keyframes: {
   			slideIn: {
   				'0%': {
@@ -25,10 +26,9 @@ export default {
   			slideIn: 'slideIn 1.5s ease-in-out forwards'
   		},
   		fontFamily: {
-  			poppins: [
-  				'Poppins',
-  				'sans-serif'
-  			]
+			poppins: ['Poppins', 'sans-serif'],
+			vast: ['"Vast Shadow"', 'serif'],
+			lilita: ['"Lilita One"', 'serif'],
   		},
   		colors: {
   			background: 'hsl(var(--background))',

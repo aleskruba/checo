@@ -1,25 +1,21 @@
 "use client"
-import { notFound } from 'next/navigation';
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import Head from 'next/head';
 import { Poppins } from 'next/font/google'
 import Footer from './components/Footer';
 import { Button } from "@/components/ui/button";
-import DropDownSettingComponents from "./components/DropDownSettingComponents";
-import type { Metadata } from 'next';
 import Logo from "@/public/man1.png"
 import Flag from "@/public/czflag.png"
 import Image from "next/image";
 import Link from "next/link";
-
-import { DashboardLinks } from "./components/DashboardLinks";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { AppSidebar } from './components/SidebarLessons';
 import { SidebarProvider } from '@/components/ui/sidebar';
-import { TestsComponent } from './components/TestsComponent';
+import { TestComponent } from './components/TestsComponent';
 import { useState } from 'react';
+import { ThemeComponent } from './components/ThemeComponent';
 
 
 const poppins = Poppins({
@@ -43,8 +39,11 @@ export default  function LocaleLayout({
   };
   return (
     <html lang='cz' suppressHydrationWarning>
-      <Head>
-  <title>Aleš Kruba - Full Stack Web Developer</title>
+
+     <Head>
+  <title>Aprender checo con Aleš</title>
+
+  
   <meta name="description" content="Portfolio of Aleš Kruba, a full-stack web developer specializing in frontend and backend development using JavaScript, React, Next.js, and Express.js." />
   <meta name="author" content="Aleš Kruba" />
   <meta name="keywords" content="Portfolio, Full Stack Web Development, JavaScript, TypeScript, React js, Next js, Express js, Tailwind CSS, Material UI, Docker, Databases, PHP, Python" />
@@ -84,13 +83,16 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                     <Image src={Flag} alt='Flag' className="size-16 rounded-full"/>
                     <h1
                       className="
-                      text-center pt-1 md:pt-0 pb-4 text-base md:text-xl 
-                      font-mono md:font-poppins
+                      md:hidden lg:block
+                      font-poppins font-extrabold  
+                      text-center pt-1 md:pt-0 pb-4  text-xl 
+          
                       mt-4 
                       animate-slideIn
+                      
                       "
                       >
-                      Vítejte na stránkách <span className="font-extrabold ml-2">" <span className='text-blue-700'>Čeština</span> <span className='dark:text-white text-gray-400'>jednoduše</span> s <span className='dark:text-red-500 text-red-700'>Alešem</span>"</span> !
+                      Vítejte na stránkách <span className="font-extrabold ml-2">"  <span className="text-blue-700  ">Čeština</span>  <span className='dark:text-white text-gray-400'>s</span>  <span className='dark:text-red-500 text-red-700'>Alešem</span>"</span> !
                     </h1>
            
                     </Link>
@@ -98,13 +100,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                  
                 </div>
         
-        <div>
-            <DropDownSettingComponents settings={'settings'} 
-                                                      dark={'dark'}
-                                                      light={'light'}
-                                                      themeText={'theme'}
-                                                      /> 
-        </div>
+  
         </nav>
 
         <SidebarProvider>
@@ -122,7 +118,8 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                    {/*      <DashboardLinks/> */}
 
                    <AppSidebar closeSheet={closeSheet} />
-                   <TestsComponent/>
+                   <TestComponent closeSheet={closeSheet}/>
+                   <ThemeComponent closeSheet={closeSheet}/>
 
                     </nav>
 
@@ -153,26 +150,27 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                                 
                                 
                                 rounded-full"/>
-                                     <p className="text-xl font-bold text-white ">
-                                     Hola,  Ahoj! 
+                              <p className="text-ls font-bold text-white whitespace-nowrap">
+                              Hola,  Ahoj! 
                                     </p>
-                                    <Image src={Flag} alt='Flag' className="size-16 rounded-full"/>
+                                    <Image src={Flag} alt='Flag' className="size-14 rounded-full"/>
                                     </div>
                             </SheetTitle>
                                 <nav className="grid gap-2 mt-10  fixed text-white">
                                 <AppSidebar closeSheet={closeSheet} />
-                                <TestsComponent/>
+                                <TestComponent closeSheet={closeSheet}/>
+                                <ThemeComponent closeSheet={closeSheet}/>
                                 </nav>
                             </SheetContent>
                         </Sheet>
 
-                        <div className="flex w-full justify-center md:hidden ">
+                        <div className="flex w-full justify-start md:hidden ">
                         <Link href="/" className="flex items-center gap-2">
                     
-                            <Image src={Logo} alt='logo' className="size-9 rounded-full"/>
+                            <Image src={Logo} alt='logo' className="size-12 rounded-full"/>
                             <div className='flex gap-2 flex-col'>
           
-                    <h3 className="font-extrabold ml-2 text">Čeština jednoduše s Alešem</h3> 
+                    <h3 className="font-extrabold ml-2 text text-xl"><span className='text-blue-700'>Čeština</span>  <span className='dark:text-white text-gray-400'>s</span> <span className='dark:text-red-500 text-red-700'> Alešem</span></h3> 
 
                     </div>
                             </Link>

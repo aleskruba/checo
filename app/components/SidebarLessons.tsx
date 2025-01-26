@@ -15,17 +15,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const BASE_URL = "http://localhost:3000/lessons/";
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
 
 // Menu items
 const items = {
-  title: "Lekce/Clases",
+  title: "Lekce / Clases",
   content: [
-    { title: "Lekce 1", url: `${BASE_URL}1` },
-    { title: "Lekce 2", url: `${BASE_URL}2` },
-    { title: "Lekce 3", url: `${BASE_URL}3` },
-    { title: "Lekce 4", url: `${BASE_URL}4` },
-    { title: "Lekce 5", url: `${BASE_URL}5` },
+    { title: "Lekce 1", url: `${BASE_URL}/lessons/1` },
+    { title: "Lekce 2", url: `${BASE_URL}/lessons/2` },
+    { title: "Lekce 3", url: `${BASE_URL}/lessons/3` },
+    { title: "Lekce 4", url: `${BASE_URL}/lessons/4` },
+    { title: "Lekce 5", url: `${BASE_URL}/lessons/5` },
   ],
 };
 
@@ -44,8 +45,8 @@ export function AppSidebar({ closeSheet }: { closeSheet: () => void }) {
         <SidebarMenuItem>
           <CollapsibleTrigger asChild>
               <SidebarMenuButton className="group">
-      <span className="flex items-center justify-between w-full" onClick={handleToggle}>
-      <h1 className="text-xl" >
+      <span className="flex gap-2 items-center justify-between w-full" onClick={handleToggle}>
+      <h1 className="text-lg" >
               {items.title}
             </h1>
           {/* ChevronDown shows when Collapsible is open */}
@@ -70,7 +71,7 @@ export function AppSidebar({ closeSheet }: { closeSheet: () => void }) {
                   <SidebarMenuSubItem key={index}>
                     <Link
                       href={item.url}
-                      className={`flex items-center gap-2 ${isActive ? "text-red-500 font-bold" : ""}`}
+                      className={`flex items-center gap-2  dark:hover:text-gray-200 hover:text-gray-800  ${isActive ? "text-blue-500 font-bold" : ""}`}
                       onClick={() => {
                         closeSheet(); // Close the sheet when an item is clicked
                       }}

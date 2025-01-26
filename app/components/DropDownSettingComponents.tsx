@@ -28,16 +28,7 @@ function DropDownSettingComponents({ settings, dark,light,themeText }: DropDownP
   const { setTheme, theme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const pathname = usePathname(); // Get the current path
-  const router = useRouter();
 
-  const changeLanguage = (newLang: string) => {
-    // Split the current pathname into segments and remove the first two
-    const path = pathname.split("/").slice(2).join("/")
-    router.push(`/${newLang}/${[path]}`)
-  };
-  
-  
   // Ensure component is only rendered after hydration
   useEffect(() => {
     setMounted(true);
