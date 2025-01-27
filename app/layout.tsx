@@ -186,7 +186,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                           <TestComponent closeSheet={closeSheet} />
                          <ThemeComponent closeSheet={closeSheet} />
                          </div>
-                         <div className="w-full ">
+                         <div className="w-full mt-16 ">
                          <Image
                     src={YouTube}
                     alt="Logo"

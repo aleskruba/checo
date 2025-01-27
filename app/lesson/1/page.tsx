@@ -37,7 +37,7 @@ function lesson1() {
           </p>
         </li>
         <li className="flex items-center space-x-4">
-          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Dobrý den</span>
+          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Dobrý den</span>
           <button
               onClick={() => playAudio("/lesson1/den.m4a")}
             className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -50,7 +50,7 @@ function lesson1() {
           </p>
         </li>
         <li className="flex items-center space-x-4">
-          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Dobré ráno</span>
+          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Dobré ráno</span>
           <button
                onClick={() => playAudio("/lesson1/rano.m4a")}
             className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -63,7 +63,7 @@ function lesson1() {
           </p>
         </li>
         <li className="flex items-center space-x-4">
-          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Dobré odpoledne</span>
+          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Dobré odpoledne</span>
           <button
                onClick={() => playAudio("/lesson1/odpo.m4a")}
             className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -76,7 +76,7 @@ function lesson1() {
           </p>
         </li>
         <li className="flex items-center space-x-4">
-          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Dobrou noc</span>
+          <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Dobrou noc</span>
           <button
                  onClick={() => playAudio("/lesson1/noc.m4a")}
             className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -97,7 +97,7 @@ function lesson1() {
   </h2>
   <ul className="space-y-4">
   <li className="flex items-center space-x-4">
-  <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Na shledanou</span>
+  <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Na shledanou</span>
   <button
     onClick={() => playAudio("/lesson1/nashledanou.m4a")}
     className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -111,7 +111,7 @@ function lesson1() {
 </li>
 
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Jak se máš?</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Jak se máš?</span>
       <button
         onClick={() => playAudio("/lesson1/jak.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -124,7 +124,7 @@ function lesson1() {
       </p>
     </li>
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Děkuji</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Děkuji</span>
       <button
         onClick={() => playAudio("/lesson1/dekuji.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -137,7 +137,7 @@ function lesson1() {
       </p>
     </li>
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Prosím</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Prosím</span>
       <button
         onClick={() => playAudio("/lesson1/prosim.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -150,7 +150,7 @@ function lesson1() {
 </p>
     </li>
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Omlouvám se</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Omlouvám se</span>
       <button
         onClick={() => playAudio("/lesson1/omlouvam.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -163,7 +163,7 @@ function lesson1() {
       </p>
     </li>
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Kolik to stojí?</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Kolik to stojí?</span>
       <button
         onClick={() => playAudio("/lesson1/kolik.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -176,7 +176,7 @@ function lesson1() {
       </p>
     </li>
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Kde je toaleta?</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Kde je toaleta?</span>
       <button
         onClick={() => playAudio("/lesson1/kdeje.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
@@ -189,7 +189,7 @@ function lesson1() {
       </p>
     </li>
     <li className="flex items-center space-x-4">
-      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">Pomozte mi, prosím</span>
+      <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Pomozte mi, prosím</span>
       <button
         onClick={() => playAudio("/lesson1/pomoztemi.m4a")}
         className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
