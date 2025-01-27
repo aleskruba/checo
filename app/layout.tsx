@@ -5,6 +5,7 @@ import Head from "next/head";
 import { Poppins } from "next/font/google";
 import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
+import YouTube from "@/public/youtube.png";
 import Logo from "@/public/man1.png";
 import Flag from "@/public/czflag.png";
 import Image from "next/image";
@@ -133,6 +134,12 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
                         <ThemeComponent closeSheet={closeSheet} />
+                        <div className="mt-16 ">
+                         <Image
+                    src={YouTube}
+                    alt="Logo"
+                    height={100}
+                  /></div>
                       </nav>
                     </div>
                   </div>
@@ -179,6 +186,12 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                           <TestComponent closeSheet={closeSheet} />
                          <ThemeComponent closeSheet={closeSheet} />
                          </div>
+                         <div className="w-full ">
+                         <Image
+                    src={YouTube}
+                    alt="Logo"
+                    height={100}
+                  /></div>
                         </nav>
                       </SheetContent>
                     </Sheet>
