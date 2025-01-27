@@ -179,7 +179,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                             />
                           </div>
                         </SheetTitle>
-                        <nav className="grid gap-2 mt-10  fixed text-white  overflow-y-auto  w-[50%] max-h-[70%] pb-8 ">
+                        <nav className="grid gap-2 mt-10  fixed text-white  overflow-y-auto  max-h-[70%] pb-8 ">
                             <div className="overflow-y-auto h-full ">
                           <LessonComponent closeSheet={closeSheet} />
                           <DialogComponent closeSheet={closeSheet} />
