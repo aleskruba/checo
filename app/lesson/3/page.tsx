@@ -15,7 +15,7 @@ function lesson3() {
     <div className='w-full min-h-screen px-0 md:px-12  '>
       
        <SectionTopComponent
-    title='El verbo "být" ser/estar'
+    title='El verbo "být" ser/estar en presente'
     description='En esta lección, aprenderemos el verbo "být" en checo y cómo usarlo en frases básicas para presentarnos y preguntar por el nombre de otras personas.'
   />
   <section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white">

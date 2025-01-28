@@ -10,7 +10,7 @@ const items = {
     { title: "Frases básicas I", url: `${BASE_URL}/lesson/1` },
     { title: "Frases básicas II", url: `${BASE_URL}/lesson/2` },
     { title: 'El verbo "být"', url: `${BASE_URL}/lesson/3` },
-    { title: "Lekce 4", url: `${BASE_URL}/lesson/4` },
+    { title: "Vocabulario", url: `${BASE_URL}/lesson/4` },
     { title: "Lekce 5", url: `${BASE_URL}/lesson/5` },
   ],
 };
