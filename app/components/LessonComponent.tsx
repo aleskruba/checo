@@ -11,7 +11,7 @@ const items = {
     { title: "Frases básicas II", url: `${BASE_URL}/lesson/2` },
     { title: 'El verbo "být"', url: `${BASE_URL}/lesson/3` },
     { title: "Vocabulario", url: `${BASE_URL}/lesson/4` },
-    { title: "Lekce 5", url: `${BASE_URL}/lesson/5` },
+    { title: "Caracteres especiales", url: `${BASE_URL}/lesson/5` },
   ],
 };
 
