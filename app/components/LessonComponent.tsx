@@ -10,9 +10,11 @@ const items = {
     { title: "Frases básicas I", url: `${BASE_URL}/lesson/1` },
     { title: "Frases básicas II", url: `${BASE_URL}/lesson/2` },
     { title: 'El verbo "být"', url: `${BASE_URL}/lesson/3` },
-    { title: "Vocabulario básico", url: `${BASE_URL}/lesson/4` },
+    { title: "Eso es + Vocabulario ", url: `${BASE_URL}/lesson/4` },
     { title: "Caracteres especiales", url: `${BASE_URL}/lesson/5` },
-    { title: "Vocabulario Casa/Colores", url: `${BASE_URL}/lesson/6` },
+    { title: "Introducción a los adjetivos", url: `${BASE_URL}/lesson/6` },
+    { title: "Los posesivos básicos", url: `${BASE_URL}/lesson/7` },
+    
   ],
 };
 

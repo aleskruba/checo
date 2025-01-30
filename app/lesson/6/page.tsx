@@ -14,10 +14,33 @@ function lesson6() {
   return (
     <div className='w-full min-h-screen px-0 md:px-12  '>
   <SectionTopComponent
-    title='Vocabulario Casa+Colores / Dům+Barvy'
-    description="En esta lección, aprenderemos palabras básicas relacionadas con la casa y los colores, para familiarizarnos con el vocabulario esencial en el contexto del hogar y su entorno."
+    title='Introducción a los adjetivos  , Vocabulario Casa+Colores / Dům+Barvy'
+    description="En esta lección, aprenderemos los fundamentos de los adjetivos en checo y nuevo vocabulario con colores."
   />
 
+  <section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white">
+  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Géneros y Adjetivos en Checo</h2>
+    <div className="space-y-4">
+      <div className="p-4 border-l-4 border-blue-500 bg-blue-100 dark:bg-blue-900 rounded-lg">
+        <p className="text-gray-900 dark:text-white font-medium">
+          <span className="font-bold">Femenino</span> (termina en <span className="text-blue-600 dark:text-blue-300">-á</span>):
+        </p>
+        <p className="italic text-gray-700 dark:text-gray-300">Modrá židle → "židle" (silla) es femenina.</p>
+      </div>
+      <div className="p-4 border-l-4 border-green-500 bg-green-100 dark:bg-green-900 rounded-lg">
+        <p className="text-gray-900 dark:text-white font-medium">
+          <span className="font-bold">Masculino</span> (termina en <span className="text-green-600 dark:text-green-300">-ý</span>):
+        </p>
+        <p className="italic text-gray-700 dark:text-gray-300">Zelený koberec → "koberec" (alfombra) es masculino.</p>
+      </div>
+      <div className="p-4 border-l-4 border-indigo-500 bg-indigo-100 dark:bg-indigo-900 rounded-lg">
+        <p className="text-gray-900 dark:text-white font-medium">
+          <span className="font-bold">Neutro</span> (termina en <span className="text-indigo-600 dark:text-indigo-300">-é</span>):
+        </p>
+        <p className="italic text-gray-700 dark:text-gray-300">Modré okno → "okno" (ventana) es neutro.</p>
+      </div>
+    </div>
+  </section>
     <section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white">
     <div className="overflow-x-auto">
   <Table className="min-w-full">
