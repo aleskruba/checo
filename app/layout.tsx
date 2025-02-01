@@ -23,6 +23,8 @@ import { TestComponent } from "./components/TestComponent";
 import { useState } from "react";
 import { ThemeComponent } from "./components/ThemeComponent";
 import { DialogComponent } from "./components/DialogComponent";
+import ViajerosComponent from "./components/ViajerosComponent";
+import { IntermedioComponent } from "./components/IIntermedioComponent";
 
 const poppins = Poppins({
   weight: "300",
@@ -123,14 +125,15 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
             </nav>
 
             <SidebarProvider>
-              <div className="mt-4 grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]  text-center">
+              <div className="mt-4 grid min-h-screen w-full md:grid-cols-[240px_1fr] lg:grid-cols-[300px_1fr]  text-center">
                 <div className="hidden  bg-muted/40 md:block">
                   <div className="flex flex-col mah-h-screen h-full gap-2">
                     <div className="flex-1">
                       <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
                         {/*      <DashboardLinks/> */}
-
+                        <ViajerosComponent closeSheet={closeSheet} />
                         <LessonComponent closeSheet={closeSheet} />
+                        <IntermedioComponent closeSheet={closeSheet}/>
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
                         <ThemeComponent closeSheet={closeSheet} />
@@ -181,7 +184,9 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                         </SheetTitle>
                         <nav className="grid gap-2 mt-10  fixed text-white  overflow-y-auto  max-h-[70%] pb-8 ">
                             <div className="overflow-y-auto h-full ">
+                            <ViajerosComponent closeSheet={closeSheet} />
                           <LessonComponent closeSheet={closeSheet} />
+                          <IntermedioComponent closeSheet={closeSheet}/>
                           <DialogComponent closeSheet={closeSheet} />
                           <TestComponent closeSheet={closeSheet} />
                          <ThemeComponent closeSheet={closeSheet} />

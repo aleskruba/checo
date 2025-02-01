@@ -5,10 +5,10 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 // Menu items
 const items = {
-  title: "Lekce / Clases",
+  title: "Začátečnící / Principiantes ",
   content: [
-    { title: "Frases básicas I", url: `${BASE_URL}/lesson/1` },
-    { title: "Frases básicas II", url: `${BASE_URL}/lesson/2` },
+    { title: "Introducción", url: `${BASE_URL}/lesson/1` },
+    { title: "Números y palabras básicas", url: `${BASE_URL}/lesson/2` },
     { title: 'El verbo "být"', url: `${BASE_URL}/lesson/3` },
     { title: "Eso es + Vocabulario ", url: `${BASE_URL}/lesson/4` },
     { title: "Caracteres especiales", url: `${BASE_URL}/lesson/5` },
