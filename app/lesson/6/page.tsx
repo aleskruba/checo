@@ -47,8 +47,8 @@ function lesson6() {
     <TableHeader>
       <TableRow>
         <TableHead className="text-center">Audio</TableHead>
-        <TableHead className="text-center">Czech</TableHead>
-        <TableHead className="text-center">Spanish</TableHead>
+        <TableHead className="text-center">Česky/En checo</TableHead>
+            <TableHead className="text-center">Španělsky/En español</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>

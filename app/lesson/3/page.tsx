@@ -25,9 +25,9 @@ function lesson3() {
         <Table className="min-w-full">
           <TableHeader>
           <TableRow>
-            <TableHead className="text-center font-bold">Audio</TableHead>
-            <TableHead className="text-center font-bold">Česky/En checo</TableHead>
-            <TableHead className="text-center font-bold">Španělsky/En español</TableHead>
+            <TableHead className="text-center ">Audio</TableHead>
+              <TableHead className="text-center">Česky/En checo</TableHead>
+                  <TableHead className="text-center">Španělsky/En español</TableHead>
           </TableRow>
 
           </TableHeader>
@@ -136,8 +136,8 @@ function lesson3() {
           <TableHeader>
             <TableRow>
               <TableHead className="text-center">Audio</TableHead>
-              <TableHead className="text-center">Czech</TableHead>
-              <TableHead className="text-center">Spanish</TableHead>
+             <TableHead className="text-center">Česky/En checo</TableHead>
+                 <TableHead className="text-center">Španělsky/En español</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -276,8 +276,8 @@ function lesson3() {
           <TableHeader>
             <TableRow>
               <TableHead className="text-center">Audio</TableHead>
-              <TableHead className="text-center">Czech</TableHead>
-              <TableHead className="text-center">Spanish</TableHead>
+           <TableHead className="text-center">Česky/En checo</TableHead>
+               <TableHead className="text-center">Španělsky/En español</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
