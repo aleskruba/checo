@@ -160,7 +160,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                       </SheetTrigger>
                       <SheetContent
                         side="left"
-                        className="darK:bg-black darK:text-white bg-gray-500 "
+                        className="darK:bg-black darK:text-white bg-gray-500 w-[80%] "
                       >
                         <SheetTitle>
                           <div className="flex items-center gap-2 ">
