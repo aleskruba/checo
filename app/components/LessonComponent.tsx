@@ -14,7 +14,8 @@ const items = {
     { title: "Caracteres especiales", url: `${BASE_URL}/lesson/5` },
     { title: "Introducción a los adjetivos", url: `${BASE_URL}/lesson/6` },
     { title: "Los posesivos básicos", url: `${BASE_URL}/lesson/7` },
-    { title: "Los plurales de los sustantivos", url: `${BASE_URL}/lesson/8` },
+    { title: "Los plurales/sustantivos", url: `${BASE_URL}/lesson/8` },
+    { title: "Los plurales/sustantivos II", url: `${BASE_URL}/lesson/9` },
     
   ],
 };
