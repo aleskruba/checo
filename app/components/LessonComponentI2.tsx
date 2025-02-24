@@ -5,7 +5,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 // Menu items
 const items = {
-  title: "Principiantes I ",
+  title: "Principiantes II ",
   content: [
     { title: "Introducción", url: `${BASE_URL}/lesson/1` },
     { title: "Números y palabras básicas", url: `${BASE_URL}/lesson/2` },
@@ -22,7 +22,7 @@ const items = {
   ],
 };
 
-export function LessonComponent({ closeSheet }: { closeSheet: () => void }) {
+export function LessonComponent2({ closeSheet }: { closeSheet: () => void }) {
   return (
     <SidebarMenu>
       {/* Use SidebarMenuSection component for each section */}

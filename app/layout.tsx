@@ -25,6 +25,7 @@ import { ThemeComponent } from "./components/ThemeComponent";
 import { DialogComponent } from "./components/DialogComponent";
 import ViajerosComponent from "./components/ViajerosComponent";
 import { IntermedioComponent } from "./components/IIntermedioComponent";
+import { LessonComponent2 } from "./components/LessonComponentI2";
 
 const poppins = Poppins({
   weight: "300",
@@ -131,6 +132,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                         {/*      <DashboardLinks/> */}
                         <ViajerosComponent closeSheet={closeSheet} />
                         <LessonComponent closeSheet={closeSheet} />
+                        <LessonComponent2 closeSheet={closeSheet} />
                         <IntermedioComponent closeSheet={closeSheet}/>
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
@@ -184,6 +186,7 @@ dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900
                             <div className="overflow-y-auto h-full ">
                             <ViajerosComponent closeSheet={closeSheet} />
                           <LessonComponent closeSheet={closeSheet} />
+                          <LessonComponent2 closeSheet={closeSheet} />
                           <IntermedioComponent closeSheet={closeSheet}/>
                           <DialogComponent closeSheet={closeSheet} />
                           <TestComponent closeSheet={closeSheet} />
