@@ -9,27 +9,27 @@ const items = {
   title: "Testy / Tests",
   content: [
     {
-      title: "Test 1",
+      title: "Quiz para principiantes 1",
         url: `${BASE_URL}/test/1` 
 
     },
     {
-        title: "Test 2",
+        title: "Quiz para principiantes 2",
         url: `${BASE_URL}/test/2` 
      
     },
     {
-        title: "Test 3",
+      title: "Quiz para principiantes 3",
         url: `${BASE_URL}/test/3` 
 
     },
     {
-        title: "Test 4",
+      title: "Quiz para principiantes 4",
         url: `${BASE_URL}/test/4` 
 
     },
     {
-        title: "Test 5",
+      title: "Quiz para principiantes 5",
         url: `${BASE_URL}/test/5` 
 
     },

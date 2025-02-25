@@ -42,12 +42,12 @@ function Test1() {
   const allAnswersSelected = selectedAnswers.length === quizQuestions.length && !selectedAnswers.includes(undefined);
 
   return (
-    <div className="max-w-2xl mx-auto py-6 px-4">
+    <div className="max-w-2xl mx-auto py-6 px-4 ">
       <form onSubmit={handleSubmit}>
         {quizQuestions.map((question, index) => (
           <div key={index} className="mb-6 flex flex-col items-start gap-2">
-                <Label className="text-lg font-semibold "> {/* Make the label text larger */}
-             {index+1}<span className="text-2xl mr-2">.</span>{question.question}
+                <Label className="text-lg font-thin "> {/* Make the label text larger */}
+             {index+1}<span className="text-2xl  mr-2">.</span>{question.question}
             </Label>
             <RadioGroup
               value={selectedAnswers[index]?.toString() || ""} // Convert number to string
@@ -63,11 +63,12 @@ function Test1() {
                     <RadioGroupItem
                       value={optionIndex.toString()}
                       id={`option-${index}-${optionIndex}`}
+                      disabled={submitted}
                       className={`dark:bg-white w-5 h-5 relative peer ${submitted && isCorrect ? "bg-green-500" : ""} ${submitted && isIncorrect ? "bg-red-500" : ""}`}
                     />
                     <Label
                       htmlFor={`option-${index}-${optionIndex}`}
-                      className={`text-lg ${submitted && isCorrect ? "text-green-500" : submitted && isIncorrect ? "text-red-500" : ""} `}
+                      className={`text-xl font-mono ${submitted && isCorrect ? "text-green-500" : submitted && isIncorrect ? "text-red-500" : ""} `}
                     >
                       {option}
                     </Label>
