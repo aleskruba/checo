@@ -8,7 +8,7 @@ const items = {
   title: "Principiantes II ",
   content: [
     { title: "La conjugación de los verbos", url: `${BASE_URL}/lesson/13` },
-    { title: "Próximamente, nuevas lecciones estarán disponibles...", url: `${BASE_URL}/intermedio/1` },
+    { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     
   ],
