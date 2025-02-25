@@ -18,7 +18,8 @@ const items = {
     { title: "Los plurales/sustantivos II", url: `${BASE_URL}/lesson/9` },
     { title: 'El verbo "mít" + acusativo', url: `${BASE_URL}/lesson/10`},
     { title: 'El verbo "vidět" + acusativo', url: `${BASE_URL}/lesson/11`},
-    
+    { title: 'Verbos que usan el acusativo', url: `${BASE_URL}/lesson/12` },
+
   ],
 };
 

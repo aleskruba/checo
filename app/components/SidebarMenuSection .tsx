@@ -21,40 +21,41 @@ const SidebarMenuSection = ({ title, content, closeSheet }: SidebarMenuSectionPr
 
   return (
     <SidebarMenuItem>
-      <Collapsible defaultOpen={false}>
-        <CollapsibleTrigger asChild>
-          <SidebarMenuButton>
-            <span className="flex gap-2 items-center justify-between w-full" onClick={handleToggle}>
-              <h1 className="text-base">{title}</h1>
-              {isOpen ? (
-                <ChevronDown className="w-4 h-4" />
-              ) : (
-                <ChevronRight className="w-4 h-4" />
-              )}
-            </span>
-          </SidebarMenuButton>
-        </CollapsibleTrigger>
-        <CollapsibleContent>
-          <SidebarMenuSub>
-            {content.map((item, index) => {
-       
-                    const isActive = new URL(item.url).pathname === pathname;
- 
-              return (
-                <SidebarMenuSubItem key={index}>
-                  <Link
-                    href={item.url}
-                    className={`flex items-center gap-2 hover:text-blue-500 ${isActive ? "text-blue-500 font-bold" : ""}`}
-                    onClick={() => closeSheet()} // Close the sheet when an item is clicked
-                  >
-                    <span>{item.title}</span>
-                  </Link>
-                </SidebarMenuSubItem>
-              );
-            })}
-          </SidebarMenuSub>
-        </CollapsibleContent>
-      </Collapsible>
+   <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+  <CollapsibleTrigger asChild>
+    <SidebarMenuButton>
+      <span className="flex gap-2 items-center justify-between w-full">
+        <h1 className="text-base">{title}</h1>
+        {isOpen ? (
+          <ChevronDown className="w-4 h-4" />
+        ) : (
+          <ChevronRight className="w-4 h-4" />
+        )}
+      </span>
+    </SidebarMenuButton>
+  </CollapsibleTrigger>
+  <CollapsibleContent>
+    <SidebarMenuSub>
+      {content.map((item, index) => {
+        const isActive = new URL(item.url).pathname === pathname;
+        return (
+          <SidebarMenuSubItem key={index}>
+            <Link
+              href={item.url}
+              className={`flex items-center gap-2 hover:text-blue-500 ${
+                isActive ? "text-blue-500 font-bold" : ""
+              }`}
+              onClick={closeSheet}
+            >
+              <span>{item.title}</span>
+            </Link>
+          </SidebarMenuSubItem>
+        );
+      })}
+    </SidebarMenuSub>
+  </CollapsibleContent>
+</Collapsible>
+
     </SidebarMenuItem>
   );
 };

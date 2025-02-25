@@ -133,8 +133,8 @@ function lesson11() {
         <h3 className="text-lg font-semibold text-orange-700">🟠 Género femenino (Rod ženský)</h3>
         <p className="mt-2">En el caso acusativo, los sustantivos femeninos cambian su terminación:</p>
         <ul className="list-disc list-inside ml-4">
-            <li><strong>Si termina en "a" → cambia a "u":</strong> <i>žena → ženu</i>, <i>kniha → knihu</i></li>
-            <li><strong>Si termina en "e" → cambia a "i":</strong> <i>růže → růži</i>, <i>ulice → ulici</i></li>
+            <li><strong>Si termina en "a" → cambia a "u":</strong> <i>žena → vidím ženu</i>, <i>kniha → vidím knihu</i></li>
+            <li><strong>Si termina en "e" → cambia a "i":</strong> <i>růže → vidím růži</i>, <i>ulice → vidím ulici</i></li>
             <li><strong>Excepción:</strong> Sustantivos inanimados con terminación <i>-e</i> o <i>-i</i> no cambian: <i>místnost → místnost</i>, <i>kost → kost</i></li>
         </ul>
         </div>
@@ -143,17 +143,16 @@ function lesson11() {
           <h3 className="text-lg font-semibold text-yellow-700">🟡 Género neutro (Rod střední)</h3>
           <p className="mt-2">Normalmente, la terminación no cambia:</p>
           <ul className="list-disc list-inside ml-4">
-            <li><i>město → město</i>, <i>auto → auto</i>, <i>dítě → dítě</i></li>
-            <li><strong>Excepción:</strong> Pronombres y algunos adjetivos: <i>to → to</i>, <i>moje → moje</i></li>
-          </ul>
+            <li><i>město → vidím město</i>, <i>auto → vidím auto</i>, <i>dítě → vidím dítě</i></li>
+            </ul>
         </div>
 
         <div className="p-4 bg-blue-100 rounded-lg">
           <h3 className="text-lg font-semibold text-blue-700">🔵 Género masculino (Rod mužský)</h3>
           <p className="mt-2">Diferencia entre sustantivos animados e inanimados:</p>
           <ul className="list-disc list-inside ml-4">
-            <li><strong>Animado:</strong> Cambia la terminación: <i>vidím pán → vidím pána</i>, <i>muž → muže</i>, <i>pes → psa</i></li>
-            <li><strong>Inanimado:</strong> La terminación no cambia: <i>vidím stůl → vidím stůl</i>, <i>hrad → hrad</i></li>
+            <li><strong>Animado:</strong> Cambia la terminación: <i>pán → vidím pána</i>, <i>muž → vidím muže</i>, <i>pes → vidím psa</i></li>
+            <li><strong>Inanimado:</strong> La terminación no cambia: <i>stůl → vidím stůl</i>, <i>hrad → vidím hrad</i></li>
           </ul>
         </div>
       </div>

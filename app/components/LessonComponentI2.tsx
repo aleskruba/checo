@@ -7,7 +7,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 const items = {
   title: "Principiantes II ",
   content: [
-    { title: "Algo", url: `${BASE_URL}/lesson/1` },
+    { title: "La conjugación de los verbos", url: `${BASE_URL}/lesson/13` },
+    { title: "Próximamente, nuevas lecciones estarán disponibles...", url: `${BASE_URL}/intermedio/1` },
 
     
   ],
