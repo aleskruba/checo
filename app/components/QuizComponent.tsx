@@ -136,9 +136,9 @@ function Quiz({ questions }: QuizProps) {
       <div className="flex md:justify-start justify-center">
         {submitted && (
           <section className="mt-6">
-            <h2 className="text-xl font-thin">
+            <h2 className="text-lg font-thin">
               Tvoje skóre (Tu resultado es):{" "}
-              <span className="text-xl font-semibold">
+              <span className="text-lg font-semibold">
                 <span className="text-green-500 text-3xl">{score}</span> / {questions.length}
               </span>
             </h2>
