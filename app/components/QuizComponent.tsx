@@ -146,7 +146,7 @@ function Quiz({ questions }: QuizProps) {
         )}
       </div>
 
-      <div className="flex md:justify-start justify-center">
+      <div className="flex md:justify-start justify-center pb-8">
   {submitted && (
     <Image
       src={
