@@ -33,6 +33,11 @@ const items = {
         url: `${BASE_URL}/test/5` 
 
     },
+    {
+      title: "Quiz para principiantes 6",
+        url: `${BASE_URL}/test/6` 
+
+    },
   ],
 };export function TestComponent({ closeSheet }: { closeSheet: () => void }) {
 

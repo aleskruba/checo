@@ -1,9 +1,20 @@
-import React from 'react'
+"use client"
 
-function lesson5() {
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { quizQuestions } from "./test5";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import Quiz from "@/app/components/QuizComponent";
+
+function Test5() {
+
+
   return (
-    <div>lesson5</div>
-  )
+    <div className="">
+    <Quiz questions={quizQuestions} />
+    </div>
+  );
 }
 
-export default lesson5
+export default Test5;

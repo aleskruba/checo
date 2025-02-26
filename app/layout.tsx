@@ -71,7 +71,7 @@ export default function LocaleLayout({
       <body
         suppressHydrationWarning
         className={`text-center pb-4 
-dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-amber-900 
+dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
             bg-gradient-to-b from-gray-100 via-beige-50 to-gray-200
         ${poppins.className}`}
       >
