@@ -3,6 +3,7 @@
 import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
+import { useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -12,6 +13,8 @@ interface DialogLine {
 }
 function Conversations1() {
   const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
+  const [isPlayingOne,setIsPlayingOne] = useState(false)
+
   const dialog = [
     { name: "Pavel", text: "Ahoj! Já jsem Pavel. Jak se jmenuješ?", es: "¡Hola! Yo soy Pavel. ¿Cómo te llamas?", audio: "/dialog1/cs-CZ-AntoninNeural (18).mp3" },
     { name: "Jana", text: "Ahoj! Jmenuji se Jana. Těší mě.", es: "¡Hola! Me llamo Jana. Mucho gusto.", audio: "/dialog1/cs-CZ-VlastaNeural (78).mp3" },
@@ -24,12 +27,25 @@ function Conversations1() {
     { name: "Pavel", text: "To je zajímavé!", es: "¡Qué interesante!", audio:"/dialog1/cs-CZ-AntoninNeural (22).mp3"  },
   ];
 
-  
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
 
+  const playAudio = (audioUrl: string): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      setIsPlayingOne(true);  // Začneme přehrávat zvuk
+      const audio = new Audio(audioUrl);
+      audio.play();
+  
+      audio.onended = () => {
+        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
+        resolve();  // Promise se vyřeší
+      };
+  
+      audio.onerror = (error) => {
+        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
+        reject(error);  // Pokud dojde k chybě, Promise se odmítne
+      };
+    });
+  };
+  
   return (
     <div className='flex w-full  flex-col items-center min-h-screen px-0 md:px-12'>
 
@@ -38,9 +54,9 @@ function Conversations1() {
         {!isPlayingAll ? (
         <button
           onClick={() => playAllAudio(dialog)} // Přehrání celého dialogu
-          className={`${isPlayingAll ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+          className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
           aria-label="Play All Audio"
-          disabled={isPlayingAll} // Zakázání tlačítka při přehrávání celého dialogu
+          disabled={isPlayingAll || isPlayingOne} // Zakázání tlačítka při přehrávání celého dialogu
         >
           <FaPlay size={20} />
         </button>
@@ -67,9 +83,9 @@ function Conversations1() {
                 <span className={`font-semibold text-xs md:text-base pr-2 ${line.name === "Jana" ? "flex justify-start md:justify-end w-full  md:pr-8  text-pink-700 dark:text-pink-300" : "text-gray-600 dark:text-gray-400"} `}> <span className='mr-1'>{line.name}:</span> <span className='font-normal  first-letter: text-black dark:text-white'>{line.text}</span></span>
               <button
                 onClick={() => playAudio(line.audio)}
-                className={`${isPlayingAll ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
                 aria-label={`Play ${line.name} Audio`}
-                disabled={isPlayingAll}
+                disabled={isPlayingAll || isPlayingOne}
               >
                 <FaPlay size={20} />
               </button>

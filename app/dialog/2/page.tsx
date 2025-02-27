@@ -3,6 +3,7 @@
 import { FaStop } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
+import { useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -13,6 +14,8 @@ interface DialogLine {
 
 const Conversations2: React.FC = () => {
   const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
+    const [isPlayingOne,setIsPlayingOne] = useState(false)
+  
   const dialog: DialogLine[] = [
     { name: "Tomáš", text: "Ahoj! Jak se máš?", es: "¡Hola! ¿Cómo estás?", audio: "/dialog2/cs-CZ-AntoninNeural (23).mp3" },
     { name: "Eva", text: "Ahoj! Mám se dobře. A ty?", es: "¡Hola! Estoy bien. ¿Y tú?", audio: "/dialog2/cs-CZ-VlastaNeural (82).mp3" },
@@ -24,22 +27,34 @@ const Conversations2: React.FC = () => {
     { name: "Eva", text: "Ty taky! Ahoj!", es: "¡Tú también! ¡Adiós!", audio: "/dialog2/cs-CZ-VlastaNeural (85).mp3" },
   ];
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
+  const playAudio = (audioUrl: string): Promise<void> => {
+    return new Promise((resolve, reject) => {
+      setIsPlayingOne(true);  // Začneme přehrávat zvuk
+      const audio = new Audio(audioUrl);
+      audio.play();
+  
+      audio.onended = () => {
+        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
+        resolve();  // Promise se vyřeší
+      };
+  
+      audio.onerror = (error) => {
+        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
+        reject(error);  // Pokud dojde k chybě, Promise se odmítne
+      };
+    });
   };
-
   return (
     <div className="flex w-full flex-col items-center min-h-screen px-0 md:px-12">
       <div className="flex justify-center gap-4 text-base">
         <h1 className="font-semibold">Reproducir el diálogo completo</h1>
         {!isPlayingAll ? (
         <button
-          onClick={() => playAllAudio(dialog)} // Přehrání celého dialogu
-          className={`${isPlayingAll ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
-          aria-label="Play All Audio"
-          disabled={isPlayingAll} // Zakázání tlačítka při přehrávání celého dialogu
-        >
+        onClick={() => playAllAudio(dialog)} // Přehrání celého dialogu
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        aria-label="Play All Audio"
+        disabled={isPlayingAll || isPlayingOne} // Zakázání tlačítka při přehrávání celého dialogu
+      >
           <FaPlay size={20} />
         </button>
         ): (
@@ -66,11 +81,11 @@ const Conversations2: React.FC = () => {
                   <span className="font-normal first-letter: text-black dark:text-white">{line.text}</span>
                 </span>
                 <button
-                  onClick={() => playAudio(line.audio)}
-                  className={`${isPlayingAll ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
-                  aria-label={`Play ${line.name} Audio`}
-                  disabled={isPlayingAll} // Zakázání tlačítka při přehrávání celého dialogu
-                >
+                onClick={() => playAudio(line.audio)}
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                aria-label={`Play ${line.name} Audio`}
+                disabled={isPlayingAll || isPlayingOne}
+              >
                   <FaPlay size={20} />
                 </button>
               </div>
