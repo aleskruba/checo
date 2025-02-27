@@ -26,7 +26,7 @@ import { DialogComponent } from "./components/DialogComponent";
 import ViajerosComponent from "./components/ViajerosComponent";
 import { IntermedioComponent } from "./components/IIntermedioComponent";
 import { LessonComponent2 } from "./components/LessonComponentI2";
-
+import { AudioProvider } from "./context/AudioContext";
 const poppins = Poppins({
   weight: "300",
   subsets: ["latin"],
@@ -74,7 +74,7 @@ export default function LocaleLayout({
 dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
             bg-gradient-to-b from-gray-100 via-beige-50 to-gray-200
         ${poppins.className}`}
-      >
+      > <AudioProvider> 
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -234,6 +234,7 @@ dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
             <Footer />
           </div>
         </ThemeProvider>
+        </AudioProvider>
       </body>
     </html>
   );
