@@ -57,9 +57,9 @@ const Conversations2: React.FC = () => {
         <h2 className="text-xl font-bold text-center mb-4 text-gray-900 dark:text-white">Krátký rozhovor/Diálogo corto</h2>
         <div className="space-y-3">
           {dialog.map((line, index) => (
-            <div className="w-full flex flex-col" key={index}>
+            <div className="w-full flex flex-col rounded-xl shadow-md py-2 px-2" key={index}>
               <div
-                className={`flex items-center justify-between p-3 rounded-xl shadow-md ${line.name === "Pavel" ? "" : " w-full  "}`}
+                className={`flex  justify-between   ${line.name === "Pavel" ? "" : " w-full  "}`}
               >
                 <span className={`font-semibold text-xs md:text-base pr-2 ${line.name === "Eva" ? "flex justify-start md:justify-end w-full  md:pr-8  text-pink-700 dark:text-pink-300" : "text-gray-600 dark:text-gray-400"} `}>
                   <span className="mr-1">{line.name}:</span>
