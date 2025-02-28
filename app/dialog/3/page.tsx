@@ -1,5 +1,5 @@
 // src/components/Conversations2.tsx
-/* "use client";
+"use client";
 import { FaStop } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
@@ -102,4 +102,3 @@ const Conversations3: React.FC = () => {
 }
 
 export default Conversations3;
- */
