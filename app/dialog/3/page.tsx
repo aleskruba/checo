@@ -11,7 +11,7 @@ interface DialogLine {
   es: string;
   audio: string;
 }
-//test
+
 const Conversations3: React.FC = () => {
   const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
     const [isPlayingOne,setIsPlayingOne] = useState(false)
