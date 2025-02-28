@@ -60,7 +60,7 @@ export default function LocaleLayout({
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
-
+        <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
         <meta
             property="og:description"
             content="Sumérgete en el idioma checo con cursos diseñados para hispanohablantes. Aprende gramática, mejora tu pronunciación y practica con diálogos reales."
@@ -79,6 +79,7 @@ export default function LocaleLayout({
         </script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"
      crossOrigin="anonymous"></script>
+
       </Head>
       <body
         suppressHydrationWarning
