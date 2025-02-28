@@ -9,9 +9,9 @@ const items = {
   content: [
     { title: "Presentación", url: `${BASE_URL}/dialog/1` },
     { title: "Diálogo corto", url: `${BASE_URL}/dialog/2` },
-    { title: "conversation 3", url: `${BASE_URL}/dialog/3` },
-    { title: "conversation 4", url: `${BASE_URL}/dialog/4` },
-    { title: "conversation 5", url: `${BASE_URL}/dialog/5` },
+    { title: "En el café", url: `${BASE_URL}/dialog/3` },
+    { title: "En la tienda", url: `${BASE_URL}/dialog/4` },
+    { title: "¿Dónde está la estación ...", url: `${BASE_URL}/dialog/5` },
   ],
 };
 
