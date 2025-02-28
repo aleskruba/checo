@@ -67,6 +67,18 @@ export default function LocaleLayout({
           />
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RP3H6ZD9NZ');
+          `}
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"
+     crossOrigin="anonymous"></script>
       </Head>
       <body
         suppressHydrationWarning
