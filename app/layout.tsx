@@ -20,7 +20,7 @@ import { Menu } from "lucide-react";
 import { LessonComponent } from "./components/LessonComponent";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { TestComponent } from "./components/TestComponent";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ThemeComponent } from "./components/ThemeComponent";
 import { DialogComponent } from "./components/DialogComponent";
 import ViajerosComponent from "./components/ViajerosComponent";
@@ -44,8 +44,13 @@ export default function LocaleLayout({
   const closeSheet = () => {
     setIsSheetOpen(false); // Close the sheet
   };
+
+
+
+  
   return (
     <html lang="cz" suppressHydrationWarning>
+
 
       <head>
       <title>Aprender checo con Aleš</title>
@@ -71,7 +76,7 @@ export default function LocaleLayout({
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
 
      
-
+{/* 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
         <script>
           {`
@@ -83,7 +88,7 @@ export default function LocaleLayout({
         </script>
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
-     crossOrigin="anonymous"></script>
+     crossOrigin="anonymous"></script> */}
       </head>
       <Head>
         <title>Aprender checo con Aleš</title>
