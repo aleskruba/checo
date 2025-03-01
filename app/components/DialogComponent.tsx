@@ -12,6 +12,7 @@ const items = {
     { title: "En el café", url: `${BASE_URL}/dialog/3` },
     { title: "En la tienda", url: `${BASE_URL}/dialog/4` },
     { title: "¿Dónde está la estación ...", url: `${BASE_URL}/dialog/5` },
+    { title: "En el aeropuerto", url: `${BASE_URL}/dialog/6` },
   ],
 };
 
