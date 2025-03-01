@@ -57,6 +57,19 @@ export default function LocaleLayout({
       <head>
       <title>Aprender checo con Aleš</title>
       <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
+      <meta 
+  httpEquiv="Content-Security-Policy" 
+  content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googlesyndication.com https://*.google-analytics.com https://*.google.com https://*.gstatic.com;
+  style-src 'self' 'unsafe-inline' https://*.googleapis.com;
+  img-src 'self' data: https://*.google.com https://*.googleusercontent.com https://*.gstatic.com https://*.googlesyndication.com;
+  frame-src 'self' https://*.googlesyndication.com https://*.google.com;
+  connect-src 'self' https://aprendercheco.com https://*.google-analytics.com https://*.googlesyndication.com;
+  " 
+/>
+
+
 
       <meta
           name="description"
