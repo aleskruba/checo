@@ -21,7 +21,7 @@ export default async function Home() {
   <p className="mb-2">
     En esta página encontrarás las bases de la gramática checa, vocabulario útil y frases comunes. También podrás escuchar las frases y poner a prueba tus conocimientos con ejercicios interactivos.
   </p>
-  <div className="mb-4 flex items-center justify-start">
+{/*   <div className="mb-4 flex items-center justify-start">
   <p className="inline">
     Si estás interesado, también ofrezco clases de conversación en checo a través de la plataforma{" "}
     <a href="https://www.italki.com" target="_blank" rel="noopener noreferrer" className="inline">
@@ -33,7 +33,7 @@ export default async function Home() {
       className="inline-block w-12 h-auto ml-2 p-1" // Adjust size and margin-left as needed
     />
   </p>
-</div>
+</div> */}
 
   <p>Todo el contenido de esta página es completamente gratis. ¡Te deseo mucho éxito en tu aprendizaje!</p>
 </section>
@@ -52,7 +52,7 @@ export default async function Home() {
     Na těchto stránkách najdete základy české gramatiky, užitečná slovíčka a fráze. Zároveň budete moci poslouchat jednotlivé fráze a vyzkoušet si testy na ověření vašich znalostí.
   </p>
 
-  <div className="mb-4 flex items-center">
+{/*   <div className="mb-4 flex items-center">
   <p className="mr-2">
     Pokud budete mít zájem, nabízím také konverzační kurzy češtiny přes aplikaci{" "}
     <a href="https://www.italki.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
@@ -64,7 +64,7 @@ export default async function Home() {
       />
     </a>
   </p>
-</div>
+</div> */}
   <p>Vše na této stránce je pro vás zcela zdarma. Přeji hodně štěstí při studiu!</p>
 </section>
 
