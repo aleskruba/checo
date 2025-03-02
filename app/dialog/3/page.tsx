@@ -68,7 +68,7 @@ const Conversations3: React.FC = () => {
         )}
       </div>
 
-      <section className="mt-4 p-1 shadow-lg rounded-2xl pt-4 dark:bg-gray-800 bg-white w-full md:w-[60%]">
+      <section className="mt-4 p-1 shadow-lg rounded-2xl pt-4 dark:bg-gray-800 bg-white w-full md:w-[80%]">
         <h2 className="text-xl font-bold text-center mb-4 text-gray-900 dark:text-white">V kavárně/En el café</h2>
         <div className="space-y-3">
           {dialog.map((line, index) => (

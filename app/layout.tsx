@@ -29,6 +29,7 @@ import ViajerosComponent from "./components/ViajerosComponent";
 import { IntermedioComponent } from "./components/IIntermedioComponent";
 import { LessonComponent2 } from "./components/LessonComponentI2";
 import { AudioProvider } from "./context/AudioContext";
+import SubscribeComponent from "./components/SubscribeComponent";
 const poppins = Poppins({
   weight: "300",
   subsets: ["latin"],
@@ -199,7 +200,7 @@ dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
                         <ThemeComponent closeSheet={closeSheet} />
-                        <div className="mt-16 ">
+                                    <div className="mt-16 ">
                          <Image
                     src={YouTube}
                     alt="Logo"

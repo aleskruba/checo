@@ -1,9 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
+import SubscribeComponent from './SubscribeComponent';
 
 function Footer() {
   return (
-    <footer className="mt-4 bg-gray-300  dark:bg-gray-800 text-gray-800 dark:text-white text-center w-full py-4  absolute b-0">
+    <footer className=" bg-gray-300  dark:bg-gray-800 text-gray-800 dark:text-white text-center w-full py-4  absolute b-0">
+      <div className='flex justify-center '>
+      <SubscribeComponent/>
+      </div>
       <div className="container mx-auto px-4">
         <div className="space-y-2">
           <p className="text-sm">
