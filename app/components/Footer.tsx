@@ -4,7 +4,7 @@ import SubscribeComponent from './SubscribeComponent';
 
 function Footer() {
   return (
-    <footer className=" bg-gray-300  dark:bg-gray-800 text-gray-800 dark:text-white text-center w-full py-4  absolute b-0">
+    <footer className=" bg-gray-300 mt-2 dark:bg-gray-800 text-gray-800 dark:text-white text-center w-full py-4  absolute b-0">
       <div className='flex justify-center '>
       <SubscribeComponent/>
       </div>
