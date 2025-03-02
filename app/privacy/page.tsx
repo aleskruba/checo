@@ -4,39 +4,7 @@ function Page() {
   return (
     <div className="container mx-auto p-4">
 
-    <section className="mb-8">
-      <h2 className="text-2xl font-bold mb-4">Zásady ochrany osobních údajů</h2>
-      <div className="space-y-4 text-justify">
-        <h3 className="text-xl font-semibold">Shromažďování a zpracování osobních údajů</h3>
-        <p>
-          Shromažďujeme Vaši e-mailovou adresu pouze za účelem zasílání novinek, informací o našich produktech a službách a jiných marketingových materiálů. Tato data zpracováváme na základě Vašeho souhlasu, který udělujete při přihlášení k odběru našeho newsletteru.
-        </p>
-        <h3 className="text-xl font-semibold">Účel zpracování osobních údajů</h3>
-        <p>
-          Vaše e-mailová adresa bude použita pouze pro účely zasílání newsletteru. Vaše osobní údaje nebudou předávány třetím stranám bez Vašeho výslovného souhlasu, kromě poskytovatelů služeb pro zasílání newsletterů (např. e-mailových platforem), které jsme si najali na správu našich marketingových kampaní.
-        </p>
-        <h3 className="text-xl font-semibold">Souhlas a právo na jeho odvolání</h3>
-        <p>
-          Při přihlášení k odběru newsletteru souhlasíte s tím, že zpracováváme Vaši e-mailovou adresu pro uvedený účel. Tento souhlas můžete kdykoli odvolat kliknutím na odkaz pro odhlášení, který je součástí každého zaslaného newsletteru, nebo kontaktováním nás na uvedených kontaktech.
-        </p>
-        <h3 className="text-xl font-semibold">Práva subjektu údajů</h3>
-        <p>
-          Máte právo požadovat přístup k Vašim osobním údajům, jejich opravu, výmaz nebo omezení jejich zpracování. Máte také právo na přenositelnost údajů a právo vznést námitku proti jejich zpracování. Pokud chcete využít tato práva, obraťte se na nás pomocí kontaktních údajů uvedených na této stránce.
-        </p>
-        <h3 className="text-xl font-semibold">Cookies a sledování</h3>
-        <p>
-          Tento web používá cookies k zajištění lepšího uživatelského zážitku, analýze návštěvnosti a poskytování personalizovaného obsahu. Používáme cookies třetích stran (např. Google Analytics), které sbírají anonymní údaje o Vašem chování na webu. Používáním této stránky souhlasíte s použitím cookies v souladu s touto politikou ochrany osobních údajů.
-        </p>
-        <h3 className="text-xl font-semibold">Údaje o bezpečnosti</h3>
-        <p>
-          Vaše osobní údaje chráníme před neoprávněným přístupem, použitím nebo zveřejněním. Používáme odpovídající technická a organizační opatření k zajištění bezpečnosti Vašich údajů.
-        </p>
-        <h3 className="text-xl font-semibold">Doba uchovávání osobních údajů</h3>
-        <p>
-          Vaše e-mailová adresa bude uchovávána po dobu, po kterou budete odběratelem našeho newsletteru, nebo dokud neodvoláte svůj souhlas. Jakmile zrušíte odběr nebo si odhlásíte souhlas, Vaše údaje budou vymazány.
-        </p>
-      </div>
-    </section>
+
   
  
     <section className="mb-8">
@@ -104,6 +72,40 @@ function Page() {
         <h3 className="text-xl font-semibold">Retención de datos</h3>
         <p>
           Su dirección de correo electrónico se conservará mientras esté suscrito al boletín o hasta que retire su consentimiento. Una vez que se dé de baja o retire su consentimiento, sus datos serán eliminados.
+        </p>
+      </div>
+    </section>
+
+    <section className="mb-8">
+      <h2 className="text-2xl font-bold mb-4">Zásady ochrany osobních údajů</h2>
+      <div className="space-y-4 text-justify">
+        <h3 className="text-xl font-semibold">Shromažďování a zpracování osobních údajů</h3>
+        <p>
+          Shromažďujeme Vaši e-mailovou adresu pouze za účelem zasílání novinek, informací o našich produktech a službách a jiných marketingových materiálů. Tato data zpracováváme na základě Vašeho souhlasu, který udělujete při přihlášení k odběru našeho newsletteru.
+        </p>
+        <h3 className="text-xl font-semibold">Účel zpracování osobních údajů</h3>
+        <p>
+          Vaše e-mailová adresa bude použita pouze pro účely zasílání newsletteru. Vaše osobní údaje nebudou předávány třetím stranám bez Vašeho výslovného souhlasu, kromě poskytovatelů služeb pro zasílání newsletterů (např. e-mailových platforem), které jsme si najali na správu našich marketingových kampaní.
+        </p>
+        <h3 className="text-xl font-semibold">Souhlas a právo na jeho odvolání</h3>
+        <p>
+          Při přihlášení k odběru newsletteru souhlasíte s tím, že zpracováváme Vaši e-mailovou adresu pro uvedený účel. Tento souhlas můžete kdykoli odvolat kliknutím na odkaz pro odhlášení, který je součástí každého zaslaného newsletteru, nebo kontaktováním nás na uvedených kontaktech.
+        </p>
+        <h3 className="text-xl font-semibold">Práva subjektu údajů</h3>
+        <p>
+          Máte právo požadovat přístup k Vašim osobním údajům, jejich opravu, výmaz nebo omezení jejich zpracování. Máte také právo na přenositelnost údajů a právo vznést námitku proti jejich zpracování. Pokud chcete využít tato práva, obraťte se na nás pomocí kontaktních údajů uvedených na této stránce.
+        </p>
+        <h3 className="text-xl font-semibold">Cookies a sledování</h3>
+        <p>
+          Tento web používá cookies k zajištění lepšího uživatelského zážitku, analýze návštěvnosti a poskytování personalizovaného obsahu. Používáme cookies třetích stran (např. Google Analytics), které sbírají anonymní údaje o Vašem chování na webu. Používáním této stránky souhlasíte s použitím cookies v souladu s touto politikou ochrany osobních údajů.
+        </p>
+        <h3 className="text-xl font-semibold">Údaje o bezpečnosti</h3>
+        <p>
+          Vaše osobní údaje chráníme před neoprávněným přístupem, použitím nebo zveřejněním. Používáme odpovídající technická a organizační opatření k zajištění bezpečnosti Vašich údajů.
+        </p>
+        <h3 className="text-xl font-semibold">Doba uchovávání osobních údajů</h3>
+        <p>
+          Vaše e-mailová adresa bude uchovávána po dobu, po kterou budete odběratelem našeho newsletteru, nebo dokud neodvoláte svůj souhlas. Jakmile zrušíte odběr nebo si odhlásíte souhlas, Vaše údaje budou vymazány.
         </p>
       </div>
     </section>
