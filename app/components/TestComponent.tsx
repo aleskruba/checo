@@ -34,13 +34,18 @@ const items = {
 
     },
     {
-      title: "Quiz para principiantes 6",
+      title: "Plural de sustantivos I",
         url: `${BASE_URL}/test/6` 
 
     },
     {
-      title: "Quiz para principiantes 7",
+      title: "Plural de sustantivos II",
         url: `${BASE_URL}/test/7` 
+
+    },
+    {
+      title: "La conjug. de los verbos",
+        url: `${BASE_URL}/test/8` 
 
     },
   ],
