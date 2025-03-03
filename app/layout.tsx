@@ -72,7 +72,6 @@ export default function LocaleLayout({
       <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
      crossOrigin="anonymous"></Script>
 
-
       <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
       <meta 
   httpEquiv="Content-Security-Policy" 
@@ -86,15 +85,6 @@ export default function LocaleLayout({
   " 
 />
 
-{/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RP3H6ZD9NZ');
-          `}
-        </script> */}
 
       <meta
           name="description"
@@ -120,18 +110,9 @@ export default function LocaleLayout({
       </head>
       <Head>
         <title>Aprender checo con Aleš</title>
-      {/*   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-RP3H6ZD9NZ');
-          `}
-        </script> */}
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
-     crossOrigin="anonymous"></script>
+
+ 
 
         <meta
           name="description"
