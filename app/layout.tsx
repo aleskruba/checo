@@ -11,6 +11,7 @@ import Flag from "@/public/czflag.png";
 import Image from "next/image";
 import Link from "next/link";
 import CookieBanner from "./components/Cookie";
+import Script from "next/script"; // Importujeme Script z next/script
 
 import {
   Sheet,
@@ -53,10 +54,25 @@ export default function LocaleLayout({
   
   return (
     <html lang="cz" suppressHydrationWarning>
-
+  
 
       <head>
       <title>Aprender checo con Aleš</title>
+
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-RP3H6ZD9NZ');
+        `}
+      </Script>
+
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
+     crossOrigin="anonymous"></Script>
+
+
       <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
       <meta 
   httpEquiv="Content-Security-Policy" 
@@ -104,7 +120,7 @@ export default function LocaleLayout({
       </head>
       <Head>
         <title>Aprender checo con Aleš</title>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
+      {/*   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
         <script>
           {`
             window.dataLayer = window.dataLayer || [];
@@ -112,7 +128,7 @@ export default function LocaleLayout({
             gtag('js', new Date());
             gtag('config', 'G-RP3H6ZD9NZ');
           `}
-        </script>
+        </script> */}
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
      crossOrigin="anonymous"></script>
@@ -298,7 +314,10 @@ dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
                     </div>
                   </header>
 
-                  <main className="">{children}</main>
+                  <main className="">
+
+                    {children}
+                    </main>
                 </div>
               </div>
             </SidebarProvider>
