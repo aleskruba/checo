@@ -72,7 +72,7 @@ export default function LocaleLayout({
       <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
      crossOrigin="anonymous"></Script>
 
-      <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
+{/*       <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
       <meta 
   httpEquiv="Content-Security-Policy" 
   content="
@@ -83,7 +83,7 @@ export default function LocaleLayout({
   frame-src 'self' https://*.googlesyndication.com https://*.google.com;
   connect-src 'self' https://aprendercheco.com https://*.google-analytics.com https://*.googlesyndication.com;
   " 
-/>
+/> */}
 
 
       <meta
