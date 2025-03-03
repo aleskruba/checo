@@ -70,7 +70,15 @@ export default function LocaleLayout({
   " 
 />
 
-
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ"></script>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RP3H6ZD9NZ');
+          `}
+        </script>
 
       <meta
           name="description"
