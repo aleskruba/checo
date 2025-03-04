@@ -2,18 +2,17 @@
 
 import Link from 'next/link'
 import { useSearchParams, useRouter } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 
-export default function UnsubscribePage() {
+function UnsubscribeContent() {
   const [noEmail, setNoEmail] = useState(false)
   const [emailExists, setEmailExists] = useState<boolean | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [emailDeletedSuccess, setEmailDeletedSuccess] = useState(false)
-  const [delteteFunction,setDeleteFunction] = useState(false)
+  const [deleteFunction, setDeleteFunction] = useState(false)
   const searchParams = useSearchParams()
   const router = useRouter()
 
-  // Get the 'email' query parameter from the URL
   const email = searchParams.get('email')
 
   useEffect(() => {
@@ -61,9 +60,9 @@ export default function UnsubscribePage() {
       if (response.ok) {
         setEmailDeletedSuccess(true)
         setIsLoading(true)
-           setTimeout(() => {
+        setTimeout(() => {
           setEmailDeletedSuccess(false)
-          router.push('/') // Corrected navigation method
+          router.push('/') 
         }, 2000)
       } else {
         alert(`Error: ${data.error}`)
@@ -83,14 +82,14 @@ export default function UnsubscribePage() {
           La suscripción al correo electrónico ha sido cancelada exitosamente.
         </div>
       )}
-      <div className=" p-8 rounded-lg shadow-lg w-full max-w-md">
+      <div className="p-8 rounded-lg shadow-lg w-full max-w-md">
         {isLoading ? (
           <h1 className="text-xl dark:text-white text-black text-center">Espera por favor...</h1>
         ) : noEmail && !emailDeletedSuccess ? (
           <h1 className="text-xl dark:text-white text-black text-center">
             No se proporcionó ningún correo electrónico o el correo electrónico no está registrado
           </h1>
-        ) : emailExists && !delteteFunction ? (
+        ) : emailExists && !deleteFunction ? (
           <>
             <h1 className="text-2xl font-semibold text-center text-blue-400 mb-4">{email}</h1>
             <p className="text-lg dark:text-white text-black text-center mb-6">
@@ -115,10 +114,22 @@ export default function UnsubscribePage() {
           </>
         ) : (
           <>
-{!emailDeletedSuccess ?<h1 className="text-xl text-white text-center">Correo electrónico no encontrado</h1> : <h1>Gracias</h1>}
-</>
+            {!emailDeletedSuccess ? (
+              <h1 className="text-xl text-white text-center">Correo electrónico no encontrado</h1>
+            ) : (
+              <h1>Gracias</h1>
+            )}
+          </>
         )}
       </div>
     </div>
+  )
+}
+
+export default function UnsubscribePage() {
+  return (
+    <Suspense fallback={<h1 className="text-xl text-white text-center">Cargando...</h1>}>
+      <UnsubscribeContent />
+    </Suspense>
   )
 }
