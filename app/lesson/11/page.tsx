@@ -1,15 +1,28 @@
 "use client"
 
 import SectionTopComponent from '@/app/components/SectionTopComponents'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaPlay } from "react-icons/fa";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { useAudio } from "../../context/AudioContext"; 
 function lesson11() {
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
+
+const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
 
   return (
     <div className='w-full min-h-screen px-0 md:px-12  '>
@@ -33,8 +46,9 @@ function lesson11() {
                     <TableCell>
                         <button
                             onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (59).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play Já vidím Audio"
+                            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                            disabled={isPlayingAll || isPlayingOne}
+                                                        aria-label="Play Já vidím Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -46,8 +60,9 @@ function lesson11() {
                     <TableCell>
                         <button
                             onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (60).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play Ty vidíš Audio"
+                            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                            disabled={isPlayingAll || isPlayingOne}
+                                                        aria-label="Play Ty vidíš Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -59,8 +74,9 @@ function lesson11() {
                     <TableCell>
                         <button
                           onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (61).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play On vidí Audio"
+                          className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                          disabled={isPlayingAll || isPlayingOne}
+                                                      aria-label="Play On vidí Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -72,8 +88,9 @@ function lesson11() {
                     <TableCell>
                         <button
                                onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (62).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play Ona vidí Audio"
+                               className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                               disabled={isPlayingAll || isPlayingOne}
+                                                           aria-label="Play Ona vidí Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -85,8 +102,9 @@ function lesson11() {
                     <TableCell>
                         <button
                              onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (63).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play My vidíme Audio"
+                             className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                             disabled={isPlayingAll || isPlayingOne}
+                                                         aria-label="Play My vidíme Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -98,8 +116,9 @@ function lesson11() {
                     <TableCell>
                         <button
                             onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (64).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play Vy vidíte Audio"
+                            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                            disabled={isPlayingAll || isPlayingOne}
+                                                        aria-label="Play Vy vidíte Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -111,8 +130,9 @@ function lesson11() {
                     <TableCell>
                         <button
                         onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (65).mp3")}
-                            className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                            aria-label="Play Oni vidí Audio"
+                        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                        disabled={isPlayingAll || isPlayingOne}
+                                                    aria-label="Play Oni vidí Audio"
                         >
                             <FaPlay size={20} />
                         </button>
@@ -175,7 +195,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           {/* Ženský rod */}
           <tr className="bg-orange-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (66).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (66).mp3")} 
+                           className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                           disabled={isPlayingAll || isPlayingOne}
+                           aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -184,7 +207,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-orange-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (67).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (67).mp3")}
+                            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                            disabled={isPlayingAll || isPlayingOne}
+                             aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -193,7 +219,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-orange-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (68).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (68).mp3")}
+                            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                            disabled={isPlayingAll || isPlayingOne}
+                             aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -202,7 +231,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-orange-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (69).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (69).mp3")}
+                             className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                             disabled={isPlayingAll || isPlayingOne}
+                             aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -212,7 +244,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           {/* Střední rod */}
           <tr className="bg-yellow-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (70).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (70).mp3")}
+                           className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                           disabled={isPlayingAll || isPlayingOne}
+                            aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -221,7 +256,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-yellow-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (71).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (71).mp3")}
+                            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                            disabled={isPlayingAll || isPlayingOne}
+                             aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -230,7 +268,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-yellow-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (72).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (72).mp3")}
+                           className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                           disabled={isPlayingAll || isPlayingOne}
+                           aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -239,7 +280,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-yellow-100">
             <td className="text-center p-2">
-              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (73).mp3")}className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+              <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (73).mp3")} 
+                           className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                           disabled={isPlayingAll || isPlayingOne}
+                            aria-label="Play Audio">
                 <FaPlay size={20} />
               </button>
             </td>
@@ -248,7 +292,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
           </tr>
           <tr className="bg-blue-100">
   <td className="text-center p-2">
-    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (74).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (74).mp3")} 
+              className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+              disabled={isPlayingAll || isPlayingOne}
+               aria-label="Play Audio">
       <FaPlay size={20} />
     </button>
   </td>
@@ -258,7 +305,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
 
 <tr className="bg-blue-100">
   <td className="text-center p-2">
-    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (75).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (75).mp3")}
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Audio">
       <FaPlay size={20} />
     </button>
   </td>
@@ -268,7 +318,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
 
 <tr className="bg-blue-100">
   <td className="text-center p-2">
-    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (76).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (76).mp3")} 
+                 className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                 disabled={isPlayingAll || isPlayingOne}
+                  aria-label="Play Audio">
       <FaPlay size={20} />
     </button>
   </td>
@@ -278,7 +331,10 @@ Ejemplos con acusativo (caso 4) - El verbo "ver"
 
 <tr className="bg-blue-100">
   <td className="text-center p-2">
-    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (77).mp3")} className="text-blue-600 hover:text-blue-800" aria-label="Play Audio">
+    <button    onClick={() => playAudio("/lesson11/cs-CZ-VlastaNeural (77).mp3")}
+                 className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                 disabled={isPlayingAll || isPlayingOne}
+                  aria-label="Play Audio">
       <FaPlay size={20} />
     </button>
   </td>

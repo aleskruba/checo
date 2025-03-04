@@ -1,15 +1,28 @@
 "use client"
 
 import SectionTopComponent from '@/app/components/SectionTopComponents'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaPlay } from "react-icons/fa";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { useAudio } from "../../context/AudioContext"; 
 function lesson9() {
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
+
+const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
 
   return (
     <div className='w-full min-h-screen px-0 md:px-12  '>
@@ -33,8 +46,9 @@ function lesson9() {
       <TableCell>
         <button
           onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (36).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Auto Audio"
+          className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+          disabled={isPlayingAll || isPlayingOne}
+                    aria-label="Play Auto Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -47,8 +61,9 @@ function lesson9() {
       <TableCell>
         <button
       onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (9).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Město Audio"
+      className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+      disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Město Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -61,8 +76,9 @@ function lesson9() {
       <TableCell>
         <button
         onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (37).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Slovo Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                  aria-label="Play Slovo Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -75,8 +91,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (10).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -89,8 +106,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (38).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -103,8 +121,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (11).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -117,8 +136,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (39).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -130,8 +150,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (12).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -145,8 +166,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (40).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -159,8 +181,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (13).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -173,8 +196,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (41).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -188,8 +212,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (14).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -202,8 +227,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (42).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -216,8 +242,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (15).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -230,8 +257,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (43).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -244,8 +272,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (16).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -258,8 +287,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-VlastaNeural (44).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>
@@ -271,8 +301,9 @@ function lesson9() {
       <TableCell>
         <button
          onClick={() => playAudio("/lesson9/cs-CZ-AntoninNeural (17).mp3")}
-          className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-          aria-label="Play Okno Audio"
+         className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+         disabled={isPlayingAll || isPlayingOne}
+                   aria-label="Play Okno Audio"
         >
           <FaPlay size={20} />
         </button>

@@ -3,7 +3,7 @@
 import { FaStop } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -13,8 +13,8 @@ interface DialogLine {
 }
 
 const Conversations2: React.FC = () => {
-  const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
-    const [isPlayingOne,setIsPlayingOne] = useState(false)
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
   
   const dialog: DialogLine[] = [
     { name: "Tomáš", text: "Ahoj! Jak se máš?", es: "¡Hola! ¿Cómo estás?", audio: "/dialog2/cs-CZ-AntoninNeural (23).mp3" },
@@ -26,24 +26,19 @@ const Conversations2: React.FC = () => {
     { name: "Tomáš", text: "Musím jít. Měj se hezky!", es: "Tengo que irme. ¡Que tengas un buen día!", audio: "/dialog2/cs-CZ-AntoninNeural (26).mp3" },
     { name: "Eva", text: "Ty taky! Ahoj!", es: "¡Tú también! ¡Adiós!", audio: "/dialog2/cs-CZ-VlastaNeural (85).mp3" },
   ];
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
 
-  const playAudio = (audioUrl: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      setIsPlayingOne(true);  // Začneme přehrávat zvuk
-      const audio = new Audio(audioUrl);
-      audio.play();
-  
-      audio.onended = () => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
-        resolve();  // Promise se vyřeší
-      };
-  
-      audio.onerror = (error) => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
-        reject(error);  // Pokud dojde k chybě, Promise se odmítne
-      };
-    });
-  };
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
+
   return (
     <div className="flex w-full flex-col items-center min-h-screen px-0 md:px-12">
       <div className="flex justify-center gap-4 text-base">

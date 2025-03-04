@@ -3,7 +3,7 @@
 import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -12,8 +12,8 @@ interface DialogLine {
   audio: string;
 }
 function Conversations1() {
-  const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
-  const [isPlayingOne,setIsPlayingOne] = useState(false)
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
 
   const dialog = [
     { name: "Pavel", text: "Ahoj! Já jsem Pavel. Jak se jmenuješ?", es: "¡Hola! Yo soy Pavel. ¿Cómo te llamas?", audio: "/dialog1/cs-CZ-AntoninNeural (18).mp3" },
@@ -28,23 +28,20 @@ function Conversations1() {
   ];
 
 
-  const playAudio = (audioUrl: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      setIsPlayingOne(true);  // Začneme přehrávat zvuk
-      const audio = new Audio(audioUrl);
-      audio.play();
-  
-      audio.onended = () => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
-        resolve();  // Promise se vyřeší
-      };
-  
-      audio.onerror = (error) => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
-        reject(error);  // Pokud dojde k chybě, Promise se odmítne
-      };
-    });
-  };
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
+
   
   return (
     <div className='flex w-full  flex-col items-center min-h-screen px-0 md:px-12'>

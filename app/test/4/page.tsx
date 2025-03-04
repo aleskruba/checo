@@ -1,13 +1,26 @@
 "use client"
 
-import { Label } from "@/components/ui/label";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { quizQuestions } from "./test4";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import Quiz from "@/app/components/QuizComponent";
+import React, { useEffect } from 'react'
+import { useAudio } from "../../context/AudioContext"; 
+function Test4() {
 
-function Test3() {
+const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using context
+
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
 
 
   return (
@@ -17,4 +30,4 @@ function Test3() {
   );
 }
 
-export default Test3;
+export default Test4;

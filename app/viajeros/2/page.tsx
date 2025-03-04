@@ -1,16 +1,24 @@
 "use client"
-
 import SectionTopComponent from '@/app/components/SectionTopComponents'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaPlay } from "react-icons/fa";
-
+import { useAudio } from "../../context/AudioContext"; 
 function lesson2() {
+const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
 
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
   return (
     <div className='w-full min-h-screen px-0 md:px-12'>
       
@@ -27,8 +35,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Ahoj, já jsem Juan</span>
       <button
         onClick={() => playAudio("/lesson2/jsemJuan.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Ahoj Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Ahoj Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -43,8 +52,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Dobrý den, já jsem Juan</span>
       <button
         onClick={() => playAudio("/lesson2/dobrýdenjsemJaun.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Dobrý den Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Dobrý den Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -59,8 +69,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Jak se jmenuješ?</span>
       <button
         onClick={() => playAudio("/lesson2/jaksejmenujes.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Jak se jmenuješ Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Jak se jmenuješ Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -75,8 +86,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Jmenuji se Juan</span>
       <button
         onClick={() => playAudio("/lesson2/jmenujiseJuan.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Jmenuji se Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Jmenuji se Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -91,8 +103,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Těší mě</span>
       <button
         onClick={() => playAudio("/lesson2/tesime.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Těší mě Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Těší mě Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -107,8 +120,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Odkud jsi?</span>
       <button
         onClick={() => playAudio("/lesson2/odkudjsi.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Odkud jsi Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Odkud jsi Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -123,8 +137,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Jsem z Mexika</span>
       <button
         onClick={() => playAudio("/lesson2/jsemzMexika.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Jsem z Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Jsem z Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -139,7 +154,8 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Kolik je ti let?</span>
       <button
         onClick={() => playAudio("/lesson2/kolikjeti.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
         aria-label="Play Kolik je ti let Audio"
       >
         <FaPlay size={20} />
@@ -155,8 +171,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Je mi dvacet let</span>
       <button
         onClick={() => playAudio("/lesson2/jemidvacet.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Je mi let Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Je mi let Audio"
       >
         <FaPlay size={20} />
       </button>
@@ -171,8 +188,9 @@ function lesson2() {
       <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">Rád/a tě poznávám</span>
       <button
         onClick={() => playAudio("/lesson2/radtepoznavam.m4a")}
-        className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-        aria-label="Play Rád/a tě poznávám Audio"
+        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+        disabled={isPlayingAll || isPlayingOne}
+                aria-label="Play Rád/a tě poznávám Audio"
       >
         <FaPlay size={20} />
       </button>

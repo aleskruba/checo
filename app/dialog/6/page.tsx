@@ -3,7 +3,7 @@
 import { FaStop } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -13,9 +13,8 @@ interface DialogLine {
 }
 
 const Conversations5: React.FC = () => {
-  const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
-    const [isPlayingOne,setIsPlayingOne] = useState(false)
-  
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
     const dialog: DialogLine[] = [
         { name: "Letištní pracovník", text: "Dobrý den! Pasy a letenky, prosím.", es: "¡Buenos días! Pasaportes y billetes, por favor.", audio: "/dialog6/cs-CZ-VlastaNeural (97).mp3" },
         { name: "Carlos", text: "Tady jsou.", es: "Aquí están.", audio: "/dialog6/cs-CZ-AntoninNeural (38).mp3" },
@@ -31,23 +30,18 @@ const Conversations5: React.FC = () => {
       ];
       
 
-  const playAudio = (audioUrl: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      setIsPlayingOne(true);  // Začneme přehrávat zvuk
-      const audio = new Audio(audioUrl);
-      audio.play();
-  
-      audio.onended = () => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
-        resolve();  // Promise se vyřeší
-      };
-  
-      audio.onerror = (error) => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
-        reject(error);  // Pokud dojde k chybě, Promise se odmítne
-      };
-    });
-  };
+  useEffect(() => {
+     // Stop all audio when the page changes or component unmounts
+     if (isPlayingAll || isPlayingOne) {
+       stopAllAudio();
+     }
+ 
+     return () => {
+       if (isPlayingAll || isPlayingOne) {
+         stopAllAudio();
+       }
+     };
+   }, []);
   return (
     <div className="flex w-full flex-col items-center min-h-screen px-0 md:px-12">
       <div className="flex justify-center gap-4 text-base">

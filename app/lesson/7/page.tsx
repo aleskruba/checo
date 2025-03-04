@@ -1,15 +1,28 @@
 "use client"
 
 import SectionTopComponent from '@/app/components/SectionTopComponents'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaPlay } from "react-icons/fa";
+import useStopAudio from '../../hooks/useStopAudio'
+import { useAudio } from "../../context/AudioContext"; 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-function lesson7() {
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
+function lesson7() {
+const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
 
   return (
     <div className='w-full min-h-screen px-0 md:px-12  '>
@@ -91,8 +104,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (5).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Modrá židle Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Modrá židle Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -104,8 +118,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (8).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Zelený koberec Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Zelený koberec Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -118,8 +133,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (6).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Zelený koberec Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Zelený koberec Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -132,8 +148,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (9).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Zelený koberec Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Zelený koberec Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -146,8 +163,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (7).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Bílé dveře Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Bílé dveře Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -161,8 +179,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (10).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Červený stůl Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Červený stůl Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -176,8 +195,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (8).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Oranžová pohovka Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Oranžová pohovka Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -190,8 +210,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (11).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Oranžová pohovka Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Oranžová pohovka Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -205,8 +226,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (9).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Růžová kachlička Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Růžová kachlička Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -219,8 +241,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (12).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Růžová kachlička Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Růžová kachlička Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -233,8 +256,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (10).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Hnědý strop Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Hnědý strop Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -248,8 +272,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (13).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Šedá židle Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Šedá židle Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -263,8 +288,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (11).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Žlutá stěna Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Žlutá stěna Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -278,8 +304,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (14).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Bílý stůl Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Bílý stůl Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -293,8 +320,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (12).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Černý koberec Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Černý koberec Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -308,8 +336,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (15).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Růžové závěsy Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Růžové závěsy Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -323,8 +352,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-AntoninNeural (13).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Modré okno Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Modré okno Audio"
               >
                 <FaPlay size={20} />
               </button>
@@ -337,8 +367,9 @@ function lesson7() {
             <TableCell>
               <button
                 onClick={() => playAudio("/lesson7/cs-CZ-VlastaNeural (16).mp3")}
-                className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                aria-label="Play Modré okno Audio"
+                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                disabled={isPlayingAll || isPlayingOne}
+                                aria-label="Play Modré okno Audio"
               >
                 <FaPlay size={20} />
               </button>

@@ -1,6 +1,28 @@
-import React from 'react'
+"use client"
 
-function page() {
+import SectionTopComponent from '@/app/components/SectionTopComponents'
+import React, { useEffect } from 'react'
+import { FaPlay } from "react-icons/fa";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { useAudio } from "../../context/AudioContext"; 
+function lesson14() {
+
+const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
+
   return (
 
 <div className='min-h-screen bg-gray-100 dark:bg-gray-800 text-center p-2'>
@@ -22,4 +44,4 @@ function page() {
   )
 }
 
-export default page
+export default lesson14

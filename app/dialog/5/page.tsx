@@ -3,7 +3,7 @@
 import { FaStop } from "react-icons/fa";
 import { FaPlay } from "react-icons/fa";
 import { useAudio } from "../../context/AudioContext"; // Importování hooku
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -13,8 +13,20 @@ interface DialogLine {
 }
 
 const Conversations5: React.FC = () => {
-  const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
-    const [isPlayingOne,setIsPlayingOne] = useState(false)
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); 
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
   
     const dialog: DialogLine[] = [
       { name: "Carlos", text: "Dobrý den! Kde je nádraží?", es: "¡Buenos días! ¿Dónde está la estación?", audio: "/dialog5/cs-CZ-AntoninNeural (35).mp3" },
@@ -25,23 +37,9 @@ const Conversations5: React.FC = () => {
       { name: "Marta", text: "Není zač! Hezký den!", es: "¡De nada! ¡Que tenga un buen día!", audio: "/dialog5/cs-CZ-VlastaNeural (96).mp3" }
     ];
 
-  const playAudio = (audioUrl: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      setIsPlayingOne(true);  // Začneme přehrávat zvuk
-      const audio = new Audio(audioUrl);
-      audio.play();
+
+ 
   
-      audio.onended = () => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
-        resolve();  // Promise se vyřeší
-      };
-  
-      audio.onerror = (error) => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
-        reject(error);  // Pokud dojde k chybě, Promise se odmítne
-      };
-    });
-  };
   return (
     <div className="flex w-full flex-col items-center min-h-screen px-0 md:px-12">
       <div className="flex justify-center gap-4 text-base">

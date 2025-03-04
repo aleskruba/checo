@@ -1,14 +1,22 @@
 "use client"
 import SectionTopComponent from '@/app/components/SectionTopComponents'
-import React from 'react'
-import { FaPlay } from "react-icons/fa";
-
+import React, { useEffect } from 'react'
+import { useAudio } from "../../context/AudioContext"; 
 function lesson1() {
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
+  const { isPlayingAll,  stopAllAudio, isPlayingOne } = useAudio(); // Using context
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
 
   return (
     <div className='w-full min-h-screen px-0 md:px-12'>

@@ -1,9 +1,7 @@
-// src/components/Conversations2.tsx
 "use client";
-import { FaStop } from "react-icons/fa";
-import { FaPlay } from "react-icons/fa";
-import { useAudio } from "../../context/AudioContext"; // Importování hooku
-import { useState } from "react";
+import { FaStop, FaPlay } from "react-icons/fa";
+import { useAudio } from "../../context/AudioContext"; // Import hook
+import { useEffect, useState } from "react";
 
 interface DialogLine {
   name: string;
@@ -13,51 +11,47 @@ interface DialogLine {
 }
 
 const Conversations4: React.FC = () => {
-  const { isPlayingAll, playAllAudio,stopAllAudio } = useAudio(); // Použití kontextu
-    const [isPlayingOne,setIsPlayingOne] = useState(false)
-  
-    const dialog: DialogLine[] = [
-      { name: "Lucie", text: "Dobrý den! Máte jablka?", es: "¡Buenos días! ¿Tienen manzanas?", audio: "/dialog4/cs-CZ-VlastaNeural (90).mp3" },
-      { name: "Prodavač", text: "Ano, máme červená a zelená jablka.", es: "Sí, tenemos manzanas rojas y verdes.", audio: "/dialog4/cs-CZ-AntoninNeural (31).mp3" },
-      { name: "Lucie", text: "Prosím dvě červená jablka.", es: "Dos manzanas rojas, por favor.", audio: "/dialog4/cs-CZ-VlastaNeural (91).mp3"},
-      { name: "Prodavač", text: "Ještě něco?", es: "¿Algo más?", audio: "/dialog4/cs-CZ-AntoninNeural (32).mp3" },
-      { name: "Lucie", text: "Ano, jeden chleba.", es: "Sí, un pan.", audio: "/dialog4/cs-CZ-VlastaNeural (92).mp3" },
-      { name: "Prodavač", text: "Tady máte. Bude to 50 korun.", es: "Aquí tiene. Son 50 coronas.", audio: "/dialog4/cs-CZ-AntoninNeural (33).mp3" },
-      { name: "Lucie", text: "Tady máte. Děkuji!", es: "Aquí tiene. ¡Gracias!", audio: "/dialog4/cs-CZ-VlastaNeural (93).mp3" },
-      { name: "Prodavač", text: "Děkuji, na shledanou!", es: "Gracias, ¡hasta luego!", audio: "/dialog4/cs-CZ-AntoninNeural (34).mp3" }
-    ];
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
 
-  const playAudio = (audioUrl: string): Promise<void> => {
-    return new Promise((resolve, reject) => {
-      setIsPlayingOne(true);  // Začneme přehrávat zvuk
-      const audio = new Audio(audioUrl);
-      audio.play();
-  
-      audio.onended = () => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn po skončení přehrávání
-        resolve();  // Promise se vyřeší
-      };
-  
-      audio.onerror = (error) => {
-        setIsPlayingOne(false);  // Ujistíme se, že stav je změněn, i když nastane chyba
-        reject(error);  // Pokud dojde k chybě, Promise se odmítne
-      };
-    });
-  };
+
+  const dialog: DialogLine[] = [
+    { name: "Lucie", text: "Dobrý den! Máte jablka?", es: "¡Buenos días! ¿Tienen manzanas?", audio: "/dialog4/cs-CZ-VlastaNeural (90).mp3" },
+    { name: "Prodavač", text: "Ano, máme červená a zelená jablka.", es: "Sí, tenemos manzanas rojas y verdes.", audio: "/dialog4/cs-CZ-AntoninNeural (31).mp3" },
+    { name: "Lucie", text: "Prosím dvě červená jablka.", es: "Dos manzanas rojas, por favor.", audio: "/dialog4/cs-CZ-VlastaNeural (91).mp3"},
+    { name: "Prodavač", text: "Ještě něco?", es: "¿Algo más?", audio: "/dialog4/cs-CZ-AntoninNeural (32).mp3" },
+    { name: "Lucie", text: "Ano, jeden chleba.", es: "Sí, un pan.", audio: "/dialog4/cs-CZ-VlastaNeural (92).mp3" },
+    { name: "Prodavač", text: "Tady máte. Bude to 50 korun.", es: "Aquí tiene. Son 50 coronas.", audio: "/dialog4/cs-CZ-AntoninNeural (33).mp3" },
+    { name: "Lucie", text: "Tady máte. Děkuji!", es: "Aquí tiene. ¡Gracias!", audio: "/dialog4/cs-CZ-VlastaNeural (93).mp3" },
+    { name: "Prodavač", text: "Děkuji, na shledanou!", es: "Gracias, ¡hasta luego!", audio: "/dialog4/cs-CZ-AntoninNeural (34).mp3" }
+  ];
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
+
   return (
     <div className="flex w-full flex-col items-center min-h-screen px-0 md:px-12">
       <div className="flex justify-center gap-4 text-base">
         <h1 className="font-semibold">Reproducir el diálogo completo</h1>
         {!isPlayingAll ? (
-        <button
-        onClick={() => playAllAudio(dialog)} // Přehrání celého dialogu
-        className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
-        aria-label="Play All Audio"
-        disabled={isPlayingAll || isPlayingOne} // Zakázání tlačítka při přehrávání celého dialogu
-      >
-          <FaPlay size={20} />
-        </button>
-        ): (
+          <button
+            onClick={() => playAllAudio(dialog)} // Přehrání celého dialogu
+            className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"}`}
+            aria-label="Play All Audio"
+            disabled={isPlayingAll || isPlayingOne} // Zakázání tlačítka při přehrávání celého dialogu
+          >
+            <FaPlay size={20} />
+          </button>
+        ) : (
           <button
             onClick={stopAllAudio} // Zastavení přehrávání
             className="text-red-600 hover:text-red-800 dark:hover:text-red-400"
@@ -73,19 +67,17 @@ const Conversations4: React.FC = () => {
         <div className="space-y-3">
           {dialog.map((line, index) => (
             <div className="w-full flex flex-col rounded-xl shadow-md py-2 px-2" key={index}>
-              <div
-                className={`flex  justify-between   ${line.name === "Pavel" ? "" : " w-full  "}`}
-              >
-                <span className={`font-semibold text-xs md:text-base pr-2 ${line.name === "Lucie" ? "flex justify-start md:justify-end w-full  md:pr-8  text-pink-700 dark:text-pink-300" : "text-gray-600 dark:text-gray-400"} `}>
+              <div className={`flex justify-between ${line.name === "Pavel" ? "" : "w-full"}`}>
+                <span className={`font-semibold text-xs md:text-base pr-2 ${line.name === "Lucie" ? "flex justify-start md:justify-end w-full md:pr-8 text-pink-700 dark:text-pink-300" : "text-gray-600 dark:text-gray-400"}`}>
                   <span className="mr-1">{line.name}:</span>
-                  <span className="font-normal first-letter: text-black dark:text-white">{line.text}</span>
+                  <span className="font-normal first-letter:text-black dark:text-white">{line.text}</span>
                 </span>
                 <button
-                onClick={() => playAudio(line.audio)}
-                className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
-                aria-label={`Play ${line.name} Audio`}
-                disabled={isPlayingAll || isPlayingOne}
-              >
+                  onClick={() => playAudio(line.audio)} // Using context method to play individual audio
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"}`}
+                  aria-label={`Play ${line.name} Audio`}
+                  disabled={isPlayingAll || isPlayingOne}
+                >
                   <FaPlay size={20} />
                 </button>
               </div>
@@ -99,6 +91,6 @@ const Conversations4: React.FC = () => {
       </section>
     </div>
   );
-}
+};
 
 export default Conversations4;

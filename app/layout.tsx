@@ -31,6 +31,7 @@ import { IntermedioComponent } from "./components/IIntermedioComponent";
 import { LessonComponent2 } from "./components/LessonComponentI2";
 import { AudioProvider } from "./context/AudioContext";
 import SubscribeComponent from "./components/SubscribeComponent";
+
 const poppins = Poppins({
   weight: "300",
   subsets: ["latin"],
@@ -71,19 +72,6 @@ export default function LocaleLayout({
 
       <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
      crossOrigin="anonymous"></Script>
-
-{/*       <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
-      <meta 
-  httpEquiv="Content-Security-Policy" 
-  content="
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googlesyndication.com https://*.google-analytics.com https://*.google.com https://*.gstatic.com;
-  style-src 'self' 'unsafe-inline' https://*.googleapis.com;
-  img-src 'self' data: https://*.google.com https://*.googleusercontent.com https://*.gstatic.com https://*.googlesyndication.com;
-  frame-src 'self' https://*.googlesyndication.com https://*.google.com;
-  connect-src 'self' https://aprendercheco.com https://*.google-analytics.com https://*.googlesyndication.com;
-  " 
-/> */}
 
 
       <meta

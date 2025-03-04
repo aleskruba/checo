@@ -1,15 +1,29 @@
 "use client"
 
 import SectionTopComponent from '@/app/components/SectionTopComponents'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaPlay } from "react-icons/fa";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-function lesson3() {
+import useStopAudio from '../../hooks/useStopAudio'
+import { useAudio } from "../../context/AudioContext"; 
 
-  const playAudio = (audioUrl: string) => {
-    const audio = new Audio(audioUrl);
-    audio.play();
-  };
+function lesson3() {
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+
+
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
+
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
+
 
   return (
     <div className='w-full min-h-screen px-0 md:px-12  '>
@@ -36,8 +50,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/jajsem.m4a")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                                    aria-label="Play Já jsem Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -49,8 +64,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/tyjsi.m4a")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                     aria-label="Play Ty jsi Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -62,8 +78,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/onje.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play On je Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                    aria-label="Play On je Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -75,8 +92,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/onaje.m4a")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ona je Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                     aria-label="Play Ona je Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -88,8 +106,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/myjsme.m4a")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play My jsme Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                      aria-label="Play My jsme Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -101,8 +120,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/vyste.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Vy jste Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                      aria-label="Play Vy jste Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -114,8 +134,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/onijsou.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Oni jsou Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                     aria-label="Play Oni jsou Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -146,8 +167,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/jacech.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem Čech Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                      aria-label="Play Já jsem Čech Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -159,8 +181,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/jame.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem Mexičan Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play Já jsem Mexičan Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -172,8 +195,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/jabr.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem Brazilec Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                      aria-label="Play Já jsem Brazilec Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -187,8 +211,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/tyce.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi Čech Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                      aria-label="Play Ty jsi Čech Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -200,8 +225,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/type.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi Peruánec Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play Ty jsi Peruánec Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -213,8 +239,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/tysp.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi Španěl Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                     aria-label="Play Ty jsi Španěl Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -228,8 +255,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/oncech.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play On je Čech Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play On je Čech Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -241,8 +269,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/onaarg.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ona je Argentinka Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                           aria-label="Play Ona je Argentinka Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -254,8 +283,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/onkol.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play On je Kolumbijec Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                     aria-label="Play On je Kolumbijec Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -286,8 +316,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-st.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem šťastný Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play Já jsem šťastný Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -299,8 +330,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-una.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem unavený Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                         aria-label="Play Já jsem unavený Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -312,8 +344,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-zdr.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Já jsem zdravý Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play Já jsem zdravý Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -327,8 +360,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-sm.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi smutný Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                      aria-label="Play Ty jsi smutný Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -340,8 +374,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-ves.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi veselý Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play Ty jsi veselý Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -353,8 +388,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-pom.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ty jsi pomalý Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                       aria-label="Play Ty jsi pomalý Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -368,8 +404,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-kra.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play Ona je krásná Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                          aria-label="Play Ona je krásná Audio"
                 >
                   <FaPlay size={20} />
                 </button>
@@ -381,8 +418,9 @@ function lesson3() {
               <TableCell>
                 <button
                   onClick={() => playAudio("/lesson3/adj-vy.mp3")}
-                  className="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
-                  aria-label="Play On je vysoký Audio"
+                  className={`${isPlayingAll || isPlayingOne ? "dark:text-gray-600 text-gray-300" : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"} `}
+                  disabled={isPlayingAll || isPlayingOne}
+                        aria-label="Play On je vysoký Audio"
                 >
                   <FaPlay size={20} />
                 </button>

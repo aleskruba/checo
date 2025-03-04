@@ -1,11 +1,24 @@
-
+"use client"
 import Image from "next/image";
-
+import { useAudio } from "./context/AudioContext"; // Import hook
 import Italki from "@/public/italki.png"
+import { useEffect } from "react";
 
-export default async function Home() {
+export default  function Home() {
 
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+  useEffect(() => {
+    // Stop all audio when the page changes or component unmounts
+    if (isPlayingAll || isPlayingOne) {
+      stopAllAudio();
+    }
 
+    return () => {
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+    };
+  }, []);
   return (
 
     <div className="mt-8 md:mt-0">
