@@ -6,13 +6,13 @@ export const quizQuestions = [
       answer: 1
     },
     {
-      question: "¿Cómo se dice 'Můj dům' en español?",
+      question: "¿Que significa 'Můj dům' en español?",
       options: ["Mi casa", "Su casa", "Mi ciudad", "Su ciudad"],
       answer: 0
     },
     {
-      question: "¿Cómo se dice 'Tu tía' en español?",
-      options: [ "Su tía", "Tvoje sestra", "Su hermana","Tvoje teta"],
+      question: "¿Que significa 'Tvoje teta' en español?",
+      options: [ "Mi tía", "Tvoje sestra", "Su hermana","Tu tía"],
       answer: 3
     },
     {

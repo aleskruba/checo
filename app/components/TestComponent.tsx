@@ -9,27 +9,32 @@ const items = {
   title: "Testy / Tests",
   content: [
     {
-      title: "Quiz para principiantes 1",
+      title: "Vocabulario básico",
+        url: `${BASE_URL}/test/vocabulario` 
+
+    },
+    {
+      title: "Vocabulario + frases básicas",
         url: `${BASE_URL}/test/1` 
 
     },
     {
-        title: "Quiz para principiantes 2",
+        title: "Vocabulario + frases básicas",
         url: `${BASE_URL}/test/2` 
      
     },
     {
-      title: "Quiz para principiantes 3",
+      title: 'El verbo "být" ',
         url: `${BASE_URL}/test/3` 
 
     },
     {
-      title: "Quiz para principiantes 4",
+      title: "Los posesivos básicos",
         url: `${BASE_URL}/test/4` 
 
     },
     {
-      title: "Quiz para principiantes 5",
+      title: "Acusativo  ",
         url: `${BASE_URL}/test/5` 
 
     },
@@ -46,6 +51,10 @@ const items = {
     {
       title: "La conjug. de los verbos",
         url: `${BASE_URL}/test/8` 
+
+    },    {
+      title: "Adjetivos y colores",
+        url: `${BASE_URL}/test/9` 
 
     },
   ],

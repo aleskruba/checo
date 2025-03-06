@@ -472,7 +472,7 @@ function lesson2() {
       </button>
     </div>
     <p className="text-sm text-start text-gray-600 dark:text-gray-400">
-     Škola
+     Escuela
     </p>
   </li>
 </ul>

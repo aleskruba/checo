@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import Head from "next/head";
 import { Poppins } from "next/font/google";
+import { Sigmar } from "next/font/google";
 import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
 import YouTube from "@/public/youtube.png";
@@ -34,6 +35,11 @@ import SubscribeComponent from "./components/SubscribeComponent";
 
 const poppins = Poppins({
   weight: "300",
+  subsets: ["latin"],
+});
+
+const sigmar = Sigmar({
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -127,8 +133,7 @@ export default function LocaleLayout({
       <body
         suppressHydrationWarning
         className={`text-center pb-4 
-dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
-            bg-gradient-to-b from-gray-100 via-beige-50 to-gray-200
+dark:bg-black
         ${poppins.className}`}
       > <AudioProvider> 
         <ThemeProvider
@@ -163,13 +168,13 @@ dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
                       "
                   >
                     Vítejte na stránkách{" "}
-                    <span className="font-extrabold ml-2">
+                    <span className="font-extrabold ml-2 text-2xl">
                       {" "}
-                      <span className="text-blue-700  dark:text-blue-400">
+                      <span className={`text-blue-700 dark:text-blue-400  ${sigmar.className}`}>
                         Čeština
                       </span>{" "}
-                      <span className="dark:text-white text-gray-400">s</span>{" "}
-                      <span className="dark:text-red-500 text-red-700">
+                      <span className={`dark:text-white text-gray-400 ${sigmar.className}`}>s</span>{" "}
+                      <span className={`dark:text-red-500 text-red-700 ${sigmar.className}`}>
                         Alešem
                       </span>
                     </span>{" "}
@@ -208,13 +213,13 @@ dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
                   <header className="flex h-14 items-center gap-4 border-0 bg-muted/40 px-4 lg:h-[20px] lg:px-6  ">
                     <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
                       <SheetTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="md:hidden "
-                        >
-                          <Menu className="size-5" />
-                        </Button>
+                      <Button
+                            variant="outline"
+                            size="icon"
+                            className="md:hidden w-12 h-12 p-3"
+                          >
+                            <Menu className="size-7" />
+                          </Button>
                       </SheetTrigger>
                       <SheetContent
                         side="left"
@@ -267,23 +272,20 @@ dark:bg-gradient-radial dark:from-[#0a1a2b] dark:via-[#102a44] dark:to-[#0a1a2b]
                         />
                         <div className="flex gap-2 flex-col">
                           <h3 className="font-extrabold ml-2 text text-xl">
-                            <span className="text-blue-700 dark:text-blue-400">
-                              Čeština
-                            </span>{" "}
-                            <span className="dark:text-white text-gray-400">
-                              s
-                            </span>{" "}
-                            <span className="dark:text-red-500 text-red-700">
-                              {" "}
-                              Alešem
-                            </span>
+                         <span className={`text-blue-700 dark:text-blue-400  ${sigmar.className}`}>
+                        Čeština
+                      </span>{" "}
+                      <span className={`dark:text-white text-gray-400 ${sigmar.className}`}>s</span>{" "}
+                      <span className={`dark:text-red-500 text-red-700 ${sigmar.className}`}>
+                        Alešem
+                      </span>
                           </h3>
                         </div>
                       </Link>
                     </div>
                   </header>
 
-                  <main className="">
+                  <main className="md:max-w-5xl">
 
                     {children}
                     </main>

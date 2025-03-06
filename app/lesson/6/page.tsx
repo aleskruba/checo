@@ -98,7 +98,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
       </TableRow>
 
       {/* Bílé dveře */}
-      <TableRow>
+{/*       <TableRow>
         <TableCell>
           <button
             onClick={() => playAudio("/lesson6/cs-CZ-VlastaNeural (1).mp3")}
@@ -111,7 +111,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         </TableCell>
         <TableCell>Bílé dveře <span className='italic text-xs'>-neut.</span></TableCell>
         <TableCell>Puerta blanca</TableCell>
-      </TableRow>
+      </TableRow> */}
 
       {/* Červený stůl */}
       <TableRow>
