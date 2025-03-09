@@ -32,7 +32,7 @@ import { IntermedioComponent } from "./components/IIntermedioComponent";
 import { LessonComponent2 } from "./components/LessonComponentI2";
 import { AudioProvider } from "./context/AudioContext";
 import SubscribeComponent from "./components/SubscribeComponent";
-import { useMediaQuery } from "@/hooks/isSmallScreen ";
+
 import { useAudio } from "./context/AudioContext";
 
 const poppins = Poppins({
@@ -61,8 +61,6 @@ export default function LocaleLayout({
   const handleResize = () => {
     if (window.innerWidth >= 768) {
       setIsSheetOpen(false);
-    } else {
-      setIsSheetOpen(true);
     }
   };
 
