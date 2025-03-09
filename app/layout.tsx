@@ -32,6 +32,8 @@ import { IntermedioComponent } from "./components/IIntermedioComponent";
 import { LessonComponent2 } from "./components/LessonComponentI2";
 import { AudioProvider } from "./context/AudioContext";
 import SubscribeComponent from "./components/SubscribeComponent";
+import { useMediaQuery } from "@/hooks/isSmallScreen ";
+import { useAudio } from "./context/AudioContext";
 
 const poppins = Poppins({
   weight: "300",
@@ -56,9 +58,20 @@ export default function LocaleLayout({
     setIsSheetOpen(false); // Close the sheet
   };
 
+  const handleResize = () => {
+    if (window.innerWidth >= 768) {
+      setIsSheetOpen(false);
+    } else {
+      setIsSheetOpen(true);
+    }
+  };
 
+  useEffect(() => {
+    handleResize(); // Run once on mount to check initial screen size
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-  
   return (
     <html lang="cz" suppressHydrationWarning>
   
@@ -191,7 +204,7 @@ dark:bg-black
                     <div className="flex-1">
                       <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
                         {/*      <DashboardLinks/> */}
-                        <ViajerosComponent closeSheet={closeSheet} />
+                         <ViajerosComponent closeSheet={closeSheet} />
                         <LessonComponent closeSheet={closeSheet} />
                         <LessonComponent2 closeSheet={closeSheet} />
                         <IntermedioComponent closeSheet={closeSheet}/>
@@ -210,9 +223,12 @@ dark:bg-black
                 </div>
 
                 <div className="flex flex-col ">
-                  <header className="flex h-14 items-center gap-4 border-0 bg-muted/40 px-4 lg:h-[20px] lg:px-6  ">
+                  <header className="flex h-14 items-center gap-4 border-0 bg-muted/40 px-4 lg:h-[20px] lg:px-6 ">
+                  
+                 
                     <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-                      <SheetTrigger asChild>
+                
+                      <SheetTrigger asChild >
                       <Button
                             variant="outline"
                             size="icon"
@@ -221,9 +237,10 @@ dark:bg-black
                             <Menu className="size-7" />
                           </Button>
                       </SheetTrigger>
+                 
                       <SheetContent
                         side="left"
-                        className="darK:bg-black darK:text-white bg-gray-500 w-[80%] "
+                        className="darK:bg-black darK:text-white bg-gray-500 w-[80%] md:hidden md:bg-inherit "
                       >
                         <SheetTitle>
                           <div className="flex items-center gap-2 ">
@@ -245,6 +262,7 @@ dark:bg-black
                         </SheetTitle>
                         <nav className="grid gap-2 mt-10  fixed text-white  overflow-y-auto  max-h-[70%] pb-8 ">
                             <div className="overflow-y-auto h-full ">
+                  
                             <ViajerosComponent closeSheet={closeSheet} />
                           <LessonComponent closeSheet={closeSheet} />
                           <LessonComponent2 closeSheet={closeSheet} />
