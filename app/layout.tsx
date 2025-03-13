@@ -279,13 +279,13 @@ dark:bg-black
                          <ThemeComponent closeSheet={closeSheet} />
                          </div>
                          <div className="flex items-center justify-center  p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-  <a href="https://www.youtube.com/@AprenderCheco" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white rounded-full hover:scale-105 transform transition-all duration-300">
+  <a href="https://www.youtube.com/@AprenderCheco" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white rounded-full hover:scale-105 transform transition-all duration-300">
     <Image
       src={YouTube}
       alt="Logo"
-      className="w-12 h-12 rounded-full"
+      className="w-10 h-10 rounded-full"
     />
-    <span className="text-xl font-semibold">Aprender Checo con Aleš</span>
+    <span className="text-xl font-semibold">Aprender Checo </span>
   </a>
 </div>
                         </nav>
