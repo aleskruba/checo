@@ -20,19 +20,9 @@ export const quizQuestions = [
       answer: 0
     },
     {
-      question: "¿Cómo se dice 'Sofá naranja' en checo?",
-      options: ["Oranžový pohovka", "Oranžová pohovka", "Pohovka oranžové", "Pohovka oranžový"],
-      answer: 1
-    },
-    {
       question: "¿Cómo se dice 'Almohada rosa' en checo?",
       options: ["Růžový polštář", "Polštář růžový", "Růžová polštář", "Polštář růžová"],
       answer: 0
-    },
-    {
-      question: "¿Cómo se dice 'Techo marrón' en checo?",
-      options: ["Strop hnědé", "Hnědé strop", "Strop hnědý","Hnědý strop"],
-      answer: 3
     },
     {
       question: "¿Cómo se dice 'Suelo gris' en checo?",
@@ -49,12 +39,7 @@ export const quizQuestions = [
       options: ["Bílý kuchyně", "Bílá kuchyně", "Kuchyně bílý", "Kuchyně bílá"],
       answer: 1
     },
-      {
-        question: "¿Cómo se dice 'Techo negro' (tejado) en checo?",
-        options: ["Černá střecha", "Černé střecha", "Střecha černá", "Střecha černé"],
-        answer: 0
-      },
-    {
+     {
       question: "¿Cómo se dice 'El jardín rosa' en checo?",
       options: [ "Růžový zahrada", "Zahrada růžový", "Zahrada růžová","Růžová zahrada"],
       answer: 3

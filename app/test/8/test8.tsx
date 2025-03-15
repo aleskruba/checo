@@ -44,22 +44,12 @@ export const quizQuestions = [
       options: ["Oni pracují moc", "Oni práce moc", "Oni pracuje moc", "Oni pracovat moc"],
       answer: 0
     },
-    {
-      question: "¿Cómo se dice 'Tú trabajas en la escuela' en checo?",
-      options: ["Ty pracuje ve škole", "Ty práce ve škole", "Ty pracuješ ve škole", "Ty pracovat ve škole"],
-      answer: 2
-    },
   
     // "jíst"
     {
       question: "¿Cómo se dice 'Yo como una manzana' en checo?",
       options: ["Já jím jablko", "Já jíst jablko", "Já jí jablko", "Já jísti jablko"],
       answer: 0
-    },
-    {
-      question: "¿Cómo se dice 'Tú comes pan' en checo?",
-      options: ["Ty jíst chleba", "Ty jíš chleba", "Ty jím chleba", "Ty jíte chleba"],
-      answer: 1
     },
     {
       question: "¿Cómo se dice 'Él come pizza' en checo?",

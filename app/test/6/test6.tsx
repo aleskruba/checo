@@ -69,13 +69,6 @@ export const quizQuestions = [
       options: ["Mořem", "Mořá", "Mořata", "Moře"],
       answer: 3
     },
-  
-    // Masculino / Masculino
-    {
-      question: "¿Cómo se dice 'Stan' en plural en checo?",
-      options: ["Stánky", "Stany", "Stánata", "Stána"],
-      answer: 1
-    },
     {
       question: "¿Cómo se dice 'Hrad' en plural en checo?",
       options: ["Hradky", "Hrady", "Hradata", "Hradě"],
@@ -87,10 +80,10 @@ export const quizQuestions = [
       question: "¿Cómo se dice 'Muž' en plural en checo?",
       options: ["Muži", "Mužata", "Mužici", "Muža"],
       answer: 0
-    },
+    }/* ,
     {
       question: "¿Cómo se dice 'Hráč' en plural en checo?",
       options: ["Hračky", "Hráčky", "Hráči", "Hráčci"],
       answer: 2
-    }
+    } */
   ];

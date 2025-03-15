@@ -64,7 +64,7 @@ export const quizQuestions = [
       question: "¿Cómo se dice 'Vosotros veis un coche' en checo?",
       options: ["Vy vidíš auto", "Vy vidíte auta", "Vy vidíte auto", "Vy vidí auto"],
       answer: 2
-    },
+    }/* ,
     {
       question: "¿Cómo se dice 'Ellos ven un niño' en checo?",
       options: ["Oni vidí děti", "Oni vidí dítě", "Oni vidím děti", "Oni vidíš dítě"],
@@ -94,5 +94,5 @@ export const quizQuestions = [
       question: "¿Cómo se dice 'Ella ve una casa' en checo?",
       options: ["Ona vidí domy", "Ona vidí domů", "Ona vidí dům", "Ona vidí doma"],
       answer: 2
-    }
+    } */
   ];

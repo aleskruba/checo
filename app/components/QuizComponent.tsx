@@ -150,7 +150,7 @@ function Quiz({ questions }: QuizProps) {
   {submitted && (
     <Image
       src={
-        Number(score) > 9
+        Number(score) > 8
           ? awesome // Display "awesome" if score is greater than 9
           : Number(score) > 5
           ? notbad // Display "notbad" if score is greater than 5 but less than or equal to 9

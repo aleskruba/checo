@@ -32,11 +32,11 @@ export const quizQuestions = [
       options: ["Moje oče", "Moje oči", "Můj oči", "Moje oka"],
       answer: 1
     },
-    {
+/*     {
       question: "¿Cómo se dice 'tus manos' en checo?",
       options: ["Tvoje ruka", "Tvoje ruky", "Tvoje ruce", "Tvůj ruky"],
       answer: 2
-    },
+    }, */
     {
       question: "¿Cómo se dice 'su corazón (de ella)' en checo?",
       options: ["Jeho srdce", "Jeho srdcí", "Jeho srdca", "Její srdce"],
