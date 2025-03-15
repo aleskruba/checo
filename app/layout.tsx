@@ -97,16 +97,16 @@ export default function LocaleLayout({
           />
         <meta name="author" content="Aleš Kruba" />
         <meta
-          property="og:description"
-          content="Aprende checo fácilmente: gramática, pronunciación y diálogos reales para hispanohablantes y hablantes de portugués."
-        />
+          name="keywords"
+          content="aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes ,checo para viajeros , checo con Aleš"
+          />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
         <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
         <meta
-  property="og:description"
-  content="Aprende checo fácilmente: gramática, pronunciación y diálogos reales para hispanohablantes y hablantes de portugués."
-/>
+            property="og:description"
+            content="Sumérgete en el idioma checo con cursos diseñados para hispanohablantes. Aprende gramática, mejora tu pronunciación y practica con diálogos reales."
+          />
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
 
@@ -117,8 +117,7 @@ export default function LocaleLayout({
         <title>Aprender checo con Aleš</title>
 
 
-        <meta property="og:locale" content="es_ES" />
-
+ 
 
         <meta
           name="description"
@@ -132,15 +131,14 @@ export default function LocaleLayout({
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
         <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
-   {/*      <meta
+        <meta
             property="og:description"
-            content="Aprende checo fácilmente: gramática, pronunciación y diálogos reales para hispanohablantes y hablantes de portugués."
-            /> */}
+            content="Sumérgete en el idioma checo con cursos diseñados para hispanohablantes. Aprende gramática, mejora tu pronunciación y practica con diálogos reales."
+          />
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
 
-        <link rel="canonical" href="https://www.aprendercheco.com/" />
-
+     
 
       </Head>
       <body
