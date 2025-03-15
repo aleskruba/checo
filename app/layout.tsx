@@ -138,7 +138,8 @@ export default function LocaleLayout({
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
 
-     
+        <link rel="canonical" href="https://www.aprendercheco.com/" />
+
 
       </Head>
       <body
