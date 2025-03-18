@@ -260,7 +260,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
           <FaPlay size={20} />
         </button>
       </TableCell>
-      <TableCell>Máš Lžíci</TableCell>
+      <TableCell>Máš Lžíci?</TableCell>
       <TableCell>¿Tienes una cuchara?</TableCell>
     </TableRow>
     <TableRow>
@@ -289,7 +289,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         </button>
       </TableCell>
       <TableCell>Chtěl/a bych dvě lžíce</TableCell>
-      <TableCell>Me gustaría dos cucharas</TableCell>
+      <TableCell>Quisiera  dos cucharas</TableCell>
     </TableRow>
     <TableRow>
       <TableCell>
@@ -374,7 +374,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         </button>
       </TableCell>
       <TableCell>Máš nůž?</TableCell>
-      <TableCell>Tienes un cuchillo</TableCell>
+      <TableCell>¿Tienes un cuchillo?</TableCell>
     </TableRow>
     <TableRow>
       <TableCell>
