@@ -9,8 +9,8 @@ const items = {
     content: [
       {
         title: "Informaciones",
-        url: `${BASE_URL}/intercambio`,
-        icon: <FaYoutube className="w-5 h-5 text-red-600" />,
+        url: `${BASE_URL}/intercambio`
+
       },
     ],
   };

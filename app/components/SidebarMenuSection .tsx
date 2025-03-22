@@ -7,7 +7,7 @@ import { useState } from "react";
 
 type SidebarMenuSectionProps = {
   title: string;
-  content: { title: string; icon:any; url: string }[];
+  content: { title: string;  url: string }[];
 
   closeSheet: () => void;
 };
@@ -50,7 +50,7 @@ const SidebarMenuSection = ({ title, content, closeSheet }: SidebarMenuSectionPr
             >
               <span>{item.title}</span>
               
-              {item.icon && <span className="pl-2">{item.icon}</span>}
+          
             </Link>
           </SidebarMenuSubItem>
         );
