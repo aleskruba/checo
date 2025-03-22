@@ -34,6 +34,8 @@ import { AudioProvider } from "./context/AudioContext";
 import SubscribeComponent from "./components/SubscribeComponent";
 
 import { useAudio } from "./context/AudioContext";
+import IntercambioComponent from "./intercambio/page";
+import { InterCambioComponent } from "./components/InterCambioComponent";
 
 const poppins = Poppins({
   weight: "300",
@@ -210,6 +212,8 @@ dark:bg-black
                         <IntermedioComponent closeSheet={closeSheet}/>
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
+                        <InterCambioComponent closeSheet={closeSheet} />
+
                         <ThemeComponent closeSheet={closeSheet} />
                                     <div className="mt-16 ">
                                     <div className="flex items-center justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -276,6 +280,7 @@ dark:bg-black
                           <IntermedioComponent closeSheet={closeSheet}/>
                           <DialogComponent closeSheet={closeSheet} />
                           <TestComponent closeSheet={closeSheet} />
+                          <InterCambioComponent closeSheet={closeSheet} />
                          <ThemeComponent closeSheet={closeSheet} />
                          </div>
                          <div className="flex items-center justify-center  p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
