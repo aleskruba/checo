@@ -79,6 +79,10 @@ export default function LocaleLayout({
       <head>
       <title>Aprender checo con Aleš</title>
 
+      <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
+        <link rel="alternate" hrefLang="es" href="https://aprendercheco.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" />
+
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
