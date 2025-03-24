@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useAudio } from "./context/AudioContext"; // Import hook
 import Italki from "@/public/italki.png"
 import { useEffect } from "react";
-
+import Link from "next/link";
+import Clases from "@/public/clases.png";
 export default  function Home() {
 
   const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
@@ -36,11 +37,21 @@ export default  function Home() {
   <p className="mb-2">
     En esta página encontrarás las bases de la gramática checa, vocabulario útil y frases comunes. También podrás escuchar las frases y poner a prueba tus conocimientos con ejercicios interactivos.
   </p>
-  <div className="mb-4 flex items-center justify-start">
+  <div className="mb-4 flex md:flex-row flex-col items-center justify-start">
   <p className="mr-2 text-black dark:text-white font-bold">
   Si te interesa, también ofrezco clases de conversación en checo. Estaré muy feliz de ver tu progreso en mis clases.
  
   </p>
+  <div className="flex items-center min-w-[280px]  justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <Link href="/clases" className="hover:scale-105 transform transition-all duration-300">
+                                <Image
+                              src={Clases}
+                              alt="Clases"
+                              className="w-56 h-20 rounded-xl"
+                            />
+                        </Link>
+
+                        </div>
 </div> 
 
   <p>Todo el contenido de esta página es completamente gratis. ¡Te deseo mucho éxito en tu aprendizaje!</p>

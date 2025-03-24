@@ -303,7 +303,7 @@ dark:bg-black
                          <ThemeComponent closeSheet={closeSheet} />
                          </div>
 
-                         <div className="flex items-center w-[18rem] justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  {/*        <div className="flex items-center w-[18rem] justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <Link href="/clases" className="hover:scale-105 transform transition-all duration-300">
                                 <Image
                               src={Clases}
@@ -312,7 +312,7 @@ dark:bg-black
                             />
                         </Link>
 
-                        </div>
+                        </div> */}
 
                          <div className="flex items-center w-[18rem] justify-center  p-4  shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <a href="https://www.youtube.com/@AprenderCheco" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white rounded-xl hover:scale-105 transform transition-all duration-300">

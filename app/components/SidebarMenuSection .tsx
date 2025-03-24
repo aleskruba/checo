@@ -58,7 +58,6 @@ const SidebarMenuSection = ({ title, content, closeSheet }: SidebarMenuSectionPr
     </SidebarMenuSub>
   </CollapsibleContent>
 </Collapsible>
-
     </SidebarMenuItem>
   );
 };
