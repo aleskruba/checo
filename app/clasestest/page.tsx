@@ -69,8 +69,10 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
   <p className="font-semibold text-lg">📧 Correo: <a href="mailto:ales.aprendercheco@gmail.com" className="text-blue-600 dark:text-blue-400 underline">ales.aprendercheco@gmail.com</a></p>
 </div>
 
-<MyCalendar/>
+<div className=" md:h-[80%]">
 
+<MyCalendar/>
+</div>
     </div>
   );
 }

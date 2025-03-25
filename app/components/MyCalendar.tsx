@@ -44,9 +44,9 @@ const MyCalendar = () => {
             className: "my-custom-event",
           }}
           headerToolbar={{
-            left: "prev,next today",
+            left: "prev,next",
             center: "title",
-            right: "timeGridWeek",
+            right: "",
           }}
           locale="es"
           slotMinTime="00:00:00"
@@ -72,11 +72,29 @@ const MyCalendar = () => {
           firstDay={1}
           height="auto"
           validRange={{ start: new Date() }}  // Disable past days
+          eventClick={(info) => {
+            info.jsEvent.preventDefault(); // Prevent default action
+       
+          }}
           eventContent={(eventInfo) => {
+            const startTime = eventInfo.event.start
+              ? new Intl.DateTimeFormat("es-ES", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }).format(eventInfo.event.start)
+              : "";
+          
+            const endTime = eventInfo.event.end
+              ? new Intl.DateTimeFormat("es-ES", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                }).format(eventInfo.event.end)
+              : "";
+          
             return (
               <>
                 <b>{eventInfo.event.title}</b>
-                <p>{eventInfo.event.extendedProps.description || 'No description available'}</p>
+                <p>{startTime} - {endTime}</p>
               </>
             );
           }}
