@@ -4,10 +4,11 @@ import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import '@fullcalendar/core/locales/es';  // Import Spanish locale
 
 
-const MyCalendar: React.FC = () => {
+const MyCalendar = () => {
     
-    console.log(process.env.GOOGLE_CALENDAR_ID)
-    console.log(process.env.GOOGLE_API_KEY)
+    
+    console.log(process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID)
+    console.log(process.env.NEXT_PUBLIC_GOOGLE_API_KEY)
 
  /*  useEffect(() => {
     const fetchCalendarEvents = async () => {
@@ -37,9 +38,9 @@ const MyCalendar: React.FC = () => {
         <FullCalendar
           plugins={[timeGridPlugin, googleCalendarPlugin]}
           initialView="timeGridWeek"
-          googleCalendarApiKey={process.env.GOOGLE_API_KEY}
+          googleCalendarApiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
           events={{
-            googleCalendarId: process.env.GOOGLE_CALENDAR_ID,
+            googleCalendarId: process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID,
             className: "my-custom-event",
           }}
           headerToolbar={{
