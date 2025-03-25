@@ -95,7 +95,7 @@ const MyCalendar = () => {
               <>
                 <p className="md:text-base text-xs">{eventInfo.event.title.slice(0, 4)}</p>
                 <div className="flex flex-col  md:flex-row justify-center md:text-base text-xs  ">
-                <div>{startTime} -</div>
+                <div>{startTime} <span className="hidden md:inline">-</span></div>
                 <div className="">{endTime}</div>
                 </div>
               </>
