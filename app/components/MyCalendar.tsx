@@ -79,8 +79,8 @@ const MyCalendar = () => {
           eventContent={(eventInfo) => {
             const startTime = eventInfo.event.start
               ? new Intl.DateTimeFormat("es-ES", {
-                  hour: "2-digit",
-                  minute: "2-digit",
+                  hour: "2-digit"
+             
                 }).format(eventInfo.event.start)
               : "";
           
@@ -93,8 +93,10 @@ const MyCalendar = () => {
           
             return (
               <>
-                <b>{eventInfo.event.title}</b>
-                <p>{startTime} - {endTime}</p>
+                <p className="md:text-base text-xs">{eventInfo.event.title.slice(0, 4)}</p>
+                <div className="flex justify-center md:text-base text-xs md:pt-0 pt-1 ">
+                <span>{startTime} </span><span className="">-{endTime}</span>
+                </div>
               </>
             );
           }}
