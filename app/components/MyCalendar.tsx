@@ -1,16 +1,15 @@
-"use client"
-import { useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import googleCalendarPlugin from "@fullcalendar/google-calendar";
 import '@fullcalendar/core/locales/es';  // Import Spanish locale
 
 
-
 const MyCalendar: React.FC = () => {
     
+    console.log(process.env.GOOGLE_CALENDAR_ID)
+    console.log(process.env.GOOGLE_API_KEY)
 
-  useEffect(() => {
+ /*  useEffect(() => {
     const fetchCalendarEvents = async () => {
       try {
         const url = `https://www.googleapis.com/calendar/v3/calendars/${process.env.GOOGLE_CALENDAR_ID}/events?key=${process.env.GOOGLE_API_KEY}`;
@@ -30,7 +29,7 @@ const MyCalendar: React.FC = () => {
       }
     };
     fetchCalendarEvents();
-  }, []);
+  }, []); */
 
   return (
     <>

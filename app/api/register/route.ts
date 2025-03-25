@@ -1,8 +1,11 @@
+
 import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 
 export async function POST(request: Request) {
   try {
+
+    console.log(process.env.DB_HOST)
     const body = await request.json();
     const { email } = body;
 
