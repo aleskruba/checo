@@ -5,12 +5,19 @@
     <lastmod>2025-03-23T12:00:00+00:00</lastmod>
     <priority>1.0</priority>
   </url>
-  <!-- Přidej další stránky pokud máš -->
-  <!-- <url>
-    <loc>https://aprendercheco.com/nejaka-stranka</loc>
+  <url>
+    <loc>https://aprendercheco.com/dialog/1</loc>
     <lastmod>2025-03-23T12:00:00+00:00</lastmod>
     <priority>0.8</priority>
-  </url> -->
+  </url>
+  <url>
+    <loc>https://aprendercheco.com/test/vocabulario</loc>
+    <lastmod>2025-03-23T12:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aprendercheco.com/clases</loc>
+    <lastmod>2025-03-23T12:00:00+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
-
-
