@@ -128,21 +128,22 @@ export default function LocaleLayout({
      crossOrigin="anonymous"></Script>
 
 
-      <meta
-          name="description"
-          content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases de gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente para hispanohablantes."
+          <meta
+            name="description"
+            content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
           />
+
         <meta name="author" content="Aleš Kruba" />
         <meta
           name="keywords"
-          content="aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes ,checo para viajeros , checo con Aleš"
+          content="checo para principiantes, Checo desde cero , aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes ,checo para viajeros , checo con Aleš"
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
         <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
         <meta
             property="og:description"
-            content="Sumérgete en el idioma checo con cursos diseñados para hispanohablantes. Aprende gramática, mejora tu pronunciación y practica con diálogos reales."
+            content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
           />
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
@@ -163,14 +164,14 @@ export default function LocaleLayout({
         <meta name="author" content="Aleš Kruba" />
         <meta
           name="keywords"
-          content="aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes"
+          content="checo para principiantes, Checo desde cero ,aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes"
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
         <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
         <meta
             property="og:description"
-            content="Sumérgete en el idioma checo con cursos diseñados para hispanohablantes. Aprende gramática, mejora tu pronunciación y practica con diálogos reales."
+            content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
           />
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
