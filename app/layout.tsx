@@ -80,8 +80,7 @@ export default function LocaleLayout({
       <head>
       <title>Aprender checo con Aleš</title>
 
-        <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
-        <link rel="alternate" hrefLang="es" href="https://aprendercheco.com/" />
+    {/*     <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" /><link rel="alternate" hrefLang="es" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-ES" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com" />
@@ -112,7 +111,7 @@ export default function LocaleLayout({
         <link rel="alternate" hrefLang="pt-CV" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-GW" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-ST" href="https://aprendercheco.com" />
-        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" /> */}
 
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ" />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -164,7 +163,7 @@ export default function LocaleLayout({
         <meta name="author" content="Aleš Kruba" />
         <meta
           name="keywords"
-          content="checo para principiantes, Checo desde cero ,aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes"
+          content="aprender checo, gramática checa, pronunciación checa, diálogos en checo, tests de checo, checo para hispanohablantes"
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
@@ -177,8 +176,7 @@ export default function LocaleLayout({
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
 
         <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
-        <link rel="alternate" hrefLang="es" href="https://aprendercheco.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" />
+           <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="es-ES" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-AR" href="https://aprendercheco.com" />
