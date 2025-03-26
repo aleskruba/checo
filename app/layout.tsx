@@ -80,7 +80,7 @@ export default function LocaleLayout({
       <head>
       <title>Aprender checo con Aleš</title>
 
-    {/*     <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
+        <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" /><link rel="alternate" hrefLang="es" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-ES" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com" />
@@ -111,7 +111,7 @@ export default function LocaleLayout({
         <link rel="alternate" hrefLang="pt-CV" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-GW" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-ST" href="https://aprendercheco.com" />
-        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" /> */}
+        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" />
 
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ" />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -175,7 +175,7 @@ export default function LocaleLayout({
         <meta property="og:url" content="https://aprendercheco.com" />
         <meta property="og:image" content="https://aprendercheco.com/man1.png" />
 
-        <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
+      {/*   <link rel="alternate" hrefLang="cs-CS" href="https://aprendercheco.com/" />
            <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="es-ES" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com" />
@@ -206,7 +206,7 @@ export default function LocaleLayout({
         <link rel="alternate" hrefLang="pt-CV" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-GW" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-ST" href="https://aprendercheco.com" />
-        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" /> */}
 
       </Head>
       <body
