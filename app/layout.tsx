@@ -80,9 +80,39 @@ export default function LocaleLayout({
       <head>
       <title>Aprender checo con Aleš</title>
 
-      <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
+        <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="es" href="https://aprendercheco.com/" />
-        <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" /><link rel="alternate" hrefLang="es" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-ES" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-AR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CL" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PE" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-VE" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-EC" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-GT" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CU" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-DO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-HN" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PY" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-SV" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-NI" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PA" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-BO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-UY" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-GQ" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-PT" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-AO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-MZ" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-CV" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-GW" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-ST" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" />
 
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-RP3H6ZD9NZ" />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -148,6 +178,36 @@ export default function LocaleLayout({
         <link rel="alternate" hrefLang="cs" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="es" href="https://aprendercheco.com/" />
         <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" />
+        <link rel="alternate" hrefLang="es-ES" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-AR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CL" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PE" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-VE" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-EC" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-GT" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CU" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-DO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-HN" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PY" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-SV" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-NI" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-CR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PA" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-BO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-PR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-UY" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="es-GQ" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-PT" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-BR" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-AO" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-MZ" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-CV" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-GW" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-ST" href="https://aprendercheco.com" />
+        <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" />
 
       </Head>
       <body
