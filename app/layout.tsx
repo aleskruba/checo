@@ -81,7 +81,7 @@ export default function LocaleLayout({
       <title>Aprender checo con Aleš</title>
 
         <link rel="alternate" hrefLang="cs" href={`https://aprendercheco.com/clases`}/> 
-{/*         <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" /> */}
+      <link rel="alternate" hrefLang="x-default" href="https://aprendercheco.com/" /> 
         <link rel="alternate" hrefLang="es" href={`https://aprendercheco.com/clases`} />
         <link rel="alternate" hrefLang="es-MX" href="https://aprendercheco.com/clases" />
         <link rel="alternate" hrefLang="es-AR" href="https://aprendercheco.com" />
