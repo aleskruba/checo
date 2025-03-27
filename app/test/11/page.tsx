@@ -26,8 +26,10 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
 
   return (
     <div className="">
+      <div className="flex flex-col ">
        <p className=" text-sm pb-4">
       📌 El contenido de este test proviene de este video:{" "}
+      </p>
       <a
         href="https://youtu.be/LMFJ2Z0oi9s"
         target="_blank"
@@ -36,7 +38,7 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
       >
         Ver en YouTube
       </a>
-    </p>
+      </div>
     <Quiz questions={quizQuestions} />
     </div>
   );
