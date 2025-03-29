@@ -81,15 +81,16 @@ function CookieBanner() {
       <div className="flex flex-col items-start gap-4">
         {/* Text for cookies in three languages with flags side by side */}
         <p style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Flag code={getFlagCode('es')} style={{ width: '30px', height: '20px' }} />
+          <Flag code={getFlagCode('es')} style={{ width: '30px', height: '20px' }} alt="Vlajka Španělska"
+          />
           Este sitio usa cookies para garantizar su funcionamiento correcto y con fines analíticos. Al continuar usando este sitio, aceptas el uso de cookies.
         </p>
         <p style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Flag code={getFlagCode('en')} style={{ width: '30px', height: '20px' }} />
+          <Flag code={getFlagCode('en')} style={{ width: '30px', height: '20px' }}  alt="Vlajka Spojeného království" />
           This site uses cookies to ensure proper functionality and for analytics purposes. By continuing to use this site, you agree to our use of cookies.
         </p>
         <p style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Flag code={getFlagCode('cz')} style={{ width: '30px', height: '20px' }} />
+          <Flag code={getFlagCode('cz')} style={{ width: '30px', height: '20px' }}    alt="Vlajka České republiky"/>
           Tato stránka používá cookies pro zajištění správného fungování a pro analytické účely. Pokračováním v používání této stránky souhlasíte s naším používáním cookies.
         </p>
         <div className='flex w-full justify-center mt-8 underline text-blue-600 text-base md:text-lg'>
