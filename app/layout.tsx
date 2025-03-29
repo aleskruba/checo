@@ -73,8 +73,16 @@ export default function LocaleLayout({
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const [language, setLanguage] = useState<string | undefined>(undefined); 
+  
+  useEffect(() => {
+    const currentLang = document.documentElement.lang || "cs"; 
+    setLanguage(currentLang);
+  }, []);
+
+
   return (
-    <html lang="cz" suppressHydrationWarning>
+    <html lang={language ?? "cs"} suppressHydrationWarning>
   
 
       <head>
