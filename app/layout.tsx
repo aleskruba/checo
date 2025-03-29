@@ -322,6 +322,8 @@ dark:bg-black
                             variant="outline"
                             size="icon"
                             className="md:hidden w-12 h-12 p-3"
+                            aria-label="Otevřít menu"
+                            title="Otevřít menu"
                           >
                             <Menu className="size-7" />
                           </Button>
@@ -338,6 +340,7 @@ dark:bg-black
                               alt="logo"
                               className="size-16
                                 rounded-full"
+                     
                             />
                             <p className="text-ls font-bold text-white whitespace-nowrap">
                               Ahoj, Hola!
