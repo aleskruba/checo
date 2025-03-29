@@ -49,6 +49,10 @@ export default  function Home() {
                               src={Clases}
                               alt="Clases"
                               className="w-56 h-20 rounded-xl"
+                              width={395} // Nastavte šířku na skutečnou šířku obrázku
+                              height={343} // Nastavte výšku na skutečnou výšku obrázku
+                              loading="lazy"
+                              decoding="async"
                             />
                         </Link>
 
