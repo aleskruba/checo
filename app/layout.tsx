@@ -245,6 +245,10 @@ dark:bg-black
                     src={Flag}
                     alt="Flag"
                     className="size-16 rounded-full"
+                    width={395} // Nastavte šířku na skutečnou šířku obrázku
+                    height={343} // Nastavte výšku na skutečnou výšku obrázku
+                    loading="lazy"
+                    decoding="async"
                   />
                   <h1
                     className="
@@ -348,7 +352,10 @@ dark:bg-black
                               alt="logo"
                               className="size-16
                                 rounded-full"
-                     
+                                width={395} // Nastavte šířku na skutečnou šířku obrázku
+                                height={343} // Nastavte výšku na skutečnou výšku obrázku
+                                loading="lazy"
+                                decoding="async"
                             />
                             <p className="text-ls font-bold text-white whitespace-nowrap">
                               Ahoj, Hola!
@@ -390,6 +397,10 @@ dark:bg-black
                                 src={YouTube}
                                 alt="Logo"
                                 className="w-12 h-16 rounded-xl"
+                                width={395} // Nastavte šířku na skutečnou šířku obrázku
+                                height={343} // Nastavte výšku na skutečnou výšku obrázku
+                                loading="lazy"
+                                decoding="async"
                               />
                               <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
                             </a>
@@ -404,6 +415,10 @@ dark:bg-black
                           src={Logo}
                           alt="logo"
                           className="size-12 rounded-full"
+                          width={395} // Nastavte šířku na skutečnou šířku obrázku
+                          height={343} // Nastavte výšku na skutečnou výšku obrázku
+                          loading="lazy"
+                          decoding="async"
                         />
                         <div className="flex gap-2 flex-col">
                           <h3 className="font-extrabold ml-2 text text-xl">
