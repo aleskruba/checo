@@ -404,12 +404,12 @@ dark:bg-black
                             <a href="https://www.youtube.com/@AprenderCheco" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white rounded-xl hover:scale-105 transform transition-all duration-300">
                               <Image
                                 src={YouTube}
-                                alt="Logo"
-                                className="w-16 h-16 rounded-xl"
-                                layout="intrinsic"  // Umožní automatické přizpůsobení velikosti obrázku
-                                width={64}          // Šířka obrázku pro referenci
-                                height={64}         // Výška obrázku pro referenci
-                                sizes="(max-width: 600px) 50vw, 25vw"  // O
+                              alt="Logo"
+  className="w-16 h-16 rounded-xl"
+  layout="intrinsic"  // Umožní automatické přizpůsobení velikosti obrázku
+  width={64}          // Šířka obrázku pro referenci
+  height={64}         // Výška obrázku pro referenci
+  sizes="(max-width: 600px) 50vw, 25vw"  // O
                               />
                               <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
                             </a>

@@ -26,11 +26,7 @@ function page() {
                     src={Logo}
                     alt="Logo"
                     className="size-64 rounded-full"
-                    width={395} // Nastavte šířku na skutečnou šířku obrázku
-      height={343} // Nastavte výšku na skutečnou výšku obrázku
-      loading="lazy"
-      decoding="async"
-                />
+                  />
 
           </div>
      
