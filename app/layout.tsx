@@ -301,6 +301,11 @@ dark:bg-black
       src={Clases}
       alt="Clases"
       className="h-22 rounded-xl"
+      width={400}  // Určte základní šířku obrázku
+      height={300} // Určte základní výšku obrázku
+      layout="responsive"  // Umožňuje obrázku správně reagovat na různé velikosti obrazovky
+      sizes="(max-width: 600px) 100vw, 50vw" // Určte, jakou šířku obrázku použít pro různé šířky obrazovky
+      
     />
 </Link>
 
@@ -312,6 +317,10 @@ dark:bg-black
       src={YouTube}
       alt="Logo"
       className="w-16 h-16 rounded-xl"
+      layout="intrinsic"  // Umožní automatické přizpůsobení velikosti obrázku
+      width={64}          // Šířka obrázku pro referenci
+      height={64}         // Výška obrázku pro referenci
+      sizes="(max-width: 600px) 50vw, 25vw"  // O
     />
     <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
   </a>
@@ -396,11 +405,11 @@ dark:bg-black
                               <Image
                                 src={YouTube}
                                 alt="Logo"
-                                className="w-12 h-16 rounded-xl"
-                                width={395} // Nastavte šířku na skutečnou šířku obrázku
-                                height={343} // Nastavte výšku na skutečnou výšku obrázku
-                                loading="lazy"
-                                decoding="async"
+                                className="w-16 h-16 rounded-xl"
+                                layout="intrinsic"  // Umožní automatické přizpůsobení velikosti obrázku
+                                width={64}          // Šířka obrázku pro referenci
+                                height={64}         // Výška obrázku pro referenci
+                                sizes="(max-width: 600px) 50vw, 25vw"  // O
                               />
                               <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
                             </a>
