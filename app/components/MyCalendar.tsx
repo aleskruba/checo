@@ -7,8 +7,7 @@ import '@fullcalendar/core/locales/es';  // Import Spanish locale
 const MyCalendar = () => {
     
     
-    console.log(process.env.NEXT_PUBLIC_GOOGLE_CALENDAR_ID)
-    console.log(process.env.NEXT_PUBLIC_GOOGLE_API_KEY)
+
 
  /*  useEffect(() => {
     const fetchCalendarEvents = async () => {
