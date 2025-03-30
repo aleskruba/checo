@@ -58,7 +58,7 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
       </div>
 
       <div className="border-t pt-4">
-        <h3 className="text-lg font-semibold">Clases  de gramática checa y conjugaciones – 60 minutos €6 (200Kč) </h3>
+        <h3 className="text-lg font-semibold">Clases  de gramática checa y conjugaciones – 60 minutos €8 (200Kč) </h3>
 
         </div>
         <div className="flex flex-col items-center space-y-4 p-6 rounded-lg shadow-md max-w-md mx-auto">
