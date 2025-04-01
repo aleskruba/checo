@@ -63,8 +63,17 @@ const items = {
 
     },
     {
-      title: "Vebos-jíst, pít, vařit",
+      title: "Verbos - jíst, pít, vařit",
         url: `${BASE_URL}/test/11` 
+    },
+    {
+      title: "Verbos - mluvit, rozumět",
+        url: `${BASE_URL}/test/12` 
+    }
+    ,
+    {
+      title: "El verbo - jít",
+        url: `${BASE_URL}/test/13` 
     }
   ],
 };export function TestComponent({ closeSheet }: { closeSheet: () => void }) {
