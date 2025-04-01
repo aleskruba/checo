@@ -9,7 +9,7 @@ import es from "@/public/es.png";
 import { useAudio } from "../context/AudioContext"; 
 function Intercambio() {
 
-const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+const { isPlayingAll,  stopAllAudio, isPlayingOne } = useAudio(); // Using context
 
 
   useEffect(() => {
