@@ -1,6 +1,5 @@
 "use client"
 
-import SectionTopComponent from '@/app/components/SectionTopComponents'
 import React, { useEffect } from 'react'
 import Image from "next/image";
 import br from "@/public/br.png";
