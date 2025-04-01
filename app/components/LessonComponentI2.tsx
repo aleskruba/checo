@@ -11,7 +11,6 @@ const items = {
     { title: "Verbos - chtít, potřebovat", url: `${BASE_URL}/lesson/16` },
     { title: "Cocina - palabras y frases", url: `${BASE_URL}/lesson/14` },
     { title: "Verbos - mluvit, rozumět", url: `${BASE_URL}/lesson/15` },
-
     { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     

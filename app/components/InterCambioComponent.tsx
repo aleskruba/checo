@@ -1,6 +1,6 @@
 import { SidebarMenu } from "@/components/ui/sidebar";
 import SidebarMenuSection from "./SidebarMenuSection ";
-import { FaYoutube } from "react-icons/fa";
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
 // Menu items

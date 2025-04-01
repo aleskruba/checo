@@ -5,7 +5,7 @@ import React, { useEffect } from 'react'
 import { FaPlay } from "react-icons/fa";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useAudio } from "../../context/AudioContext"; 
-import Image from "next/image";
+
 function lesson15() {
 
 const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
