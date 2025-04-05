@@ -37,13 +37,14 @@ const SidebarMenuSection = ({ title, content, closeSheet }: SidebarMenuSectionPr
   </CollapsibleTrigger>
   <CollapsibleContent>
     <SidebarMenuSub>
+      <div className="text-left">
       {content.map((item, index) => {
         const isActive = new URL(item.url).pathname === pathname;
         return (
           <SidebarMenuSubItem key={index}>
             <Link
               href={item.url}
-              className={`flex items-center gap-2 hover:text-blue-500 ${
+              className={`  hover:text-blue-500 ${
                 isActive ? "text-blue-500 font-bold" : ""
               }`}
               onClick={closeSheet}
@@ -55,6 +56,7 @@ const SidebarMenuSection = ({ title, content, closeSheet }: SidebarMenuSectionPr
           </SidebarMenuSubItem>
         );
       })}
+      </div>
     </SidebarMenuSub>
   </CollapsibleContent>
 </Collapsible>
