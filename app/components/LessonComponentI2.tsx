@@ -12,6 +12,7 @@ const items = {
     { title: "Cocina - palabras y frases", url: `${BASE_URL}/lesson/14` },
     { title: "Verbos - mluvit, rozumět", url: `${BASE_URL}/lesson/15` },
     { title: "Verbos - jít, chodit", url: `${BASE_URL}/lesson/17` },
+    { title: "Vocab. el cuerpo humano", url: `${BASE_URL}/lesson/18` },
     { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     
