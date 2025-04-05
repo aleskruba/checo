@@ -29,14 +29,17 @@ const { isPlayingAll,  stopAllAudio, isPlayingOne } = useAudio(); // Using conte
 
 <div className=" bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white flex flex-col md:flex-row gap-2  p-6">
 <div className="max-w-3xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 text-left relative">
-    <div className='absolute top-2 left-2'>   <Image
-                    src={es}
-                    alt="Flag Es"
-                    width={40}
-                     height={20}
-                    className='rounded-xl'
-              
-                  /></div>
+    <div className='absolute top-2 left-2'>   
+        <Image
+          src={es}  // Cesta k obrázku
+          alt="Bandeira do Espana"  // Alternativní text pro obrázek
+          width={40}  // Skutečná šířka obrázku
+          height={20}  // Skutečná výška obrázku
+          className="rounded-xl"  // CSS třídy pro styling
+          loading="lazy"  // Lazy loading pro zlepšení výkonu
+          decoding="async"  // Asynchronní dekódování pro lepší výkon
+          />
+</div>
     <h1 className="text-xl mt-8 font-bold  text-blue-600 dark:text-blue-400">
       INTERCAMBIO DE IDIOMAS - CHECO / ESPAÑOL (PORTUGUÉS)
     </h1>
@@ -77,13 +80,16 @@ const { isPlayingAll,  stopAllAudio, isPlayingOne } = useAudio(); // Using conte
 
   <div className="max-w-3xl w-full bg-white dark:bg-gray-800 shadow-xl rounded-2xl p-8 text-left relative">
   <div className='absolute top-2 left-2'>
-    <Image 
-      src={br} 
-      alt="Bandeira do Brasil" 
-      width={40}
-                    height={20}
-                    className='rounded-xl'
-    />
+  <Image
+  src={br}  // Cesta k obrázku
+  alt="Bandeira do Brasil"  // Alternativní text pro obrázek
+  width={40}  // Skutečná šířka obrázku
+  height={20}  // Skutečná výška obrázku
+  className="rounded-xl"  // CSS třídy pro styling
+  loading="lazy"  // Lazy loading pro zlepšení výkonu
+  decoding="async"  // Asynchronní dekódování pro lepší výkon
+/>
+
   </div>
   
   <h1 className="text-xl mt-8 font-bold text-blue-600 dark:text-blue-400">

@@ -20,6 +20,8 @@ import {
   SheetContent,
   SheetTitle,
   SheetTrigger,
+  SheetHeader,
+  SheetDescription
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { LessonComponent } from "./components/LessonComponent";
@@ -130,9 +132,9 @@ export default function LocaleLayout({
           gtag('config', 'G-RP3H6ZD9NZ');
         `}
       </Script>
-
+{/* 
       <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
-     crossOrigin="anonymous"></Script>
+     crossOrigin="anonymous"></Script> */}
 
 
           <meta
@@ -147,7 +149,7 @@ export default function LocaleLayout({
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
-        <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
+    {/*     <meta name="google-adsense-account" content="ca-pub-4044949713848832"/> */}
         <meta
             property="og:description"
             content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
@@ -175,7 +177,7 @@ export default function LocaleLayout({
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
-        <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
+   {/*      <meta name="google-adsense-account" content="ca-pub-4044949713848832"/> */}
         <meta
             property="og:description"
             content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
@@ -303,7 +305,6 @@ dark:bg-black
       className="h-22 rounded-xl"
       width={400}  // Určte základní šířku obrázku
       height={300} // Určte základní výšku obrázku
-      layout="responsive"  // Umožňuje obrázku správně reagovat na různé velikosti obrazovky
       sizes="(max-width: 600px) 100vw, 50vw" // Určte, jakou šířku obrázku použít pro různé šířky obrazovky
       
     />
@@ -313,15 +314,16 @@ dark:bg-black
 
 <div className="flex items-center justify-center p-4 rounded-xl  shadow-lg hover:shadow-xl transition-shadow duration-300">
   <a href="https://www.youtube.com/@AprenderCheco" target="_blank" rel="noopener noreferrer" className=" rounded-xl flex items-center gap-4 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white hover:scale-105 transform transition-all duration-300">
-    <Image
-      src={YouTube}
-      alt="Logo"
-      className="w-16 h-16 rounded-xl"
-      layout="intrinsic"  // Umožní automatické přizpůsobení velikosti obrázku
-      width={64}          // Šířka obrázku pro referenci
-      height={64}         // Výška obrázku pro referenci
-      sizes="(max-width: 600px) 50vw, 25vw"  // O
-    />
+  <Image
+  src={YouTube}  // Cesta k obrázku nebo importovaný obrázek
+  alt="Logo"  // Alternativní text pro obrázek
+  className="w-16 h-16 rounded-xl"  // Třídy pro velikost a zaoblené rohy
+  width={64}  // Referenční šířka obrázku (bude upraveno pro různé šířky zobrazení)
+  height={64}  // Referenční výška obrázku
+  sizes="(max-width: 600px) 50vw, 25vw"  // Nastaví šířku obrázku na základě šířky zobrazení
+  loading="lazy"  // Lazy loading pro lepší výkon
+  decoding="async"  // Asynchronní dekódování pro lepší výkon
+/>
     <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
   </a>
 </div>
@@ -337,86 +339,94 @@ dark:bg-black
                   
                  
                     <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-                
-                      <SheetTrigger asChild >
-                      <Button
-                            variant="outline"
-                            size="icon"
-                            className="md:hidden w-12 h-12 p-3"
-                            aria-label="Otevřít menu"
-                            title="Otevřít menu"
-                          >
-                            <Menu className="size-7" />
-                          </Button>
-                      </SheetTrigger>
-                 
-                      <SheetContent
-                        side="left"
-                        className="darK:bg-black darK:text-white bg-gray-500 w-[80%] md:hidden md:bg-inherit "
-                      >
-                        <SheetTitle>
-                          <div className="flex items-center gap-2 ">
-                            <Image
-                              src={Logo}
-                              alt="logo"
-                              className="size-16
-                                rounded-full"
-                                width={395} // Nastavte šířku na skutečnou šířku obrázku
-                                height={343} // Nastavte výšku na skutečnou výšku obrázku
-                                loading="lazy"
-                                decoding="async"
-                            />
-                            <p className="text-ls font-bold text-white whitespace-nowrap">
-                              Ahoj, Hola!
-                            </p>
-                            <Image
-                              src={Flag}
-                              alt="Flag"
-                              className="size-14 rounded-full"
-                            />
-                          </div>
-                        </SheetTitle>
-                        <nav className="grid gap-2 mt-10  fixed text-white  overflow-y-auto  max-h-[70%] pb-8 ">
-                            <div className="overflow-y-auto h-full ">
-                  
-                            <ViajerosComponent closeSheet={closeSheet} />
-                          <LessonComponent closeSheet={closeSheet} />
-                          <LessonComponent2 closeSheet={closeSheet} />
-                          <IntermedioComponent closeSheet={closeSheet}/>
-                          <DialogComponent closeSheet={closeSheet} />
-                          <TestComponent closeSheet={closeSheet} />
-                          <InterCambioComponent closeSheet={closeSheet} />
-                         <ThemeComponent closeSheet={closeSheet} />
-                         </div>
+                      
+  <SheetTrigger asChild>
+    <Button
+      variant="outline"
+      size="icon"
+      className="md:hidden w-12 h-12 p-3"
+      aria-label="Otevřít menu"
+      title="Otevřít menu"
+    >
+      <Menu className="size-7" />
+    </Button>
+  </SheetTrigger>
 
-                  {/*        <div className="flex items-center w-[18rem] justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <Link href="/clases" className="hover:scale-105 transform transition-all duration-300">
-                                <Image
-                              src={Clases}
-                              alt="Clases"
-                              className="w-18 h-20 rounded-xl"
-                            />
-                        </Link>
+  <SheetContent
+    side="left"
+    className="dark:bg-black dark:text-white bg-gray-500 w-[80%] md:hidden md:bg-inherit"
+    aria-describedby="sheet-description" // Make sure this matches the description ID below
+  >
+      <SheetHeader>
+      <SheetDescription />
+      </SheetHeader>
+    <SheetTitle>
+      <div className="flex items-center gap-2">
+        <Image
+          src={Logo}
+          alt="logo"
+          className="size-16 rounded-full"
+          width={395}
+          height={343}
+          loading="lazy"
+          decoding="async"
+        />
+        <p className="text-ls font-bold text-white whitespace-nowrap">
+          Ahoj, Hola!
+        </p>
+        <Image
+          src={Flag}
+          alt="Flag"
+          width={56}
+          height={56}
+          className="rounded-full"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </SheetTitle>
 
-                        </div> */}
+    {/* Add the description here */}
+    <p id="sheet-description" className="sr-only">
+      This is a sidebar menu where you can navigate through various sections of the website.
+    </p>
 
-                         <div className="flex items-center w-[18rem] justify-center  p-4  shadow-lg hover:shadow-xl transition-shadow duration-300">
-                            <a href="https://www.youtube.com/@AprenderCheco" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white rounded-xl hover:scale-105 transform transition-all duration-300">
-                              <Image
-                                src={YouTube}
-                              alt="Logo"
-  className="w-16 h-16 rounded-xl"
-  layout="intrinsic"  // Umožní automatické přizpůsobení velikosti obrázku
-  width={64}          // Šířka obrázku pro referenci
-  height={64}         // Výška obrázku pro referenci
-  sizes="(max-width: 600px) 50vw, 25vw"  // O
-                              />
-                              <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
-                            </a>
-                          </div>
-                        </nav>
-                      </SheetContent>
-                    </Sheet>
+    <nav className="grid gap-2 mt-10 fixed text-white overflow-y-auto max-h-[70%] pb-8">
+      <div className="overflow-y-auto h-full">
+        <ViajerosComponent closeSheet={closeSheet} />
+        <LessonComponent closeSheet={closeSheet} />
+        <LessonComponent2 closeSheet={closeSheet} />
+        <IntermedioComponent closeSheet={closeSheet} />
+        <DialogComponent closeSheet={closeSheet} />
+        <TestComponent closeSheet={closeSheet} />
+        <InterCambioComponent closeSheet={closeSheet} />
+        <ThemeComponent closeSheet={closeSheet} />
+      </div>
+
+      <div className="flex items-center w-[18rem] justify-center p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <a
+          href="https://www.youtube.com/@AprenderCheco"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 p-2 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white rounded-xl hover:scale-105 transform transition-all duration-300"
+        >
+          <Image
+            src={YouTube}
+            alt="Logo"
+            className="w-16 h-16 rounded-xl"
+            width={64}
+            height={64}
+            sizes="(max-width: 600px) 50vw, 25vw"
+            loading="lazy"
+            decoding="async"
+          />
+          <span className="text-lg font-semibold">Aprender Checo con Aleš</span>
+        </a>
+      </div>
+    </nav>
+  </SheetContent>
+</Sheet>
+
 
                     <div className="flex w-full justify-start md:hidden ">
                       <Link href="/" className="flex items-center gap-2">

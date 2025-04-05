@@ -44,13 +44,15 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
     </p>
   </div>
     <div className="relative">
-      <Image
-        src={BodyPart}
-        alt="Kitchen"
-        className=" rounded-lg float-left mr-4"
-        width={250}
-        height={250}
-      />
+    <Image
+  src={BodyPart}  // Cesta k obrázku
+  alt="BodyPart"  // Alternativní text pro obrázek
+  className="rounded-lg float-left mr-4"  // CSS třídy pro styling
+  width={250}  // Skutečná šířka obrázku
+  height={250}  // Skutečná výška obrázku
+  loading="lazy"  // Lazy loading pro zlepšení výkonu
+  decoding="async"  // Asynchronní dekódování pro lepší výkon
+/>
     </div>
 </section>
 

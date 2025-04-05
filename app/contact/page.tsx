@@ -23,10 +23,15 @@ function page() {
           </div>
           <div className="mt-8">
           <Image
-                    src={Logo}
-                    alt="Logo"
-                    className="size-64 rounded-full"
-                  />
+  src={Logo}  // Cesta k obrázku
+  alt="Logo"  // Alternativní text pro obrázek
+  width={256}  // Určete šířku obrázku
+  height={256}  // Určete výšku obrázku
+  className="rounded-3xl"  // CSS třída pro zaoblené rohy
+  loading="lazy"  // Lazy loading pro zlepšení výkonu
+  decoding="async"  // Asynchronní dekódování pro lepší výkon
+/>
+
 
           </div>
      
