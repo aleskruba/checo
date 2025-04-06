@@ -49,12 +49,16 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
         Mis Clases  son amigables y las adaptaré a tus necesidades. Si quieres, puedo ayudarte con la gramática o simplemente podemos conversar, ¡tú decides!
       </p>
       
-      <div className="border-t pt-4">
-        <h2 className="text-xl font-bold text-center">🌟 Clase de prueba: 15 minutos - Gratis</h2>
-      </div>
+   
 
       <div className="border-t pt-4">
-      <h2 className="text-lg font-semibold text-center">Clases de conversación en checo – €6 (150 Kč)</h2>
+      <h2 className="text-lg font-semibold text-center">
+        Conversación / intercambio en checo, español y portugués – gratuito
+      </h2>     
+ </div>
+
+      <div className="border-t pt-4">
+        <h2 className="text-xl font-bold text-center">🌟 Clase de prueba: 15 minutos - Gratis</h2>
       </div>
 
       <div className="border-t pt-4">
