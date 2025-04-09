@@ -155,7 +155,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         <ul className="list-disc list-inside ml-4">
             <li><strong>Si termina en "a" → cambia a "u":</strong> <i>žena → vidím ženu</i>, <i>kniha → vidím knihu</i></li>
             <li><strong>Si termina en "e" → cambia a "i":</strong> <i>růže → vidím růži</i>, <i>ulice → vidím ulici</i></li>
-            <li><strong>Excepción:</strong> Sustantivos inanimados con terminación <i>-e</i> o <i>-i</i> no cambian: <i>místnost → místnost</i>, <i>kost → kost</i></li>
+            <li><strong>Excepción:</strong> Sustantivos inanimados con terminación <i>-t</i> no cambian: <i>místnost → místnost</i>, <i>kost → kost</i></li>
         </ul>
         </div>
 

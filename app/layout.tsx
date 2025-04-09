@@ -7,7 +7,7 @@ import { Sigmar } from "next/font/google";
 import Footer from "./components/Footer";
 import { Button } from "@/components/ui/button";
 import YouTube from "@/public/youtube.png";
-import Clases from "@/public/clases.png";
+import Clases from "@/public/italki.png";
 import Logo from "@/public/man1.png";
 import Flag from "@/public/czflag.png";
 import Image from "next/image";
@@ -298,17 +298,22 @@ dark:bg-black
                                     <div className="mt-16 ">
 
   <div className="flex items-center justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-    <Link href="/clases" className="hover:scale-105 transform transition-all duration-300">
-        <Image
-      src={Clases}
-      alt="Clases"
-      className="h-22 rounded-xl"
-      width={400}  // Určte základní šířku obrázku
-      height={300} // Určte základní výšku obrázku
-      sizes="(max-width: 600px) 100vw, 50vw" // Určte, jakou šířku obrázku použít pro různé šířky obrazovky
-      
-    />
-</Link>
+  <a
+  href="https://www.italki.com/en/teacher/6813654/czech"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:scale-105 transform transition-all duration-300"
+>
+  <Image
+    src={Clases}
+    alt="Clases"
+    className="h-22 rounded-xl"
+    width={400}
+    height={200}
+    sizes="(max-width: 600px) 100vw, 50vw"
+  />
+</a>
+
 
 </div>
 
