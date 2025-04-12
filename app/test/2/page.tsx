@@ -26,6 +26,7 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
 
   return (
     <div className="">
+ 
     <Quiz questions={quizQuestions} />
     </div>
   );
