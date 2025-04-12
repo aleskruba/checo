@@ -13,6 +13,7 @@ const items = {
     { title: "Verbos - mluvit, rozumět", url: `${BASE_URL}/lesson/15` },
     { title: "Verbos - jít, chodit", url: `${BASE_URL}/lesson/17` },
     { title: "Vocab. el cuerpo humano", url: `${BASE_URL}/lesson/18` },
+    { title: "Días, meses, estaciones", url: `${BASE_URL}/lesson/19` },
     { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     
