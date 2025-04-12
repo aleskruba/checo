@@ -285,7 +285,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         { cs: "Podzim je klidné období", es: "El otoño es una estación tranquila", file: "cs-CZ-VlastaNeural (22).mp3" },
         { cs: "Na podzim pojedu do Španělska", es: "Voy a España en otoño", file: "cs-CZ-VlastaNeural (23).mp3" },
         { cs: "Zima je chladné období", es: "El invierno es una estación fría", file: "cs-CZ-VlastaNeural (24).mp3" },
-        { cs: "V zimě často sněží", es: "En invierno suele nevar", file: "cs-CZ-VlastaNeural (25).mp3" }
+        { cs: "V zimě často sněží", es: "En invierno nieva a menudo", file: "cs-CZ-VlastaNeural (25).mp3" }
       ].map(({ cs, es, file }, index) => (
         <TableRow key={index}>
           <TableCell>
