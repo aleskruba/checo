@@ -40,7 +40,7 @@ export const quizQuestions = [
       answer: 0
     },
     {
-      question: "¿Cómo se dice 'Una barriga grande en checo?",
+      question: "¿Cómo se dice 'Una barriga grande' en checo?",
       options: ["Velké rameno", "Velké břicho", "Velké koleno", "Velká hlava"],
       answer: 1
     },
