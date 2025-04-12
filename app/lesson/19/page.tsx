@@ -33,9 +33,23 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
   title="Días, meses, estaciones"
   description="Aprende las palabras en checo para hablar sobre los días, meses y estaciones del año."
 />
-
-
-
+<section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white flex flex-col justify-center items-center gap-4">
+  <div className="flex flex-col justify-center items-center gap-4">
+<div className="flex flex-col ">
+       <p className=" text-sm pb-4">
+      📌 También puedes ver el contenido de esta clase en este vídeo:{" "}
+      </p>
+      <a
+        href="https://youtu.be/wMz2WnJI4pI"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 font-semibold hover:underline"
+      >
+        Ver en YouTube
+      </a>
+      </div>
+      </div>
+      </section>
       
 <section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white flex flex-col justify-center items-center gap-4">
   <div className="flex flex-col justify-center items-center gap-4">
