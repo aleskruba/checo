@@ -49,7 +49,11 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
         Mis Clases  son amigables y las adaptaré a tus necesidades. Si quieres, puedo ayudarte con la gramática o simplemente podemos conversar, ¡tú decides!
       </p>
       
-   
+      <div className="border-t pt-4">
+      <h2 className="text-cl font-semibold text-center">
+       Facebook group 
+      </h2>     
+ </div>
 
       <div className="border-t pt-4">
       <h2 className="text-lg font-semibold text-center">
