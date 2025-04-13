@@ -60,7 +60,7 @@ const { isPlayingAll, stopAllAudio, isPlayingOne } = useAudio(); // Using contex
 
 
       <div className="border-t pt-4">
-        <h3 className="text-lg font-semibold">Clases  de gramática checa y conjugaciones – 50 minutos €6 (150Kč) </h3>
+        <h3 className="text-lg font-semibold">Desde Junio 2025 !!! Clases  de gramática checa y conjugaciones – 50 minutos €6 (150Kč) </h3>
         </div>
       <div className="border-t pt-4">
         <h2 className="text-xl font-bold text-center">🌟 Clase de prueba: 15 minutos - Gratis</h2>
