@@ -136,7 +136,8 @@ export default function LocaleLayout({
 {/* 
       <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"  
      crossOrigin="anonymous"></Script> */}
-
+<Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"
+     crossOrigin="anonymous"></Script>
 
           <meta
             name="description"
@@ -219,6 +220,8 @@ export default function LocaleLayout({
         <link rel="alternate" hrefLang="pt-ST" href="https://aprendercheco.com" />
         <link rel="alternate" hrefLang="pt-TL" href="https://aprendercheco.com" /> */}
 
+<Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4044949713848832"
+     crossOrigin="anonymous"></Script>
       </Head>
       <body
         suppressHydrationWarning
