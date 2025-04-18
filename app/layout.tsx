@@ -150,7 +150,7 @@ export default function LocaleLayout({
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
-    {/*     <meta name="google-adsense-account" content="ca-pub-4044949713848832"/> */}
+        <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
         <meta
             property="og:description"
             content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
@@ -178,7 +178,7 @@ export default function LocaleLayout({
           />
 
         <meta property="og:title" content="Aprende Checo Fácilmente con Aleš | Gramática, Pronunciación, Diálogos" />
-   {/*      <meta name="google-adsense-account" content="ca-pub-4044949713848832"/> */}
+        <meta name="google-adsense-account" content="ca-pub-4044949713848832"/>
         <meta
             property="og:description"
             content="Aprende checo de manera fácil y divertida con Aleš Kruba. Clases desde cero para principiantes, con gramática, pronunciación, diálogos prácticos y tests interactivos, especialmente diseñadas para hispanohablantes."
