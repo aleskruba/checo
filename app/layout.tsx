@@ -39,6 +39,7 @@ import SubscribeComponent from "./components/SubscribeComponent";
 import { useAudio } from "./context/AudioContext";
 import IntercambioComponent from "./intercambio/page";
 import { InterCambioComponent } from "./components/InterCambioComponent";
+import  { DropdownMenuCheckboxes } from "./components/RightMenu";
 
 const poppins = Poppins({
   weight: "300",
@@ -277,6 +278,7 @@ dark:bg-black
                   </h1>
                 </Link>
               </div>
+              <DropdownMenuCheckboxes/>
             </nav>
 
             <SidebarProvider>
