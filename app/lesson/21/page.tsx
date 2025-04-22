@@ -30,7 +30,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
     <div className='w-full min-h-screen px-0 md:px-12  '>
       
       <SectionTopComponent 
-  title="Verbos reflexivos en checo"
+  title="Verbos reflexivos en checo - Zvratná slovesa v češtině"
   description="Aprende cómo se usan los verbos reflexivos en checo, su conjugación y cuándo se emplean en diferentes contextos."
 />
 
