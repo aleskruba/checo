@@ -15,6 +15,7 @@ const items = {
     { title: "Vocab. el cuerpo humano", url: `${BASE_URL}/lesson/18` },
     { title: "Días, meses, estaciones", url: `${BASE_URL}/lesson/19` },
     { title: "Verbos - jet, jezdit", url: `${BASE_URL}/lesson/20` },
+    { title: "Verbos reflexivos en checo", url: `${BASE_URL}/lesson/21` },
     { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     
