@@ -129,7 +129,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
     {[
       ["já se jmenuju", "yo me llamo"],
       ["ty se jmenuješ", "tú te llamas"],
-      ["on/ona/to se jmenuje", "él/ella se llama"],
+      ["on/ona se jmenuje", "él/ella se llama"],
       ["my se jmenujeme", "nosotros nos llamamos"],
       ["vy se jmenujete", "vosotros os llamáis / usted se llama"],
       ["oni se jmenují", "ellos se llaman"]
@@ -165,7 +165,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         {[
           ["já se učím", "yo aprendo / estoy aprendiendo"],
           ["ty se učíš", "tú aprendes"],
-          ["on/ona/to se učí", "él/ella aprende"],
+          ["on/ona se učí", "él/ella aprende"],
           ["my se učíme", "nosotros aprendemos"],
           ["vy se učíte", "vosotros aprendéis / usted aprende"],
           ["oni se učí", "ellos aprenden"]
@@ -199,7 +199,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
         {[
           ["já se dívám", "yo miro / estoy mirando"],
           ["ty se díváš", "tú miras"],
-          ["on/ona/to se dívá", "él/ella mira"],
+          ["on/ona se dívá", "él/ella mira"],
           ["my se díváme", "nosotros miramos"],
           ["vy se díváte", "vosotros miráis / usted mira"],
           ["oni se dívají", "ellos miran"]
