@@ -16,6 +16,7 @@ const items = {
     { title: "Días, meses, estaciones", url: `${BASE_URL}/lesson/19` },
     { title: "Verbos - jet, jezdit", url: `${BASE_URL}/lesson/20` },
     { title: "Verbos reflexivos en checo", url: `${BASE_URL}/lesson/21` },
+    { title: "Pronombres reflex. si-se", url: `${BASE_URL}/lesson/22` },
     { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     
