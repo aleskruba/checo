@@ -40,6 +40,7 @@ import { useAudio } from "./context/AudioContext";
 import IntercambioComponent from "./intercambio/page";
 import { InterCambioComponent } from "./components/InterCambioComponent";
 import  { DropdownMenuCheckboxes } from "./components/RightMenu";
+import { AvanzadoComponent } from "./components/AvanzadoComponent";
 
 const poppins = Poppins({
   weight: "300",
@@ -296,6 +297,7 @@ dark:bg-black
                         <LessonComponent closeSheet={closeSheet} />
                         <LessonComponent2 closeSheet={closeSheet} />
                         <IntermedioComponent closeSheet={closeSheet}/>
+                        <AvanzadoComponent closeSheet={closeSheet}/>
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
                         <InterCambioComponent closeSheet={closeSheet} />
@@ -408,6 +410,7 @@ dark:bg-black
         <LessonComponent closeSheet={closeSheet} />
         <LessonComponent2 closeSheet={closeSheet} />
         <IntermedioComponent closeSheet={closeSheet} />
+        <AvanzadoComponent closeSheet={closeSheet}/>
         <DialogComponent closeSheet={closeSheet} />
         <TestComponent closeSheet={closeSheet} />
         <InterCambioComponent closeSheet={closeSheet} />
