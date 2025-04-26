@@ -27,9 +27,9 @@ function avanzado1() {
   />
 
 
-<section className="mt-4 shadow-lg rounded-2xl p-6 dark:bg-gray-800 bg-white dark:text-gray-200 text-gray-900 border dark:border-gray-700 border-gray-300">
+<section className="mt-4 shadow-lg  rounded-2xl p-6 dark:bg-gray-800 bg-white dark:text-gray-200 text-gray-900 border dark:border-gray-700 border-gray-300">
   <h2 className="text-2xl font-bold mb-4 text-center">Kalendárium jinak</h2>
-  <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+  <div className="relative w-full min-h-screen" style={{ paddingTop: "56.25%" }}>
     <iframe
       src="https://pekne-datum.cz/"
       title="Pěkné datum"
