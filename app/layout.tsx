@@ -303,7 +303,7 @@ dark:bg-black
                         <InterCambioComponent closeSheet={closeSheet} />
 
                         <ThemeComponent closeSheet={closeSheet} />
-                                    <div className="mt-16 ">
+                                    <div className="mt-8 ">
 
   <div className="flex items-center justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
   <a
