@@ -17,6 +17,8 @@ const items = {
     { title: "Verbos - jet, jezdit", url: `${BASE_URL}/lesson/20` },
     { title: "Verbos reflexivos en checo", url: `${BASE_URL}/lesson/21` },
     { title: "Pronombres reflex. si-se", url: `${BASE_URL}/lesson/22` },
+    { title: "Pronombres person. DATIV", url: `${BASE_URL}/lesson/23` },
+    { title: "Pronombres person. AKUZATIV", url: `${BASE_URL}/lesson/24` },
     { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
 
     
