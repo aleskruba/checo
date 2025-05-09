@@ -94,7 +94,7 @@ const items = {
         url: `${BASE_URL}/test/17` 
     },
     {
-      title: "pronombres en caso DATIVO ",
+      title: "Pronombres en caso DATIVO ",
         url: `${BASE_URL}/test/18` 
     }
   ],
