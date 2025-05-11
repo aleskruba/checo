@@ -34,14 +34,14 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
   description="Descubre cómo se usan los pronombres ti, jí, mu... y el reflexivo si con los verbos que requieren el caso dativo en checo."
 />
 
-{/* <section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white flex flex-col justify-center items-center gap-4">
+<section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white flex flex-col justify-center items-center gap-4">
   <div className="flex flex-col justify-center items-center gap-4">
 <div className="flex flex-col ">
        <p className=" text-sm pb-4">
       📌 También puedes ver el contenido de esta clase en este vídeo:{" "}
       </p>
       <a
-        href="https://youtu.be/KCtROO4dX6M"
+        href="https://youtu.be/Gp2hj1tRgiA"
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-600 font-semibold hover:underline"
@@ -50,7 +50,7 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
       </a>
       </div>
       </div>
-      </section> */}
+      </section>
       
       <section className="mt-2 shadow-lg rounded-2xl p-4 dark:bg-gray-800 bg-white flex flex-col justify-center items-center gap-4">
   <div className="flex flex-col justify-center items-center gap-4 max-w-3xl w-full text-center">
