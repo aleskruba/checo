@@ -73,10 +73,10 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
 
 <section className="mt-4 shadow-lg rounded-2xl p-6 dark:bg-gray-800 bg-white flex flex-col justify-center items-center gap-6 w-full">
   <h2 className="text-2xl font-bold text-gray-800 dark:text-white text-center">
-    Conjugación del verbo "jít" (ir a pie)
+    Conjugación del verbo "jet" (ir en transporte)
   </h2>
   <p className="text-gray-700 dark:text-gray-300 text-center max-w-2xl">
-    Aprende cómo se conjuga en checo el verbo <strong>"jít"</strong>, que significa <em>"ir a pie"</em> en español. Este verbo se usa para describir una acción que ocurre una vez o en este momento.
+    Aprende cómo se conjuga en checo el verbo <strong>"jet"</strong>, que significa <em>"ir en transporte"</em> en español. Este verbo se usa para describir desplazamientos en coche, tren, autobús u otros medios de transporte.
   </p>
 
   <div className="overflow-x-auto w-full">
@@ -89,12 +89,12 @@ const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = us
       </thead>
       <tbody className="divide-y divide-gray-300 dark:divide-gray-600">
         {[
-          ["já jdu", "yo voy (a pie)"],
-          ["ty jdeš", "tú vas"],
-          ["on/ona/to jde", "él/ella va"],
-          ["my jdeme", "nosotros vamos"],
-          ["vy jdete", "vosotros vais / usted va"],
-          ["oni jdou", "ellos van"]
+          ["já jedu", "yo voy (en coche, tren, etc.)"],
+          ["ty jedeš", "tú vas"],
+          ["on/ona/to jede", "él/ella va"],
+          ["my jedeme", "nosotros vamos"],
+          ["vy jedete", "vosotros vais / usted va"],
+          ["oni jedou", "ellos van"]
         ].map(([cz, es], idx) => (
           <tr key={idx} className="hover:bg-gray-100 dark:hover:bg-gray-700 transition">
             <td className="px-4 py-2">{cz}</td>
