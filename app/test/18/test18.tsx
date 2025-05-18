@@ -15,7 +15,7 @@ export const quizQuestions = [
         answer: 1
     },
     {
-      question: "¿Cómo se dice '¿Te comprarás un libro? en checo? ",
+      question: "¿Cómo se dice '¿Te comprarás un libro?' en checo? ",
       options: ["Koupíš si knihu?", "Koupíš ti knihu?", "Koupíš ty knihu?", "Koupíš tě knihu?"],
       answer: 0
     },

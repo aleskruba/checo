@@ -94,8 +94,12 @@ const items = {
         url: `${BASE_URL}/test/17` 
     },
     {
-      title: "Pronombres en caso DATIVO ",
+      title: "Pronombres en DATIVO",
         url: `${BASE_URL}/test/18` 
+    },
+    {
+      title: "Pronombres en ACUSATIVO",
+        url: `${BASE_URL}/test/19` 
     }
   ],
 };export function TestComponent({ closeSheet }: { closeSheet: () => void }) {
