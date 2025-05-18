@@ -2,16 +2,19 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import stringComparison from "string-comparison";
+import { FaPlay } from "react-icons/fa";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { useAudio } from "../context/AudioContext"; 
 
 const frases = [
-  { cz: "Chtěl bych chleba.", es: "Quisiera pan." },
-  { cz: "Chladný vzduch.", es: "Aire frío." },
-  { cz: "Jdu do obchodu.", es: "Voy a la tienda." },
-  { cz: "Chlapec chodí.", es: "El niño camina." },
-  { cz: "Chci trochu vody.", es: "Quiero un poco de agua." },
-  { cz: "Byla tam chyba.", es: "Había un error." },
-  { cz: "Máme nový obchod.", es: "Tenemos una tienda nueva." },
-  { cz: "Pes je v chladu.", es: "El perro está en el frío." }
+  { cz: "Chtěl bych chleba.", es: "Quisiera pan.",file:"voice1/1.mp3" },
+  { cz: "Chladný vzduch.", es: "Aire frío.",file:"voice1/2.mp3" },
+  { cz: "Jdu do obchodu.", es: "Voy a la tienda.",file:"voice1/3.mp3" },
+  { cz: "Chlapec chodí.", es: "El niño camina.",file:"voice1/4.mp3" },
+  { cz: "Chci trochu vody.", es: "Quiero un poco de agua.",file:"voice1/5.mp3" },
+  { cz: "Byla tam chyba.", es: "Había un error.",file:"voice1/6.mp3" },
+  { cz: "Máme nový obchod.", es: "Tenemos una tienda nueva.",file:"voice1/7.mp3" },
+  { cz: "Chodba je chladná.", es: "El pasillo está frío.",file:"voice1/8.mp3" }
 ];
 
 const SpeechCheck: React.FC = () => {
@@ -19,50 +22,75 @@ const SpeechCheck: React.FC = () => {
   const [spokenText, setSpokenText] = useState("");
   const [score, setScore] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [targetSentence, setTargetSentence] = useState(frases[0].cz);
-  const targetRef = useRef(targetSentence);
+  const [targetSentence, setTargetSentence] = useState(frases[0]);
+  const targetRef = useRef(targetSentence.cz);
   const recognition = useRef<any>(null);
 
-  useEffect(() => {
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SpeechRecognition) {
-      alert("Váš prohlížeč nepodporuje Web Speech API.");
-      return;
+  const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
+  
+   useEffect(() => {
+      // Stop all audio when the page changes or component unmounts
+      if (isPlayingAll || isPlayingOne) {
+        stopAllAudio();
+      }
+  
+      return () => {
+        if (isPlayingAll || isPlayingOne) {
+          stopAllAudio();
+        }
+      };
+    }, []);
+
+useEffect(() => {
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    alert("Váš prohlížeč nepodporuje Web Speech API.");
+    return;
+  }
+
+  recognition.current = new SpeechRecognition();
+  recognition.current.lang = "cs-CZ";
+  recognition.current.interimResults = false;
+  recognition.current.maxAlternatives = 1;
+
+  recognition.current.onresult = (event: any) => {
+    const transcript = event.results[0][0].transcript;
+    console.log("Recognized:", transcript);
+    setSpokenText(transcript);
+    evaluateSimilarity(transcript, targetRef.current);
+    setIsListening(false);
+  };
+
+  recognition.current.onerror = (event: any) => {
+    console.log("Recognition error:", event.error);
+  /*   alert("Chyba rozpoznávání: " + event.error); */
+    setIsListening(false);
+  };
+
+  recognition.current.onspeechend = () => {
+    console.log("Speech ended.");
+    recognition.current.stop();
+    setIsListening(false);
+  };
+
+  recognition.current.onend = () => {
+    console.log("Recognition ended.");
+    setIsListening(false);
+  };
+
+  // Cleanup function on unmount
+  return () => {
+    if (recognition.current) {
+      recognition.current.abort(); // stop any ongoing recognition immediately
+      setIsListening(false);
+      console.log("Speech recognition aborted on unmount");
     }
+  };
+}, []);
 
-    recognition.current = new SpeechRecognition();
-    recognition.current.lang = "cs-CZ";
-    recognition.current.interimResults = false;
-    recognition.current.maxAlternatives = 1;
-
-    recognition.current.onresult = (event: any) => {
-      const transcript = event.results[0][0].transcript;
-      console.log("Recognized:", transcript);
-      setSpokenText(transcript);
-      evaluateSimilarity(transcript, targetRef.current);
-      setIsListening(false);
-    };
-
-    recognition.current.onerror = (event: any) => {
-      console.log("Recognition error:", event.error);
-      alert("Chyba rozpoznávání: " + event.error);
-      setIsListening(false);
-    };
-
-    recognition.current.onspeechend = () => {
-      console.log("Speech ended.");
-      recognition.current.stop();
-      setIsListening(false);
-    };
-
-    recognition.current.onend = () => {
-      console.log("Recognition ended.");
-      setIsListening(false);
-    };
-  }, []);
 
   useEffect(() => {
-    targetRef.current = targetSentence;
+    targetRef.current = targetSentence.cz;
   }, [targetSentence]);
 
   function normalizeText(text: string) {
@@ -100,7 +128,7 @@ const SpeechCheck: React.FC = () => {
   function nextWord() {
     const nextIndex = (currentIndex + 1) % frases.length;
     setCurrentIndex(nextIndex);
-    setTargetSentence(frases[nextIndex].cz);
+    setTargetSentence(frases[nextIndex]);
     setScore(null);
     setSpokenText("");
   }
@@ -118,9 +146,27 @@ const SpeechCheck: React.FC = () => {
         Řekni frázi: / Di la frase:
       </h2>
 
-      <p style={{ fontSize: "1.8rem", fontWeight: "bold" }}>"{targetSentence}"</p>
 
-      <div className="flex flex-col">
+      <div className="flex justify-center items-center  ">
+     <button
+              onClick={() => playAudio(targetSentence.file)}
+              className={`flex gap-2 items-center text-xl ${
+                isPlayingAll || isPlayingOne
+                  ? "dark:text-gray-600 text-gray-300"
+                  : "text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
+              }`}
+              disabled={isPlayingAll || isPlayingOne}
+              aria-label={targetSentence.cz}
+            >   <FaPlay size={20} /> play</button>
+    </div>
+
+        <div className="flex flex-col">      
+      <p className="text-xl md:text-2xl font-semibold mb-2">{targetSentence.cz}</p>
+       <p className="text-xs md:text-base italic  mb-6">{targetSentence.es}</p>
+</div>
+
+
+      <div className="flex flex-col ">
         {score === null && !isListening && (
           <button
             onClick={startListening}
@@ -146,14 +192,14 @@ const SpeechCheck: React.FC = () => {
         )}
 
         {spokenText && (
-          <>
+          <div className="dark:bg-gray-800 bg-gray-200 mb-2">
             <h3>Tvůj výstup:</h3>
             <p>"{spokenText}"</p>
-          </>
+          </div>
         )}
 
         {score !== null && (
-          <>
+          <div className="">
             <h3 className="text-xl font-semibold text-center mb-4">
               Podobnost: <span className={score >= 80 ? "text-green-600" : "text-red-600"}>{score}%</span> {score >= 80 ? "👍" : "👎"}
             </h3>
@@ -172,7 +218,7 @@ const SpeechCheck: React.FC = () => {
                 Nová fráze / Nueva frase
               </button>
             </div>
-          </>
+          </div>
         )}
 
         {score === null && !isListening && (

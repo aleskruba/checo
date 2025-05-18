@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
-      <h1 className="mb-8">vyber výslovnost</h1>
+      <h1 className="mb-8">Pronunciación checa / Česká výslovnost</h1>
       {children}
     </>
   );
