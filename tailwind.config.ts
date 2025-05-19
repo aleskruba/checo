@@ -11,6 +11,10 @@ export default {
   	extend: {
 		
   		keyframes: {
+			   growBold: {
+				'0%': { transform: 'scale(1)', fontWeight: '400' },
+				'100%': { transform: 'scale(1.4)', fontWeight: '900' },
+				},
   			slideIn: {
   				'0%': {
   					transform: 'translateX(120%)',
@@ -23,7 +27,8 @@ export default {
   			}
   		},
   		animation: {
-  			slideIn: 'slideIn 1.5s ease-in-out forwards'
+  			slideIn: 'slideIn 1.5s ease-in-out forwards',
+			growBold: 'growBold 1s forwards',
   		},
   		fontFamily: {
 			poppins: ['Poppins', 'sans-serif'],

@@ -123,7 +123,7 @@ const SpeechCheck: React.FC = () => {
 
   return (
     <div style={{ maxWidth: 400, margin: "auto", fontFamily: "Arial, sans-serif" }}>
-      <h2 className="text-xl font-semibold mb-4 text-center">
+      <h2 className="text-xl font-semibold mb-2 text-center">
         Řekni frázi: / Di la frase:
       </h2>
 
@@ -142,8 +142,8 @@ const SpeechCheck: React.FC = () => {
         </button>
       </div>
 
-      <div className="flex flex-col">
-        <p className="text-xl md:text-2xl font-semibold mb-2">{targetSentence.cz}</p>
+      <div className="flex flex-col mt-2">
+    <p className="text-xl md:text-2xl mb-2 animate-growBold">{targetSentence.cz}</p>
         <p className="text-xs md:text-base italic mb-6">{targetSentence.es}</p>
       </div>
 
