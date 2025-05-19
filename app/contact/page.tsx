@@ -11,6 +11,15 @@ function page() {
             <span className="font-bold text-2xl">Aleš Kruba</span>
           </div>
 
+<div className="flex flex-col items-center text-center mt-6 animate-growBold mb-6">
+  <p className="text-xs ">
+    amatérský učitel češtiny / profesor de checo (aficionado)
+  </p>
+  <p className="text-xs ">
+    amaterský web developer / desarrollador web (más o menos)
+  </p>
+</div>
+
   
           <div className="flex items-center">
             <p className="text-lg">Brno, Czech Republic</p> {/* Agregué una línea adicional para ubicación escrita */}
