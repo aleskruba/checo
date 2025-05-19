@@ -8,24 +8,15 @@ function page() {
 
           <div className="flex items-center text-lg">
           
-            <span className="font-bold text-2xl">Aleš Kruba</span>
+            <span className=" text-xl animate-growBold ">Aleš KRUBA</span>
           </div>
 
-<div className="flex flex-col items-center text-center mt-6 animate-growBold mb-6">
-  <p className="text-xs ">
-    amatérský učitel češtiny / profesor de checo (aficionado)
-  </p>
-  <p className="text-xs ">
-    amaterský web developer / desarrollador web (más o menos)
-  </p>
-</div>
-
   
-          <div className="flex items-center">
+          <div className="flex items-center mt-6">
             <p className="text-lg">Brno, Czech Republic</p> {/* Agregué una línea adicional para ubicación escrita */}
           </div>
 
-          <div className="mt-16 flex items-center">
+          <div className=" flex items-center mt-2">
             <Link href="mailto:aleskruba@dokram.com" className="text-lg hover:text-blue-500">
               ales.aprendercheco@gmail.com
             </Link>
@@ -43,7 +34,23 @@ function page() {
 
 
           </div>
-     
+     <div className="flex flex-col items-center text-center mt-6 ">
+  <p className="text-xs animate-growBold  mb-2">
+    amatérský učitel češtiny  
+  </p>
+  <p className="text-xs italic">
+     profesor de checo (aficionado)
+  </p>
+
+  <p className="text-xs  animate-growBold mb-1 mt-4">
+    amaterský web developer
+  </p>
+ <p className="text-xs italic">
+      desarrollador web (más o menos)
+  </p>
+
+
+</div>
     </div>
   );
 }
