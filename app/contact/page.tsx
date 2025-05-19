@@ -48,7 +48,12 @@ function page() {
  <p className="text-xs italic">
       desarrollador web (más o menos)
   </p>
-
+<p className="text-xs mt-4 font-medium animate-growBold mb-1 ">
+  profesionální kamarád, který rád pomůže
+</p>
+<p className="text-xs italic">
+  amigo profesional (de los buenos), listo para ayudarte
+</p>
 
 </div>
     </div>
