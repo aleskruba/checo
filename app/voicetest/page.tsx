@@ -168,7 +168,7 @@ const SpeechCheck: React.FC = () => {
             onClick={stopListening}
             style={{ padding: "10px 20px", fontSize: "1rem", backgroundColor: "red", color: "white" }}
           >
-            Listening...   -  (Stop)
+            Escuchando/Poslouchám... - (Stop)
           </button>
         )}
 
