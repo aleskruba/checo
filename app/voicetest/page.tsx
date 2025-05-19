@@ -187,13 +187,13 @@ const SpeechCheck: React.FC = () => {
             <div className="mt-4 flex flex-col justify-center gap-4">
               <button
                 onClick={tryAgain}
-                className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md font-medium transition"
+                className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white text-2xl rounded-full shadow-md transition"
               >
-                Zkus to znovu / Intentar otra vez
+                Zkus to znovu / Intenta otra vez
               </button>
               <button
                 onClick={nextWord}
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition"
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded-full shadow-md transition"
               >
                 Nová fráze / Nueva frase
               </button>
@@ -204,9 +204,9 @@ const SpeechCheck: React.FC = () => {
         {score === null && !isListening && (
           <button
             onClick={nextWord}
-            className="px-4 py-2 mt-6 bg-blue-600 hover:bg-blue-700 text-white rounded-md font-medium transition"
+            className="px-4 py-2 mt-6 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded-full shadow-md transition"
           >
-            <span>Nová fráze / Nueva frase</span> ➡️
+            <span>Nová fráze / Nueva frase</span> 
           </button>
         )}
       </div>
