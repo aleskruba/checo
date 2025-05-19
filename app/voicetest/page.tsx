@@ -6,14 +6,14 @@ import { FaPlay } from "react-icons/fa";
 import { useAudio } from "../context/AudioContext";
 
 const frases = [
-  { cz: "Chtěl bych chleba.", es: "Quisiera pan.", file: "voice1/1.mp3" },
-  { cz: "Chladný vzduch.", es: "Aire frío.", file: "voice1/2.mp3" },
-  { cz: "Jdu do obchodu.", es: "Voy a la tienda.", file: "voice1/3.mp3" },
-  { cz: "Chlapec chodí.", es: "El niño camina.", file: "voice1/4.mp3" },
-  { cz: "Chci trochu vody.", es: "Quiero un poco de agua.", file: "voice1/5.mp3" },
-  { cz: "Byla tam chyba.", es: "Había un error.", file: "voice1/6.mp3" },
-  { cz: "Máme nový obchod.", es: "Tenemos una tienda nueva.", file: "voice1/7.mp3" },
-  { cz: "Chodba je chladná.", es: "El pasillo está frío.", file: "voice1/8.mp3" }
+  { cz: "Chtěl bych chleba", es: "Quisiera pan", file: "voice1/1.mp3" },
+  { cz: "Chladný vzduch", es: "Aire frío", file: "voice1/2.mp3" },
+  { cz: "Jdu do obchodu", es: "Voy a la tienda", file: "voice1/3.mp3" },
+  { cz: "Chlapec chodí", es: "El niño camina", file: "voice1/4.mp3" },
+  { cz: "Chci trochu vody", es: "Quiero un poco de agua", file: "voice1/5.mp3" },
+  { cz: "Byla tam chyba", es: "Había un error", file: "voice1/6.mp3" },
+  { cz: "Máme nový obchod", es: "Tenemos una tienda nueva", file: "voice1/7.mp3" },
+  { cz: "Chodba je chladná", es: "El pasillo está frío", file: "voice1/8.mp3" }
 ];
 
 const SpeechCheck: React.FC = () => {
