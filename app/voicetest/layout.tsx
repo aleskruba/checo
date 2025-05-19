@@ -19,7 +19,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </Head>
-      <h1 className="mb-8">Pronunciación checa / Česká výslovnost</h1>
+        <h1 className="mt-2 mb-8 text-base md:text-xl dark:text-red-300 text-red-800">Todavía en progreso...... Estoy preparando más frases para practicar la pronunciación</h1>
+      <h1 className="mb-4 font-bold">Pronunciación checa / Česká výslovnost</h1>
       {children}
     </>
   );

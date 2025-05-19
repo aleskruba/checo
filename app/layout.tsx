@@ -41,6 +41,7 @@ import IntercambioComponent from "./intercambio/page";
 import { InterCambioComponent } from "./components/InterCambioComponent";
 import  { DropdownMenuCheckboxes } from "./components/RightMenu";
 import { AvanzadoComponent } from "./components/AvanzadoComponent";
+import { VoiceTestComponent } from "./components/VoiceTestComponent";
 
 const poppins = Poppins({
   weight: "300",
@@ -301,7 +302,7 @@ dark:bg-black
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
                         <InterCambioComponent closeSheet={closeSheet} />
-
+                        <VoiceTestComponent closeSheet={closeSheet}/>
                         <ThemeComponent closeSheet={closeSheet} />
                                     <div className="mt-8 ">
 
@@ -414,6 +415,7 @@ dark:bg-black
         <DialogComponent closeSheet={closeSheet} />
         <TestComponent closeSheet={closeSheet} />
         <InterCambioComponent closeSheet={closeSheet} />
+         <VoiceTestComponent closeSheet={closeSheet}/>
         <ThemeComponent closeSheet={closeSheet} />
       </div>
 
