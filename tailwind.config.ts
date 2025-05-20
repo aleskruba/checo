@@ -11,6 +11,12 @@ export default {
   	extend: {
 		
   		keyframes: {
+			   'color-change': {
+          '0%': { color: '#ef4444' },     // červená
+          '33%': { color: '#facc15' },    // žlutá
+          '66%': { color: '#3b82f6' },    // modrá
+          '100%': { color: '#ef4444' },   // zpět na červenou
+        },
 			   growBold: {
 				'0%': { transform: 'scale(1)', fontWeight: '400' },
 				'100%': { transform: 'scale(1.4)', fontWeight: '900' },
@@ -29,6 +35,7 @@ export default {
   		animation: {
   			slideIn: 'slideIn 1.5s ease-in-out forwards',
 			growBold: 'growBold 1s forwards',
+			'color-cycle': 'color-change 3s infinite ease-in-out',
   		},
   		fontFamily: {
 			poppins: ['Poppins', 'sans-serif'],

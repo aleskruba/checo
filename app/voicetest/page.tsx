@@ -122,7 +122,7 @@ const SpeechCheck: React.FC = () => {
   }
 
   return (
-    <div style={{ maxWidth: 400, margin: "auto", fontFamily: "Arial, sans-serif" }}>
+    <div >
       <h2 className="text-xl font-semibold mb-2 text-center">
         Řekni frázi: / Di la frase:
       </h2>
@@ -142,18 +142,18 @@ const SpeechCheck: React.FC = () => {
         </button>
       </div>
 
-      <div className="flex flex-col mt-2">
-    <p className="text-xl md:text-2xl mb-2 animate-growBold">{targetSentence.cz}</p>
-        <p className="text-xs md:text-base italic mb-6">{targetSentence.es}</p>
+      <div className="flex flex-col items-center mt-2 relative">
+    <p className="text-xl md:text-2xl mb-2 animate-growBold absolute">{targetSentence.cz}</p>
+        <p className="text-xs md:text-base italic mt-10 mb-6">{targetSentence.es}</p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
         {score === null && !isListening && (
           <button
             onClick={startListening}
             disabled={isListening}
-            className={`
-              px-5 py-2 text-white font-semibold mb-16 mt-8 text-2xl rounded-full shadow-md
+            className={`w-80
+               py-2 text-white font-semibold mb-16 mt-8 text-2xl rounded-full shadow-md
               transition-colors duration-300 
               ${isListening ? 'bg-gray-400 cursor-not-allowed' : 'bg-green-600 hover:bg-green-700'}
               mr-2
@@ -166,9 +166,11 @@ const SpeechCheck: React.FC = () => {
         {isListening && (
           <button
             onClick={stopListening}
-            style={{ padding: "10px 20px", fontSize: "1rem", backgroundColor: "red", color: "white" }}
+                 className="w-80
+               py-2 text-white font-semibold mb-16 mt-8 text-base rounded-full shadow-md
+              transition-colors duration-300 bg-red-600"
           >
-            Escuchando/Poslouchám... - (Stop)
+            Escuchando / Poslouchám... - (Stop)
           </button>
         )}
 

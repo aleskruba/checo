@@ -301,17 +301,26 @@ dark:bg-black
                         <AvanzadoComponent closeSheet={closeSheet}/>
                         <DialogComponent closeSheet={closeSheet} />
                         <TestComponent closeSheet={closeSheet} />
-                        <InterCambioComponent closeSheet={closeSheet} />
+                        {/* <InterCambioComponent closeSheet={closeSheet} /> */}
                         <VoiceTestComponent closeSheet={closeSheet}/>
                         <ThemeComponent closeSheet={closeSheet} />
-                                    <div className="mt-8 ">
 
-  <div className="flex items-center justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div className="flex justify-start px-2 mt-1">
+                               <Link href="/contact" className=" dark:hover:text-blue-400  hover:text-blue-900 text-xs md:text-base">
+     Kontakt / Contacto 
+            </Link>
+                           </div>
+                                    <div className="">
+
+  <div className="flex items-center flex-col justify-center mt-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <h1 className="text-base font-bold animate-color-cycle">
+  classes en línea con Aleš en
+</h1>
   <a
   href="https://www.italki.com/en/teacher/6813654/czech"
   target="_blank"
   rel="noopener noreferrer"
-  className="hover:scale-105 transform transition-all duration-300"
+  className="mt-2 hover:scale-105 transform transition-all duration-300"
 >
   <Image
     src={Clases}
@@ -414,7 +423,7 @@ dark:bg-black
         <AvanzadoComponent closeSheet={closeSheet}/>
         <DialogComponent closeSheet={closeSheet} />
         <TestComponent closeSheet={closeSheet} />
-        <InterCambioComponent closeSheet={closeSheet} />
+       {/*  <InterCambioComponent closeSheet={closeSheet} /> */}
          <VoiceTestComponent closeSheet={closeSheet}/>
         <ThemeComponent closeSheet={closeSheet} />
       </div>

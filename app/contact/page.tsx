@@ -27,7 +27,7 @@ function page() {
   alt="Logo"  // Alternativní text pro obrázek
   width={256}  // Určete šířku obrázku
   height={256}  // Určete výšku obrázku
-  className="rounded-3xl"  // CSS třída pro zaoblené rohy
+  className="w-full rounded-full"  // CSS třída pro zaoblené rohy
   loading="lazy"  // Lazy loading pro zlepšení výkonu
   decoding="async"  // Asynchronní dekódování pro lepší výkon
 />
