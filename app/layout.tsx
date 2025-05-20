@@ -306,8 +306,8 @@ dark:bg-black
                         <ThemeComponent closeSheet={closeSheet} />
 
                         <div className="flex justify-start px-2 mt-1">
-                               <Link href="/contact" className=" dark:hover:text-blue-400  hover:text-blue-900 text-xs md:text-base">
-     Kontakt / Contacto 
+                                <Link href="/contact"  className=" dark:hover:text-blue-400  hover:text-blue-900 md-text-base ">
+     Kontakt / Contacto    
             </Link>
                            </div>
                                     <div className="">
@@ -428,8 +428,8 @@ dark:bg-black
         <ThemeComponent closeSheet={closeSheet} />
       </div>
      <div className="flex justify-start px-2 mt-1">
-                               <Link href="/contact" className=" dark:hover:text-blue-400  hover:text-blue-900 text-xs md:text-base">
-     Kontakt / Contacto 
+                                <Link href="/contact" onClick={closeSheet}  className=" dark:hover:text-blue-400  hover:text-blue-900 text-base ">
+     Kontakt / Contacto    
             </Link>
                            </div>
       <div className="flex items-center w-[18rem] justify-center p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
