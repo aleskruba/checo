@@ -305,8 +305,8 @@ dark:bg-black
                         <VoiceTestComponent closeSheet={closeSheet}/>
                         <ThemeComponent closeSheet={closeSheet} />
 
-                        <div className="flex justify-start px-2 mt-1">
-                                <Link href="/contact"  className=" dark:hover:text-blue-400  hover:text-blue-900 md-text-base ">
+                        <div className="flex justify-start px-2 ">
+                                <Link href="/contact"  className=" dark:hover:text-blue-400  hover:text-blue-900 md:text-base ">
      Kontakt / Contacto    
             </Link>
                            </div>
@@ -427,7 +427,7 @@ dark:bg-black
          <VoiceTestComponent closeSheet={closeSheet}/>
         <ThemeComponent closeSheet={closeSheet} />
       </div>
-     <div className="flex justify-start px-2 mt-1">
+     <div className="flex justify-start px-2 ">
                                 <Link href="/contact" onClick={closeSheet}  className=" dark:hover:text-blue-400  hover:text-blue-900 text-base ">
      Kontakt / Contacto    
             </Link>
