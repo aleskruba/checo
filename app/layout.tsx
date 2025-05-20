@@ -427,7 +427,11 @@ dark:bg-black
          <VoiceTestComponent closeSheet={closeSheet}/>
         <ThemeComponent closeSheet={closeSheet} />
       </div>
-
+     <div className="flex justify-start px-2 mt-1">
+                               <Link href="/contact" className=" dark:hover:text-blue-400  hover:text-blue-900 text-xs md:text-base">
+     Kontakt / Contacto 
+            </Link>
+                           </div>
       <div className="flex items-center w-[18rem] justify-center p-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
         <a
           href="https://www.youtube.com/@AprenderCheco"
