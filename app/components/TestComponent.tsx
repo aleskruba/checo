@@ -100,6 +100,10 @@ const items = {
     {
       title: "Pronombres en ACUSATIVO",
         url: `${BASE_URL}/test/19` 
+    },
+    {
+      title: "Pronombres demostrativos",
+        url: `${BASE_URL}/test/20` 
     }
   ],
 };export function TestComponent({ closeSheet }: { closeSheet: () => void }) {
