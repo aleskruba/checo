@@ -51,8 +51,9 @@ function VideoCard({ embedUrl, index }: { embedUrl: string; index: number }) {
   return (
     <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg relative mt-2">
       {!loaded && (
-        <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 z-10" />
-      )}
+        <div className="flex justify-center items-center absolute inset-0 animate-pulse bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 dark:from-gray-700 dark:via-gray-600 dark:to-gray-700 z-10" > <h1>moment prosím ...</h1></div>
+        
+    )}
       <iframe
         className={`w-full h-full transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
         src={embedUrl}
