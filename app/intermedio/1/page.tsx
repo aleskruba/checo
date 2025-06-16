@@ -33,7 +33,7 @@ function lesson14() {
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-center p-4">
       <SectionTopComponent
         title="Videa pro začátečníky a mírně pokročilé"
-        description="Když se video načítá, zobrazí se elegantní efekt."
+        description=""
       />
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
