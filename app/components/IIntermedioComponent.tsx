@@ -7,7 +7,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 const items = {
   title: "Mírně pokročilý / Intermedio ",
   content: [
-    { title: "Próximamente disponible...", url: `${BASE_URL}/intermedio/1` },
+    { title: "Videa s dialogy", url: `${BASE_URL}/intermedio/1` },
 
     
   ],

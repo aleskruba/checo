@@ -21,6 +21,7 @@ const items = {
     { title: "Pronombres person. AKUZATIV", url: `${BASE_URL}/lesson/24` },
     { title: "Pronombres demostrativos", url: `${BASE_URL}/lesson/25` },
     { title: "Verbo - bolet", url: `${BASE_URL}/lesson/26` },
+    { title: "Las horas - hodiny", url: `${BASE_URL}/lesson/27` },
 
     
   ],
