@@ -24,6 +24,8 @@ function lesson14() {
     'https://youtu.be/m_ROcuZAFVA',
      'https://youtu.be/RRJoV2OLU6c',
       'https://youtu.be/X8CcPeoMmik',
+        'https://youtu.be/LlW51RYViKs',
+          'https://youtu.be/CfF0vCzAlJk',
   ];
 
   function getEmbedUrl(url: string) {
