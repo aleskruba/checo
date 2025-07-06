@@ -22,6 +22,7 @@ const items = {
     { title: "Pronombres demostrativos", url: `${BASE_URL}/lesson/25` },
     { title: "Verbo - bolet", url: `${BASE_URL}/lesson/26` },
     { title: "Las horas - hodiny", url: `${BASE_URL}/lesson/27` },
+    { title: "El caso locativo - 6.pád", url: `${BASE_URL}/lesson/28` },
 
     
   ],
