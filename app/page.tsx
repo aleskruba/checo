@@ -5,6 +5,7 @@ import Italki from "@/public/italki.png"
 import { useEffect } from "react";
 import Link from "next/link";
 import Clases from "@/public/italki.png";
+import Referal from "@/public/italki-reward.jpg";
 export default  function Home() {
 
   const { isPlayingAll, playAllAudio, stopAllAudio, isPlayingOne, playAudio } = useAudio(); // Using context
@@ -39,7 +40,7 @@ export default  function Home() {
     En esta página encontrarás las bases de la gramática checa, vocabulario útil y frases comunes. También podrás escuchar las frases y poner a prueba tus conocimientos con ejercicios interactivos.
   </p>
   <div className="mb-4 flex md:flex-row flex-col items-center justify-start">
-  <div className="mr-2 text-black dark:text-white font-bold">
+<div className="mr-2 text-black dark:text-white font-bold">
   Si te interesa, también ofrezco clases de conversación en checo a través de la plataforma&nbsp;
   <Image
     src={Clases}
@@ -48,8 +49,29 @@ export default  function Home() {
     width={50}
     height={20}
   />
-  &nbsp;Estaré muy feliz de ver tu progreso en mis clases.
+  . Estaré muy feliz de ver tu progreso en mis clases.
+  <br />
+  Si aún no tienes una cuenta en italki, puedes registrarte a través de <a href="https://www.italki.com/affshare?ref=af6813654" target="_blank" rel="noopener noreferrer" className="underline text-blue-600 dark:text-blue-400">este enlace</a> y recibirás $10 que puedes usar para tus clases.
 </div>
+
+  <div className="flex items-center min-w-[280px]  justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                      <a
+                      href="https://www.italki.com/affshare?ref=af6813654"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:scale-105 transform transition-all duration-300"
+                    >
+                      <Image
+                        src={Referal}
+                        alt="Clases"
+                        className="h-22 rounded-xl"
+                        width={300}
+                        height={200}
+                        sizes="(max-width: 600px) 100vw, 50vw"
+                      />
+                    </a>
+
+                        </div>
   <div className="flex items-center min-w-[280px]  justify-center p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
                       <a
                       href="https://www.italki.com/en/teacher/6813654/czech"
