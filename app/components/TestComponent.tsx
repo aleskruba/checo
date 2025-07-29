@@ -113,6 +113,11 @@ const items = {
       title: "Caso locativo - 6.pád",
         url: `${BASE_URL}/test/22` 
     }
+    ,
+    {
+      title: "Caso genitivo - 2.pád",
+        url: `${BASE_URL}/test/23` 
+    }
   ],
 };export function TestComponent({ closeSheet }: { closeSheet: () => void }) {
 
