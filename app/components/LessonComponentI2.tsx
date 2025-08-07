@@ -23,9 +23,8 @@ const items = {
     { title: "Verbo - bolet", url: `${BASE_URL}/lesson/26` },
     { title: "Las horas - hodiny", url: `${BASE_URL}/lesson/27` },
     { title: "El caso locativo - 6.pád", url: `${BASE_URL}/lesson/28` },
-     { title: "El caso genitivo - 2.pád", url: `${BASE_URL}/lesson/29` },
-
-    
+    { title: "El caso genitivo - 2.pád", url: `${BASE_URL}/lesson/29` },
+    { title: "El tiempo futuro", url: `${BASE_URL}/lesson/30` },
   ],
 };
 
